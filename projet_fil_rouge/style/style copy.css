@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #D9D9D9;
+    /* font-family: "Sevillana", cursive; */
+    font-family: 'Roboto';
+}
+
+.containers {
+    width: 800px;
+    margin: auto;
+}
+
+/* ------ HOME PAGE ------- */
+
+.header-mobil {
+    display: none;
+}
+
+.header-desktop {
+    background-color: #E0AB55;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+#color-word {
+    color: #E0AB55;
+}
+
+#picto-valid-search-d {
+    width: 25px;
+    height: 25px;
+}
+
+.header-right-d {
+    height: 100%;
+    width: 100%;
+}
+
+.menu-d {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-d a {
+    margin-left: 5%;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-d,
+#search-bar-d,
+#picto-valid-search-d {
+    margin-right: 2.5%;
+}
+
+.bloc-search-d {
+    display: flex;
+    align-items: end;
+    height: 40%;
+    justify-content: end;
+}
+
+.titre-site h1 {
+    text-align: center;
+    background-color: white;
+    padding: 2%;
+}
+
+.img-present {
+    width: 100%;
+}
+
+.bloc-pres {
+    display: flex;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/img-asso4.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.who-are,
+.our-vision {
+    width: 50%;
+    text-align: center;
+    justify-items: center;
+}
+
+#font-pres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 90%;
+    border: 10px solid rgba(224, 171, 85, 0.75);
+    border-radius: 20px;
+    height: 100%;
+}
+
+#font-pres h3 {
+    margin: 3% 0;
+    color: #E0AB55;
+}
+
+#font-pres p {
+    width: 85%;
+    margin: 2% 0;
+}
+
+.mission {
+    background-color: #f0f0f0;
+    padding-bottom: 1.5%;
+}
+
+.titre-blc-actu-miss {
+    justify-items: center;
+    background-color: #f0f0f0;
+    font-size: 20px;
+    padding: 1% 0;
+}
+
+.galery-mini-miss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.blc-mini-miss {
+    width: 32%;
+    margin-bottom: 2.5%;
+    background-color: #FFF3E0;
+    border-top-left-radius: 45px 45px;
+    border-top-right-radius: 45px 45px;
+}
+
+.entete-mini-miss {
+    display: flex;
+    align-items: center;
+    border-radius: 45px;
+    background-color: #E0AB55;
+    color: white;
+}
+
+.img-mini-miss {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.titre-mini-miss {
+    margin-left: 2%;
+}
+
+.descr-mini-miss p {
+    margin: 2%;
+    font-size: 12px;
+}
+
+.link-view-detail-mini-miss {
+    display: flex;
+    justify-content: end;
+}
+
+.link-view-detail-mini-miss a {
+    text-decoration: none;
+    color: #E0AB55;
+}
+
+.link-more-miss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 85%;
+    background-color: #E0AB55;
+    margin: 2% auto;
+    font-size: 23px;
+    border-radius: 10px;
+}
+
+.link-more-miss a {
+    color: white;
+    text-decoration: none;
+}
+
+#contact {
+    background-color: #D9D9D9;
+    border: 15px, solid, #f0f0f0;
+    color: #E0AB55;
+}
+
+.titre-blc-contact h3 {
+    padding-top: 4.5%;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.contact-left,
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.input-align {
+    display: flex;
+    flex-direction: column;
+}
+
+.formu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.button-formu {
+    text-align: center;
+    margin: 5% 0;
+
+}
+
+#button-formu {
+    border-radius: 15px;
+    border: 3px, solid, black;
+    color: white;
+    background-color: #E0AB55;
+    width: 180px;
+    height: 50px;
+    font-size: 22px;
+}
+
+.high-footer {
+    background-color: #E0AB55;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #E0AB55;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    width: 100%;
+}
+
+.blc-copy {
+    width: 40%;
+    margin-left: 1%;
+}
+
+.bloc-picto {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.picto {
+    width: 45px;
+    height: 45px;
+}
+
+/* ------ VOUS & NOUS PAGE ------ */
+
+.content-you-our {
+    background-color: #FFF3E0;
+    padding: 2%;
+}
+
+.menu-you-our{
+background-color: #E0AB55;
+}
+
+.nav-you-our-link{
+
+}

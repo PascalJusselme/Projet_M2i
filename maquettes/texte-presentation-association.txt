@@ -1,0 +1,37 @@
+<div class="pres-asso">
+                <h3>Présentation de l'Association "Les Éclaireurs Solidaires"</h3>
+
+                <p>"Les Éclaireurs Solidaires" est une association loi 1901, fondée à Lyon en 2020, dédiée à la
+                    promotion et à
+                    la facilitation de l'engagement bénévole. Notre mission principale est de créer des ponts entre les
+                    citoyens
+                    désireux d'agir et les besoins concrets du terrain, en proposant des opportunités de bénévolat
+                    ponctuelles
+                    ou régulières dans les domaines social, écologique et culturel.</p>
+
+                <h4>Notre Vision</h4>
+                <p>Nous croyons en la puissance de l'engagement citoyen pour construire une société plus solidaire,
+                    respectueuse de son environnement et riche de sa diversité culturelle. Nous nous efforçons de rendre
+                    le
+                    bénévolat accessible, flexible et gratifiant pour tous, en offrant une plateforme intuitive qui
+                    connecte les
+                    bénévoles aux causes qui les animent.</p>
+
+                <h4>Notre Histoire et Notre Réseau</h4>
+                <p>L'aventure des "Éclaireurs Solidaires" a débuté en 2020 à Lyon, sous l'impulsion de Claire Monnier,
+                    notre
+                    fondatrice et présidente. Ancienne éducatrice spécialisée, Claire est animée par une passion pour
+                    l'engagement citoyen depuis son adolescence, et a souhaité créer une structure permettant à chacun
+                    de
+                    trouver sa place dans l'action.</p>
+
+                <p>Depuis notre création, nous avons travaillé activement à développer un solide réseau de partenaires
+                    locaux
+                    (associations, collectivités, entreprises) afin de proposer une large gamme d'actions concrètes et
+                    variées à
+                    nos bénévoles. Ce travail de tissage de liens, mené intensivement entre 2020 et 2023, nous permet
+                    aujourd'hui d'offrir des opportunités impactantes dans des domaines aussi divers que l'aide aux
+                    personnes
+                    démunies, la protection de l'environnement, l'organisation d'événements culturels, et bien plus
+                    encore.</p>
+            </div>
