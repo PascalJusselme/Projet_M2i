@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+input,textarea{
+    border:none;
+}
+
 body {
     font-family: 'Roboto';
     color: #100e25;
@@ -91,8 +95,7 @@ a {
 #btn-connec {
     padding: 12px 34px;
     background-color: #fff;
-    border-color: #FFD900;
-    border-width: medium;
+    border: medium,solid,#FFD900;
     border-radius: 10px;
 }
 
@@ -132,7 +135,8 @@ a {
     flex-direction: column;
 }
 
-.btn-see-more input {
+#btn-see-more{
+    border: 1px,solid;
     background-color: #FFD900;
     border-radius: 15px;
     padding: 12px 34px;
@@ -279,6 +283,7 @@ a {
 
 .btn-join-miss input {
     background-color: #FFD900;
+    border: 1px,solid;
     border-radius: 15px;
     padding: 8px 12px;
 }
@@ -405,6 +410,7 @@ form {
 }
 
 #button-formu {
+    border: 1px,solid;
     border-radius: 35px;
     background-color: #FFD900;
     padding: 12px 34px;
