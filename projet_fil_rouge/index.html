@@ -1,341 +1,460 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/style-mobil.css">
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style-mobil.css" />
     <title>Les &Eacute;claireurs Solidaires</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header-mobil">
-            <div class="logo-site-m">
-                <img src="img/logo2.jpg" alt="" class="logo">
-                <p>Les &Eacute;claireurs <span id="color-word">Solidaires</span></p>
-            </div>
-            <div class="header-right-m">
-                <div class="search-icon-m">
-                    <img src="img/resultat-de-la-recherche2.png" class="header-picto-m">
-                </div>
-                <div class="connect-icon-m">
-                    <img src="img/utilisateur.png" class="header-picto-m">
-                </div>
-                <div class="menu-icon-m">
-                    <img src="img/menu.png" class="header-picto-m">
-                </div>
-            </div>
+      <div class="header-mobil">
+        <div class="logo-site-m">
+          <img src="img/logo2_2.png" alt="" class="logo" />
+          <p>Les &Eacute;claireurs <span id="color-word">Solidaires</span></p>
         </div>
+        <div class="header-right-m">
+          <div class="search-icon-m">
+            <img
+              src="img/resultat-de-la-recherche2.png"
+              class="header-picto-m"
+            />
+          </div>
+          <div class="connect-icon-m">
+            <img src="img/utilisateur.png" class="header-picto-m" />
+          </div>
+          <div class="menu-icon-m">
+            <img src="img/menu.png" class="header-picto-m" />
+          </div>
+        </div>
+      </div>
 
-        <div class="header-desktop">
-            <div class="logo-site-d">
-                <img src="img/logo2.jpg" alt="" class="logo">
-            </div>
-            <div class="header-right-d">
-                <nav class="menu-d">
-                    <a href="index.html" class="link-menu-m">ACCUEIL</a>
-                    <a href="#" class="link-menu-m">NOS MISSIONS</a>
-                    <a href="vous_et_nous.html" class="link-menu-m">VOUS & NOUS</a>
-                </nav>
-            </div>
+      <div class="header-desktop">
+        <div class="logo-site-d">
+          <img src="img/logo2_2.png" alt="" class="logo" />
         </div>
+        <div class="header-right-d">
+          <nav class="menu-d">
+            <a href="index.html" class="link-menu-m">ACCUEIL</a>
+            <a href="#" class="link-menu-m">NOS MISSIONS</a>
+            <a href="vous_et_nous.html" class="link-menu-m">VOUS & NOUS</a>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <section id="hero-section">
-        <div class="titre-site">
-            <h1>Les &Eacute;claireurs <span id="color-word">Solidaires</span></h1>
-        </div>
-        <div class="accroche-site">
-            <p>Passez à l'action citoyenne : trouvez facilement des missions de bénévolat variées, engagez-vous
-                pour
-                l'environnement, la solidarité, l'entraide ou l'éducation, et devenez un acteur du changement
-                social
-                !
-            </p>
-        </div>
-        <div class="bloc-search-d">
-            <input type="search" name="search-bar-desktop" id="search-bar-d" placeholder="Rechercher une mission">
-        </div>
-        <div class="blc-btn-inscConnec">
-            <input type="button" value="S'inscrire" id="btn-inscri">
-            <input type="button" value="Se Connecter" id="btn-connec">
-        </div>
+      <div class="titre-site">
+        <h1>Les &Eacute;claireurs <span id="color-word">Solidaires</span></h1>
+      </div>
+      <div class="accroche-site">
+        <p>
+          Passez à l'action citoyenne : trouvez facilement des missions de
+          bénévolat variées, engagez-vous pour l'environnement, la solidarité,
+          l'entraide ou l'éducation, et devenez un acteur du changement social !
+        </p>
+      </div>
+      <div class="bloc-search-d">
+        <input
+          type="search"
+          name="search-bar-desktop"
+          id="search-bar-d"
+          placeholder="Rechercher une mission"
+        />
+      </div>
+      <div class="blc-btn-inscConnec">
+        <input type="button" value="S'inscrire" id="btn-inscri" />
+        <input type="button" value="Se Connecter" id="btn-connec" />
+      </div>
     </section>
 
     <section class="bloc-pres">
-        <div class="who-are">
-            <div id="font-pres">
-                <h3>Qui Sommes Nous ?</h3>
-                <p>"Les Éclaireurs Solidaires" est une association loi 1901, fondée à Lyon en 2020, dédiée à la
-                    promotion et à la facilitation de l'engagement bénévole.</p>
-                <p>Notre mission principale est de créer des ponts entre les
-                    citoyens désireux d'agir et les besoins concrets du terrain, en proposant des opportunités de
-                    bénévolat ponctuelles ou régulières dans les domaines social, écologique et culturel.
-                </p>
-                <div class="btn-see-more">
-                    <input type="button" value="En savoir plus" id="btn-see-more">
-                </div>
-            </div>
-            <div class="img-pres">
-                <img src="../projet_fil_rouge/img/img-asso3.jpg">
-            </div>
+      <div class="who-are">
+        <div id="font-pres">
+          <h3>Qui Sommes Nous ?</h3>
+          <p>
+            "Les Éclaireurs Solidaires" est une association loi 1901, fondée à
+            Lyon en 2020, dédiée à la promotion et à la facilitation de
+            l'engagement bénévole.
+          </p>
+          <p>
+            Notre mission principale est de créer des ponts entre les citoyens
+            désireux d'agir et les besoins concrets du terrain, en proposant des
+            opportunités de bénévolat ponctuelles ou régulières dans les
+            domaines social, écologique et culturel.
+          </p>
+          <div class="btn-see-more">
+            <input type="button" value="En savoir plus" id="btn-see-more" />
+          </div>
         </div>
-        <div class="our-vision">
-            <div id="font-vision">
-                <h3>Nos chiffres :</h3>
-                <ul>
-                    <li>1 200 bénévoles actifs depuis notre création</li>
-                    <li>+350 missions réalisées chaque mois</li>
-                    <li>85 % de satisfaction parmi nos bénévoles</li>
-                    <li>+ 40 partenaires associatifs à Lyon et sa métropole</li>
-                    <li>3 domaines d’actions : social, écologique, cullturel</li>
-                </ul>
-                <div class="btn-see-more">
-                    <input type="button" value="En savoir plus" id="btn-see-more">
-                </div>
-            </div>
-            <div class="img-vision">
-                <img src="../projet_fil_rouge/img/img-asso4.jpg">
-            </div>
+        <div class="img-pres">
+          <img src="../projet_fil_rouge/img/img-asso3.jpg" />
         </div>
+      </div>
+      <div class="our-vision">
+        <div id="font-vision">
+          <h3>Nos chiffres :</h3>
+          <ul>
+            <li>1 200 bénévoles actifs depuis notre création</li>
+            <li>+350 missions réalisées chaque mois</li>
+            <li>85 % de satisfaction parmi nos bénévoles</li>
+            <li>+ 40 partenaires associatifs à Lyon et sa métropole</li>
+            <li>3 domaines d’actions : social, écologique, cullturel</li>
+          </ul>
+          <div class="btn-see-more">
+            <input type="button" value="En savoir plus" id="btn-see-more" />
+          </div>
+        </div>
+        <div class="img-vision">
+          <img src="../projet_fil_rouge/img/img-asso4.jpg" />
+        </div>
+      </div>
     </section>
 
     <div class="titre-last-mission">
-        <h3>NOS DERNIERES MISSIONS</h3>
+      <h3>NOS DERNIERES MISSIONS</h3>
     </div>
 
     <section class="mission">
-        <div class="blc-mission">
-            <div class="entete-miss">
-                <div class="title-miss">
-                    <p>Titre</p>
-                </div>
-                <div class="cat-miss">
-                    <p>Catégorie</p>
-                </div>
-            </div>
-            <div class="detail-miss">
-                <div class="txt-miss">
-                    <p><b>Description mission :</b></p><br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quasi architecto maiores
-                    doloribus, minima earum eveniet! Suscipit magni eum molestias! Officiis eius velit cum. A error
-                    dignissimos consequuntur veritatis expedita.
-                </div>
-                <div class="foot-detail">
-                    <div class="btn-join-miss">
-                        <input type="button" value="Rejoindre la mission">
-                    </div>
-                    <div class="see-details">
-                        <a href="#">Voir détails</a>
-                    </div>
-                </div>
-            </div>
+      <div class="blc-mission">
+        <div class="entete-miss">
+          <div class="title-miss">
+            <p>Titre</p>
+          </div>
+          <div class="cat-miss">
+            <p>Catégorie</p>
+          </div>
         </div>
-        <div class="blc-mission">
-            <div class="entete-miss">
-                <div class="title-miss">
-                    <p>Titre</p>
-                </div>
-                <div class="cat-miss">
-                    <p>Catégorie</p>
-                </div>
+        <div class="detail-miss">
+          <div class="txt-miss">
+            <p><b>Description mission :</b></p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque quasi architecto maiores doloribus, minima earum
+              eveniet! Suscipit magni eum molestias! Officiis eius velit cum. A
+              error dignissimos consequuntur veritatis expedita.
+            </p>
+          </div>
+          <div class="foot-detail">
+            <div class="btn-join-miss">
+              <input type="button" value="Rejoindre la mission" />
             </div>
-            <div class="detail-miss">
-                <div class="txt-miss">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quasi architecto maiores
-                    doloribus, minima earum eveniet! Suscipit magni eum molestias! Officiis eius velit cum. A error
-                    dignissimos consequuntur veritatis expedita.
-                </div>
-                <div class="foot-detail">
-                    <div class="btn-join-miss">
-                        <input type="button" value="Rejoindre la mission">
-                    </div>
-                    <div class="see-details">
-                        <a href="#">Voir détails</a>
-                    </div>
-                </div>
+            <div class="see-details">
+              <a href="#">Voir détails</a>
             </div>
+          </div>
         </div>
-        <div class="blc-mission">
-            <div class="entete-miss">
-                <div class="title-miss">
-                    <p>Titre</p>
-                </div>
-                <div class="cat-miss">
-                    <p>Catégorie</p>
-                </div>
-            </div>
-            <div class="detail-miss">
-                <div class="txt-miss">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quasi architecto maiores
-                    doloribus, minima earum eveniet! Suscipit magni eum molestias! Officiis eius velit cum. A error
-                    dignissimos consequuntur veritatis expedita.
-                </div>
-                <div class="foot-detail">
-                    <div class="btn-join-miss">
-                        <input type="button" value="Rejoindre la mission">
-                    </div>
-                    <div class="see-details">
-                        <a href="#">Voir détails</a>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="blc-mission">
+        <div class="entete-miss">
+          <div class="title-miss">
+            <p>Titre</p>
+          </div>
+          <div class="cat-miss">
+            <p>Catégorie</p>
+          </div>
         </div>
+        <div class="detail-miss">
+          <div class="txt-miss">
+            <p><b>Description mission :</b></p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque quasi architecto maiores doloribus, minima earum
+              eveniet! Suscipit magni eum molestias! Officiis eius velit cum. A
+              error dignissimos consequuntur veritatis expedita.
+            </p>
+          </div>
+          <div class="foot-detail">
+            <div class="btn-join-miss">
+              <input type="button" value="Rejoindre la mission" />
+            </div>
+            <div class="see-details">
+              <a href="#">Voir détails</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blc-mission">
+        <div class="entete-miss">
+          <div class="title-miss">
+            <p>Titre</p>
+          </div>
+          <div class="cat-miss">
+            <p>Catégorie</p>
+          </div>
+        </div>
+        <div class="detail-miss">
+          <div class="txt-miss">
+            <p><b>Description mission :</b></p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque quasi architecto maiores doloribus, minima earum
+              eveniet! Suscipit magni eum molestias! Officiis eius velit cum. A
+              error dignissimos consequuntur veritatis expedita.
+            </p>
+          </div>
+          <div class="foot-detail">
+            <div class="btn-join-miss">
+              <input type="button" value="Rejoindre la mission" />
+            </div>
+            <div class="see-details">
+              <a href="#">Voir détails</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div class="btn-more-miss">
-        <a href="#" class="view-more-miss">Voir plus de missions ...</a>
+      <a href="#" class="view-more-miss">Voir plus de missions ...</a>
     </div>
 
     <div class="titre-temoignage">
-        <h3>T&Eacute;MOIGNAGES</h3>
+      <h3>T&Eacute;MOIGNAGES</h3>
     </div>
 
     <section class="temoignages">
-        <div class="avis-card">
-            <div class="avatar-member">
-                <img src="../projet_fil_rouge/img/img-mini-1-2.png" alt="" id="img-avatar">
-            </div>
-            <div class="lib-mission-avis">
-                <p>Titre Mission</p>
-            </div>
-            <div class="foot-avis">
-                <div class="icon-heart">
-                    <!-- <img src="../projet_fil_rouge/img/coeur-valide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-valide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-valide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-invalide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-invalide.png" alt="" id="icon-heart"> -->
-                </div>
-                <div class="txt-avis">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo autem accusantium veniam suscipit
-                        reprehenderit voluptatem, at rem consequuntur nesciunt asperiores velit, harum quia!
-                        Voluptatibus rem amet aliquid architecto esse in?</p>
-                </div>
-            </div>
+      <div class="avis-card">
+        <div class="avatar-member">
+          <img
+            src="../projet_fil_rouge/img/img-mini-1-2.png"
+            alt=""
+            id="img-avatar"
+          />
         </div>
-        <div class="avis-card">
-            <div class="avatar-member">
-                <img src="../projet_fil_rouge/img/img-mini-1-2.png" alt="" id="img-avatar">
-            </div>
-            <div class="lib-mission-avis">
-                <p>Titre Mission</p>
-            </div>
-            <div class="foot-avis">
-                <div class="icon-heart">
-                    <!-- <img src="../projet_fil_rouge/img/coeur-valide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-valide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-invalide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-invalide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-invalide.png" alt="" id="icon-heart"> -->
-                </div>
-                <div class="txt-avis">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo autem accusantium veniam suscipit
-                        reprehenderit voluptatem, at rem consequuntur nesciunt asperiores velit, harum quia!
-                        Voluptatibus rem amet aliquid architecto esse in?</p>
-                </div>
-            </div>
+        <div class="lib-mission-avis">
+          <p>Titre Mission</p>
         </div>
-        <div class="avis-card">
-            <div class="avatar-member">
-                <img src="../projet_fil_rouge/img/img-mini-1-2.png" alt="" id="img-avatar">
-            </div>
-            <div class="lib-mission-avis">
-                <p>Titre Mission</p>
-            </div>
-            <div class="foot-avis">
-                <div class="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-vide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-vide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-vide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-vide.png" alt="" id="icon-heart">
-                    <img src="../projet_fil_rouge/img/coeur-vide.png" alt="" id="icon-heart">
-                </div>
-                <div class="txt-avis">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo autem accusantium veniam suscipit
-                        reprehenderit voluptatem, at rem consequuntur nesciunt asperiores velit, harum quia!
-                        Voluptatibus rem amet aliquid architecto esse in?</p>
-                </div>
-            </div>
+        <div class="foot-avis">
+          <div class="icon-heart">
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+          </div>
+          <div class="txt-avis">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
+              autem accusantium veniam suscipit reprehenderit voluptatem, at rem
+              consequuntur nesciunt asperiores velit, harum quia! Voluptatibus
+              rem amet aliquid architecto esse in?
+            </p>
+          </div>
         </div>
+      </div>
+      <div class="avis-card">
+        <div class="avatar-member">
+          <img
+            src="../projet_fil_rouge/img/img-mini-1-2.png"
+            alt=""
+            id="img-avatar"
+          />
+        </div>
+        <div class="lib-mission-avis">
+          <p>Titre Mission</p>
+        </div>
+        <div class="foot-avis">
+          <div class="icon-heart">
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+          </div>
+          <div class="txt-avis">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
+              autem accusantium veniam suscipit reprehenderit voluptatem, at rem
+              consequuntur nesciunt asperiores velit, harum quia! Voluptatibus
+              rem amet aliquid architecto esse in?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="avis-card">
+        <div class="avatar-member">
+          <img
+            src="../projet_fil_rouge/img/img-mini-1-2.png"
+            alt=""
+            id="img-avatar"
+          />
+        </div>
+        <div class="lib-mission-avis">
+          <p>Titre Mission</p>
+        </div>
+        <div class="foot-avis">
+          <div class="icon-heart">
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+            <img
+              src="../projet_fil_rouge/img/coeur-vide.png"
+              alt=""
+              id="icon-heart"
+            />
+          </div>
+          <div class="txt-avis">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
+              autem accusantium veniam suscipit reprehenderit voluptatem, at rem
+              consequuntur nesciunt asperiores velit, harum quia! Voluptatibus
+              rem amet aliquid architecto esse in?
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-        <div class="titre-blc-contact">
-            <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
+      <div class="titre-blc-contact">
+        <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
+      </div>
+      <div class="formu">
+        <div class="phr-accroche">
+          <p>
+            Vous représentez une association, un collectif ou vous cherchez à
+            vous engager comme bénévole ?
+          </p>
+          <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
         </div>
-        <div class="formu">
-            <div class="phr-accroche">
-                <p>Vous représentez une association, un collectif
-                    ou vous cherchez à vous engager comme bénévole ?</p>
-                <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
+        <form action="valid.html">
+          <div class="contact-haut">
+            <div class="input-align">
+              <label for="name">NOM</label>
+              <input type="text" id="name" required placeholder="Votre nom" />
             </div>
-            <form action="valid.html">
-                <div class="contact-haut">
-                    <div class="input-align">
-                        <label for="name">NOM</label>
-                        <input type="text" id="name" required placeholder="Votre nom">
-                    </div>
-                    <div class="input-align">
-                        <label for="mail">MAIL</label>
-                        <input type="email" id="mail" required placeholder="Votre email">
-                    </div>
-                </div>
-                <div class="contact-bas">
-                    <div class="input-align">
-                        <label for="message">MESSAGE</label>
-                        <textarea id="message" placeholder="Votre message"></textarea>
-                    </div>
-                    <div class="consent">
-                        <input type="checkbox" name="consent-check" id="">
-                        Je consens à ce que mes informations soient stockées en vue de me répondre
-                    </div>
-                </div>
-                <div class="button-formu">
-                    <input type="button" value="ENVOYER" id="button-formu">
-                </div>
-            </form>
-        </div>
+            <div class="input-align">
+              <label for="mail">MAIL</label>
+              <input
+                type="email"
+                id="mail"
+                required
+                placeholder="Votre email"
+              />
+            </div>
+          </div>
+          <div class="contact-bas">
+            <div class="input-align">
+              <label for="message">MESSAGE</label>
+              <textarea id="message" placeholder="Votre message"></textarea>
+            </div>
+            <div class="consent">
+              <input type="checkbox" name="consent-check" id="" />
+              Je consens à ce que mes informations soient stockées en vue de me
+              répondre
+            </div>
+          </div>
+          <div class="button-formu">
+            <input type="button" value="ENVOYER" id="button-formu" />
+          </div>
+        </form>
+      </div>
     </section>
 
     <section class="high-footer">
-        <div class="contact-details">
-            Nos Coordonnees<br>
+      <div class="contact-details contact-left">
+        Nos Coordonnees
+        <ul>
+          <li>Claire Michelle</li>
+          <li>62 avenue de l’Imagerie</li>
+          <li>69000, Lyon Cedex 09</li>
+          <li>e-mail : claire-michelle@gmail.com</li>
+          <li>whatsApp :</li>
+        </ul>
+      </div>
 
-            Claire Michelle<br>
-            62 avenue de l’Imagerie<br>
-            69000, Lyon Cedex 09<br>
-
-            claire-michelle@gmail.com<br>
-            whatsApp : <br>
-        </div>
-
-        <div class="contact-details">
-            <p>Plan du site : <br>
-                ACCUEIL<br>
-                NOS MISSIONS<br>
-                VOUS & NOUS<br>
-            </p>
-        </div>
+      <div class="contact-details contact-right">
+        Plan du site
+        <ul>
+          <li><a href="#">ACCUEIL</a></li>
+          <li><a href="#">NOS MISSIONS</a></li>
+          <li><a href="#">VOUS & NOUS</a></li>
+        </ul>
+      </div>
     </section>
 
     <footer>
-        <div class="blc-copy">
-            &copy; Tous droits r&eacute;serv&eacute;s - CGU - Les &Eacute;claireurs Solidaires
-        </div>
-        <div class="bloc-picto">
-            <a href="#"><img src="../projet_fil_rouge/img/icon-X.png" class="picto"></a>
-            <a href="#"><img src="../projet_fil_rouge/img/icon-insta.png" class="picto"></a>
-            <a href="#"><img src="../projet_fil_rouge/img/icon-facebook.png" class="picto"></a>
-        </div>
+      <div class="blc-copy">
+        &copy; Tous droits r&eacute;serv&eacute;s - CGU - Les &Eacute;claireurs
+        Solidaires
+      </div>
+      <div class="bloc-picto">
+        <a href="#"
+          ><img src="../projet_fil_rouge/img/icon-X.png" class="picto"
+        /></a>
+        <a href="#"
+          ><img src="../projet_fil_rouge/img/icon-insta.png" class="picto"
+        /></a>
+        <a href="#"
+          ><img src="../projet_fil_rouge/img/icon-facebook.png" class="picto"
+        /></a>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
