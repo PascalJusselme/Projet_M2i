@@ -11,70 +11,79 @@
     />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/style-mobil.css" />
+    <link rel="stylesheet" href="style/style-tab.css" />
     <title>Les &Eacute;claireurs Solidaires</title>
   </head>
 
   <body>
-    <header>
-      <div class="header-mobil">
-        <div class="logo-site-m">
-          <img src="img/logo2_2.png" alt="" class="logo" />
-          <p>Les &Eacute;claireurs <span id="color-word">Solidaires</span></p>
+    <div class="top-site">
+      <header>
+        <div class="header-mobil">
+          <div class="logo-site-m">
+            <img src="img/logo2_2.png" alt="" class="logo" />
+            <p>Les &Eacute;claireurs <span id="color-word">Solidaires</span></p>
+          </div>
+          <div class="header-right-m">
+            <div class="search-icon-m">
+              <img
+                src="img/resultat-de-la-recherche2.png"
+                class="header-picto-m"
+              />
+            </div>
+            <div class="connect-icon-m">
+              <img src="img/utilisateur.png" class="header-picto-m" />
+            </div>
+            <div class="menu-icon-m">
+              <img src="img/menu.png" class="header-picto-m" />
+            </div>
+          </div>
         </div>
-        <div class="header-right-m">
-          <div class="search-icon-m">
-            <img
-              src="img/resultat-de-la-recherche2.png"
-              class="header-picto-m"
-            />
-          </div>
-          <div class="connect-icon-m">
-            <img src="img/utilisateur.png" class="header-picto-m" />
-          </div>
-          <div class="menu-icon-m">
-            <img src="img/menu.png" class="header-picto-m" />
-          </div>
-        </div>
-      </div>
 
-      <div class="header-desktop">
-        <div class="logo-site-d">
-          <img src="img/logo2_2.png" alt="" class="logo" />
+        <div class="header-desktop">
+          <div class="logo-site-d">
+            <img src="img/logo2_2.png" alt="" class="logo" />
+          </div>
+          <div class="header-right-d">
+            <nav class="menu-d">
+              <a href="index.html" class="link-menu-m">ACCUEIL</a>
+              <a href="#" class="link-menu-m">NOS MISSIONS</a>
+              <a href="vous_et_nous.html" class="link-menu-m">VOUS & NOUS</a>
+              <input
+                type="button"
+                value="S'inscrire / Se Connecter"
+                id="btn-connec"
+              />
+            </nav>
+          </div>
         </div>
-        <div class="header-right-d">
-          <nav class="menu-d">
-            <a href="index.html" class="link-menu-m">ACCUEIL</a>
-            <a href="#" class="link-menu-m">NOS MISSIONS</a>
-            <a href="vous_et_nous.html" class="link-menu-m">VOUS & NOUS</a>
-          </nav>
-        </div>
-      </div>
-    </header>
+      </header>
 
-    <section id="hero-section">
-      <div class="titre-site">
-        <h1>Les &Eacute;claireurs <span id="color-word">Solidaires</span></h1>
-      </div>
-      <div class="accroche-site">
-        <p>
-          Passez à l'action citoyenne : trouvez facilement des missions de
-          bénévolat variées, engagez-vous pour l'environnement, la solidarité,
-          l'entraide ou l'éducation, et devenez un acteur du changement social !
-        </p>
-      </div>
-      <div class="bloc-search-d">
-        <input
-          type="search"
-          name="search-bar-desktop"
-          id="search-bar-d"
-          placeholder="Rechercher une mission"
-        />
-      </div>
-      <div class="blc-btn-inscConnec">
-        <input type="button" value="S'inscrire" id="btn-inscri" />
-        <input type="button" value="Se Connecter" id="btn-connec" />
-      </div>
-    </section>
+      <section id="hero-section">
+        <div class="titre-site">
+          <h1>Les &Eacute;claireurs <span id="color-word">Solidaires</span></h1>
+        </div>
+        <div class="accroche-site">
+          <p>
+            Passez à l'action citoyenne : trouvez facilement des missions de
+            bénévolat variées, engagez-vous pour l'environnement, la solidarité,
+            l'entraide ou l'éducation, et devenez un acteur du changement social
+            !
+          </p>
+        </div>
+        <div class="bloc-search-d">
+          <input
+            type="search"
+            name="search-bar-desktop"
+            id="search-bar-d"
+            placeholder="Rechercher une mission"
+          />
+        </div>
+        <div class="blc-btn-inscConnec">
+          <input type="button" value="S'inscrire" id="btn-inscri" />
+          <input type="button" value="Se Connecter" id="btn-connec" />
+        </div>
+      </section>
+    </div>
 
     <section class="bloc-pres">
       <div class="who-are">
@@ -119,253 +128,344 @@
       </div>
     </section>
 
-    <div class="titre-last-mission">
-      <h3>NOS DERNIERES MISSIONS</h3>
-    </div>
-
     <section class="mission">
-      <div class="blc-mission">
-        <div class="entete-miss">
-          <div class="title-miss">
-            <p>Titre</p>
+      <div class="titre-last-mission">
+        <h3>NOS DERNIERES MISSIONS</h3>
+      </div>
+
+      <div id="glob-miss">
+        <div class="blc-mission">
+          <div class="entete-miss">
+            <div class="title-miss">
+              <p>Animation d'atelier cuisine solidaire</p>
+            </div>
+            <div class="cat-miss">
+              <p>SOCIAL</p>
+            </div>
           </div>
-          <div class="cat-miss">
-            <p>Catégorie</p>
+          <div class="detail-miss">
+            <div class="txt-miss">
+              <p><b>Description mission :</b></p>
+              <div class="glob-descrip">
+                <p id="descrip-mission">
+                  Animez un atelier de cuisine participatif destiné aux familles
+                  du quartier. L'objectif est de préparer ensemble un repas
+                  équilibré et économique tout en créant du lien social. Vous
+                  serez accompagné(e) d'une animatrice expérimentée.
+                </p>
+                <div id="btn-more-descrip-mission">
+                  <p id="btn-view-more-down">Voir plus</p>
+                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                </div>
+              </div>
+              <p><b>Profil recherche :</b></p>
+              <div class="glob-profil-mission">
+                <ul id="liste-profil-mission">
+                  <li>Aimer la cuisine et le contact humain</li>
+                  <li>Patience et bienveillance</li>
+                  <li>Aucune compétence culinaire professionnelle requise</li>
+                </ul>
+                <div id="btn-more-descrip-mission">
+                  <p id="btn-view-more-down">Voir plus</p>
+                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                </div>
+              </div>
+              <p><b>Date : </b>Samedi 29 juin 2025 - 14h à 17h</p>
+              <p><b>Duree : </b>3 h</p>
+              <p><b>Lieu : </b>Centre social Gerland, Lyon 7ème</p>
+            </div>
+            <div class="foot-detail">
+              <div class="btn-join-miss">
+                <input type="button" value="Rejoindre la mission" />
+              </div>
+              <div class="see-details">
+                <a href="#">Voir détails</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="detail-miss">
-          <div class="txt-miss">
-            <p><b>Description mission :</b></p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque quasi architecto maiores doloribus, minima earum
-              eveniet! Suscipit magni eum molestias! Officiis eius velit cum. A
-              error dignissimos consequuntur veritatis expedita.
-            </p>
-          </div>
-          <div class="foot-detail">
-            <div class="btn-join-miss">
-              <input type="button" value="Rejoindre la mission" />
+        <div class="blc-mission">
+          <div class="entete-miss">
+            <div class="title-miss">
+              <p>Plantation d'arbres urbains</p>
             </div>
-            <div class="see-details">
-              <a href="#">Voir détails</a>
+            <div class="cat-miss">
+              <p>ECOLOGIQUE</p>
+            </div>
+          </div>
+          <div class="detail-miss">
+            <div class="txt-miss">
+              <p><b>Description mission :</b></p>
+              <div class="glob-descrip">
+                <p id="descrip-mission">
+                  Participez à la végétalisation de Lyon en plantant des arbres
+                  fruitiers dans le cadre du projet "Forêt Urbaine". Cette
+                  action s'inscrit dans la lutte contre les îlots de chaleur et
+                  la promotion de la biodiversité en ville.
+                </p>
+                <div id="btn-more-descrip-mission">
+                  <p id="btn-view-more-down">Voir plus</p>
+                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                </div>
+              </div>
+              <p><b>Profil recherche :</b></p>
+              <div class="glob-profil-mission">
+                <ul id="liste-profil-mission">
+                  <li>Sensibilité écologique</li>
+                  <li>Bonne condition physique</li>
+                  <li>Vêtements adaptés au jardinage</li>
+                </ul>
+                <div id="btn-more-descrip-mission">
+                  <p id="btn-view-more-down">Voir plus</p>
+                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                </div>
+              </div>
+              <p><b>Date : </b>Dimanche 7 juillet 2025 - 9h à 13h</p>
+              <p><b>Duree : </b>4 h</p>
+              <p><b>Lieu : </b>Parc de la Tête d'Or, Lyon 6ème</p>
+            </div>
+            <div class="foot-detail">
+              <div class="btn-join-miss">
+                <input type="button" value="Rejoindre la mission" />
+              </div>
+              <div class="see-details">
+                <a href="#">Voir détails</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blc-mission last">
+          <div class="entete-miss">
+            <div class="title-miss">
+              <p>Accompagnement festival de rue</p>
+            </div>
+            <div class="cat-miss">
+              <p>CULTUREL</p>
+            </div>
+          </div>
+          <div class="detail-miss">
+            <div class="txt-miss">
+              <p><b>Description mission :</b></p>
+              <div class="glob-descrip">
+                <p id="descrip-mission">
+                  Soutenez l'organisation du Festival des Arts de Rue en
+                  accueillant le public, en guidant les visiteurs et en
+                  assistant les artistes. Une belle occasion de vivre
+                  l'événement de l'intérieur tout en contribuant à sa réussite.
+                </p>
+                <div id="btn-more-descrip-mission">
+                  <p id="btn-view-more-down">Voir plus</p>
+                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                </div>
+              </div>
+              <p><b>Profil recherche :</b></p>
+              <div class="glob-profil-mission">
+                <ul id="liste-profil-mission">
+                  <li>Goût pour la culture et les arts</li>
+                  <li>Sens du contact et de l'accueil</li>
+                  <li>Disponibilité en soirée</li>
+                </ul>
+                <div id="btn-more-descrip-mission">
+                  <p id="btn-view-more-down">Voir plus</p>
+                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                </div>
+              </div>
+              <p><b>Date : </b>Vendredi 12 juillet 2025 - 16h à 22h</p>
+              <p><b>Duree : </b>6 h</p>
+              <p><b>Lieu : </b>Place Bellecour, Lyon 2ème</p>
+            </div>
+            <div class="foot-detail">
+              <div class="btn-join-miss">
+                <input type="button" value="Rejoindre la mission" />
+              </div>
+              <div class="see-details">
+                <a href="#">Voir détails</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="blc-mission">
-        <div class="entete-miss">
-          <div class="title-miss">
-            <p>Titre</p>
-          </div>
-          <div class="cat-miss">
-            <p>Catégorie</p>
-          </div>
-        </div>
-        <div class="detail-miss">
-          <div class="txt-miss">
-            <p><b>Description mission :</b></p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque quasi architecto maiores doloribus, minima earum
-              eveniet! Suscipit magni eum molestias! Officiis eius velit cum. A
-              error dignissimos consequuntur veritatis expedita.
-            </p>
-          </div>
-          <div class="foot-detail">
-            <div class="btn-join-miss">
-              <input type="button" value="Rejoindre la mission" />
-            </div>
-            <div class="see-details">
-              <a href="#">Voir détails</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="blc-mission">
-        <div class="entete-miss">
-          <div class="title-miss">
-            <p>Titre</p>
-          </div>
-          <div class="cat-miss">
-            <p>Catégorie</p>
-          </div>
-        </div>
-        <div class="detail-miss">
-          <div class="txt-miss">
-            <p><b>Description mission :</b></p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque quasi architecto maiores doloribus, minima earum
-              eveniet! Suscipit magni eum molestias! Officiis eius velit cum. A
-              error dignissimos consequuntur veritatis expedita.
-            </p>
-          </div>
-          <div class="foot-detail">
-            <div class="btn-join-miss">
-              <input type="button" value="Rejoindre la mission" />
-            </div>
-            <div class="see-details">
-              <a href="#">Voir détails</a>
-            </div>
-          </div>
-        </div>
+
+      <div class="btn-more-miss">
+        <a href="#" class="view-more-miss">Voir plus de missions ...</a>
       </div>
     </section>
 
-    <div class="btn-more-miss">
-      <a href="#" class="view-more-miss">Voir plus de missions ...</a>
-    </div>
-
-    <div class="titre-temoignage">
-      <h3>T&Eacute;MOIGNAGES</h3>
-    </div>
-
     <section class="temoignages">
-      <div class="avis-card">
-        <div class="avatar-member">
-          <img
-            src="../projet_fil_rouge/img/img-mini-1-2.png"
-            alt=""
-            id="img-avatar"
-          />
-        </div>
-        <div class="lib-mission-avis">
-          <p>Titre Mission</p>
-        </div>
-        <div class="foot-avis">
-          <div class="icon-heart">
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-          </div>
-          <div class="txt-avis">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
-              autem accusantium veniam suscipit reprehenderit voluptatem, at rem
-              consequuntur nesciunt asperiores velit, harum quia! Voluptatibus
-              rem amet aliquid architecto esse in?
-            </p>
-          </div>
-        </div>
+      <div class="titre-temoignage">
+        <h3>T&Eacute;MOIGNAGES</h3>
       </div>
-      <div class="avis-card">
-        <div class="avatar-member">
-          <img
-            src="../projet_fil_rouge/img/img-mini-1-2.png"
-            alt=""
-            id="img-avatar"
-          />
-        </div>
-        <div class="lib-mission-avis">
-          <p>Titre Mission</p>
-        </div>
-        <div class="foot-avis">
-          <div class="icon-heart">
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
+      <div id="glob-card">
+        <div class="avis-card">
+          <div class="avis-card-glob">
+            <div class="entete-avis">
+              <div class="avatar-member">
+                <img
+                  src="../projet_fil_rouge/img/img-mini-1-2.png"
+                  alt=""
+                  id="img-avatar"
+                />
+              </div>
+              <div class="lib-mission-avis">
+                <p>Sportif et solidaire</p>
+              </div>
+            </div>
+            <div class="foot-avis">
+              <div class="icon-heart">
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+              </div>
+              <div class="txt-avis">
+                <p>Cammille D.</p>
+                <br />
+                <p>
+                  Super événement ! J'étais au ravitaillement et l'ambiance
+                  était électrique. Maxime avait bien organisé les rotations.
+                  Lever tôt mais ça vaut le coup de voir tous ces coureurs se
+                  dépasser pour la bonne cause. Équipe de bénévoles au top !
+                </p>
+                <br />
+                <p><b>Date : </b>30 juillet 2025</p>
+              </div>
+            </div>
           </div>
-          <div class="txt-avis">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
-              autem accusantium veniam suscipit reprehenderit voluptatem, at rem
-              consequuntur nesciunt asperiores velit, harum quia! Voluptatibus
-              rem amet aliquid architecto esse in?
-            </p>
+        </div>
+        <div class="avis-card">
+          <div class="avis-card-glob">
+            <div class="entete-avis">
+              <div class="avatar-member">
+                <img
+                  src="../projet_fil_rouge/img/img-mini-1-2.png"
+                  alt=""
+                  id="img-avatar"
+                />
+              </div>
+              <div class="lib-mission-avis">
+                <p>Magie avec les enfants</p>
+              </div>
+            </div>
+            <div class="foot-avis">
+              <div class="icon-heart">
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-vide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+              </div>
+              <div class="txt-avis">
+                <p>Laura B.</p>
+                <br />
+                <p>
+                  Quel bonheur de voir les yeux des enfants briller ! Sophie, la
+                  bibliothécaire, nous avait bien conseillés sur les livres.
+                  L'espace était parfait et les enfants très attentifs. J'ai
+                  pris autant de plaisir qu'eux. Mission parfaite pour moi !
+                </p>
+                <br />
+                <p><b>Date : </b>26 juin 2025</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="avis-card">
-        <div class="avatar-member">
-          <img
-            src="../projet_fil_rouge/img/img-mini-1-2.png"
-            alt=""
-            id="img-avatar"
-          />
-        </div>
-        <div class="lib-mission-avis">
-          <p>Titre Mission</p>
-        </div>
-        <div class="foot-avis">
-          <div class="icon-heart">
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-            <img
-              src="../projet_fil_rouge/img/coeur-vide.png"
-              alt=""
-              id="icon-heart"
-            />
-          </div>
-          <div class="txt-avis">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
-              autem accusantium veniam suscipit reprehenderit voluptatem, at rem
-              consequuntur nesciunt asperiores velit, harum quia! Voluptatibus
-              rem amet aliquid architecto esse in?
-            </p>
+
+        <div class="avis-card last">
+          <div class="avis-card-glob">
+            <div class="entete-avis">
+              <div class="avatar-member">
+                <img
+                  src="../projet_fil_rouge/img/img-mini-1-2.png"
+                  alt=""
+                  id="img-avatar"
+                />
+              </div>
+              <div class="lib-mission-avis">
+                <p>Accompagnement Festival de rue</p>
+              </div>
+            </div>
+            <div class="foot-avis">
+              <div class="icon-heart">
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-vide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-vide.png"
+                  alt=""
+                  id="icon-heart"
+                />
+              </div>
+              <div class="txt-avis">
+                <p>Antoine K.</p>
+                <br />
+                <p>
+                  Festival génial ! J'étais à la technique et c'était intense.
+                  Quelques moments de stress car pas mal d'imprévus, mais
+                  l'équipe était solidaire. Julie nous a bien soutenus. C'est le
+                  genre de mission où on apprend beaucoup !
+                </p>
+                <br />
+                <p><b>Date : </b>13 août 2025</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -456,5 +556,6 @@
         /></a>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

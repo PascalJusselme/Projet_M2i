@@ -1,3 +1,0 @@
-comment faire pour que mes bloc presentation soient
-    a la meme hauteur si le taille est plus grand d'un cote que de l'autre
-

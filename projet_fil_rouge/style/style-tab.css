@@ -1,0 +1,24 @@
+@media all and (max-width: 1200px) and (min-width: 751px) {
+  .header-desktop {
+    background-color: #6f9130;
+  }
+
+  .mission {
+    width: 100%;
+  }
+
+  .blc-mission {
+    width: 45%;
+  }
+
+  #glob-card{
+    margin-top: 5%;
+  }
+  .avis-card {
+    width: 45%;
+  }
+
+  .last {
+    display: none;
+  }
+}
