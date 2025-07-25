@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="style/style-mobil.css" />
-    <link rel="stylesheet" href="style/style-tab.css" />
+    <link rel="stylesheet" href="style/style-mobil-copy.css" />
+    <link rel="stylesheet" href="style/style-tab-copy.css" />
     <title>Les &Eacute;claireurs Solidaires</title>
   </head>
 
@@ -51,7 +48,7 @@
               <input
                 type="button"
                 value="S'inscrire / Se Connecter"
-                id="btn-connec"
+                id="btn-connec-nav"
               />
             </nav>
           </div>
@@ -70,6 +67,10 @@
             !
           </p>
         </div>
+        <div class="blc-btn-inscConnec">
+          <input type="button" value="S'inscrire" id="btn-inscri" />
+          <input type="button" value="Se Connecter" id="btn-connec" />
+        </div>
         <div class="bloc-search-d">
           <input
             type="search"
@@ -77,10 +78,6 @@
             id="search-bar-d"
             placeholder="Rechercher une mission"
           />
-        </div>
-        <div class="blc-btn-inscConnec">
-          <input type="button" value="S'inscrire" id="btn-inscri" />
-          <input type="button" value="Se Connecter" id="btn-connec" />
         </div>
       </section>
     </div>
@@ -291,10 +288,57 @@
       </div>
     </section>
 
+    <section id="contact">
+      <div class="titre-blc-contact">
+        <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
+      </div>
+      <div class="formu">
+        <div class="phr-accroche">
+          <p>
+            Vous représentez une association, un collectif ou vous cherchez à
+            vous engager comme bénévole ?
+          </p>
+          <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
+        </div>
+        <form action="valid.html">
+          <div class="contact-haut">
+            <div class="input-align">
+              <label for="name">NOM</label>
+              <input type="text" id="name" required placeholder="Votre nom" />
+            </div>
+            <div class="input-align">
+              <label for="mail">MAIL</label>
+              <input
+                type="email"
+                id="mail"
+                required
+                placeholder="Votre email"
+              />
+            </div>
+          </div>
+          <div class="contact-bas">
+            <div class="mess-area">
+              <label for="message">MESSAGE</label>
+              <textarea id="message" placeholder="Votre message"></textarea>
+            </div>
+            <div class="consent">
+              <input type="checkbox" name="consent-check" id="" />
+              Je consens à ce que mes informations soient stockées en vue de me
+              répondre
+            </div>
+          </div>
+          <div class="button-formu">
+            <input type="button" value="ENVOYER" id="button-formu" />
+          </div>
+        </form>
+      </div>
+    </section>
+
     <section class="temoignages">
       <div class="titre-temoignage">
         <h3>T&Eacute;MOIGNAGES</h3>
       </div>
+
       <div id="glob-card">
         <div class="avis-card">
           <div class="avis-card-glob">
@@ -410,7 +454,6 @@
             </div>
           </div>
         </div>
-
         <div class="avis-card last">
           <div class="avis-card-glob">
             <div class="entete-avis">
@@ -471,91 +514,47 @@
       </div>
     </section>
 
-    <section id="contact">
-      <div class="titre-blc-contact">
-        <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
-      </div>
-      <div class="formu">
-        <div class="phr-accroche">
-          <p>
-            Vous représentez une association, un collectif ou vous cherchez à
-            vous engager comme bénévole ?
-          </p>
-          <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
-        </div>
-        <form action="valid.html">
-          <div class="contact-haut">
-            <div class="input-align">
-              <label for="name">NOM</label>
-              <input type="text" id="name" required placeholder="Votre nom" />
-            </div>
-            <div class="input-align">
-              <label for="mail">MAIL</label>
-              <input
-                type="email"
-                id="mail"
-                required
-                placeholder="Votre email"
-              />
-            </div>
-          </div>
-          <div class="contact-bas">
-            <div class="input-align">
-              <label for="message">MESSAGE</label>
-              <textarea id="message" placeholder="Votre message"></textarea>
-            </div>
-            <div class="consent">
-              <input type="checkbox" name="consent-check" id="" />
-              Je consens à ce que mes informations soient stockées en vue de me
-              répondre
-            </div>
-          </div>
-          <div class="button-formu">
-            <input type="button" value="ENVOYER" id="button-formu" />
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section class="high-footer">
-      <div class="contact-details contact-left">
-        Nos Coordonnees
-        <ul>
-          <li>Claire Michelle</li>
-          <li>62 avenue de l’Imagerie</li>
-          <li>69000, Lyon Cedex 09</li>
-          <li>e-mail : claire-michelle@gmail.com</li>
-          <li>whatsApp :</li>
-        </ul>
-      </div>
-
-      <div class="contact-details contact-right">
-        Plan du site
-        <ul>
-          <li><a href="#">ACCUEIL</a></li>
-          <li><a href="#">NOS MISSIONS</a></li>
-          <li><a href="#">VOUS & NOUS</a></li>
-        </ul>
-      </div>
-    </section>
-
     <footer>
-      <div class="blc-copy">
-        &copy; Tous droits r&eacute;serv&eacute;s - CGU - Les &Eacute;claireurs
-        Solidaires
-      </div>
-      <div class="bloc-picto">
-        <a href="#"
-          ><img src="../projet_fil_rouge/img/icon-X.png" class="picto"
-        /></a>
-        <a href="#"
-          ><img src="../projet_fil_rouge/img/icon-insta.png" class="picto"
-        /></a>
-        <a href="#"
-          ><img src="../projet_fil_rouge/img/icon-facebook.png" class="picto"
-        /></a>
+      <section class="high-footer">
+        <div class="contact-details contact-left">
+          Nos Coordonnees
+          <ul>
+            <li>Claire Michelle</li>
+            <li>62 avenue de l’Imagerie</li>
+            <li>69000, Lyon Cedex 09</li>
+            <li>e-mail : claire-michelle@gmail.com</li>
+            <li>whatsApp :</li>
+          </ul>
+        </div>
+
+        <div class="contact-details contact-right">
+          Plan du site
+          <ul>
+            <li><a href="#">ACCUEIL</a></li>
+            <li><a href="#">NOS MISSIONS</a></li>
+            <li><a href="#">VOUS & NOUS</a></li>
+          </ul>
+        </div>
+      </section>
+      <div class="bottom-footer">
+        <div class="blc-copy">
+          &copy; Tous droits r&eacute;serv&eacute;s - CGU - Les
+          &Eacute;claireurs Solidaires
+        </div>
+        <div class="bloc-picto">
+          <a href="#"
+            ><img src="../projet_fil_rouge/img/icon-X.png" class="picto"
+          /></a>
+          <a href="#"
+            ><img src="../projet_fil_rouge/img/icon-insta.png" class="picto"
+          /></a>
+          <a href="#"
+            ><img src="../projet_fil_rouge/img/icon-facebook.png" class="picto"
+          /></a>
+        </div>
       </div>
     </footer>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

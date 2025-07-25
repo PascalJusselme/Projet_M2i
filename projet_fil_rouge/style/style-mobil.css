@@ -1,12 +1,8 @@
-@media all and (max-width: 750px) {
-  .containers {
-    width: 100vw;
-    margin: 0;
-  }
-
+@media all and (max-width: 860px) {
   .header-mobil {
     display: flex;
     justify-content: space-between;
+    height: 50px;
     background-color: white;
   }
 
@@ -24,7 +20,6 @@
     width: 70%;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
   }
 
   .logo-site-m p {
@@ -54,15 +49,8 @@
     border-radius: 50%;
   }
 
-  .bloc-pres {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .who-are,
-  .our-vision {
-    width: 100%;
-    margin-bottom: 1%;
+  #hero-section{
+    margin-top: 50px;
   }
 
   .mission {
@@ -70,42 +58,45 @@
     width: 100%;
   }
 
-  .blc-mission {
-    width: 45%;
+  #hero-section {
+    margin-top: 50px;
   }
 
-  .blc-mini-miss {
+  #glob-miss,
+  #glob-card {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .bloc-pres {
+    width: 95%;
+    font-size: 12px;
+  }
+
+  #font-pres,
+  #font-vision {
+    height: auto;
+  }
+
+  .blc-mission {
     width: 100%;
-    margin: 2.5%;
+  }
+
+  .blc-mini-miss,
+  .avis-card {
+    width: 100%;
+    margin: 2.5% 0;
   }
 
   .avis-card {
-    width: 45%;
+    margin-top: 55px;
   }
 
   .last {
     display: none;
   }
 
-  .contact-left,
-  .contact-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .input-align {
-    margin-bottom: 2%;
-  }
-
-  .button-formu {
-    text-align: center;
-    margin: 10% 0;
+  .btn-more-miss {
+    width: 80%;
   }
 }

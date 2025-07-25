@@ -28,4 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn_more_descrip_down[i].classList.toggle("visible");
     });
   }
+
+
+  
 });
