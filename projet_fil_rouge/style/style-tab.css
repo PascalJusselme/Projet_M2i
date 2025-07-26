@@ -7,21 +7,23 @@
   #font-pres,
   #font-vision {
     height: auto;
+    padding: 2.5%;
   }
 
-  .last {
-    display: none;
+  #font-vision ul {
+    width: 80%;
   }
 
-  .blc-mission {
-    width: 48%;
-  }
-
+  .blc-mission,
   .avis-card {
     width: 48%;
   }
 
   .btn-more-miss {
     width: 80%;
+  }
+
+  .last {
+    display: none;
   }
 }
