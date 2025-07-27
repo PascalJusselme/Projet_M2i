@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function openBurgerMenu() {
+  document.querySelector('.nav_bar').classList.remove('close');
+  document.querySelector('.overlay_menu_mobile').classList.remove('close');
   document.querySelector('.nav_bar').classList.add('open');
   document.querySelector('.overlay_menu_mobile').classList.add('open');
   document.querySelector('.mobile_title').classList.add('close');
@@ -73,5 +75,7 @@ function openBurgerMenu() {
 function closeBurgerMenu() {
   document.querySelector('.nav_bar').classList.remove('open');
   document.querySelector('.overlay_menu_mobile').classList.remove('open');
+  document.querySelector('.nav_bar').classList.add('close');
+  document.querySelector('.overlay_menu_mobile').classList.add('close');
   document.querySelector('.mobile_title').classList.remove('close');
 }
