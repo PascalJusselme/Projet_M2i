@@ -3,88 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="style/style-mobil.css" />
+    <link rel="stylesheet" href="style/style-mobile.css" />
     <link rel="stylesheet" href="style/style-tab.css" />
     <title>Les &Eacute;claireurs Solidaires</title>
   </head>
 
   <body>
-    <div class="top-site">
-      <header>
-        <div class="header-mobil">
-          <div class="logo-site-m">
-            <img src="img/logo2_2.png" alt="" class="logo" />
-            <p>Les &Eacute;claireurs <span id="color-word">Solidaires</span></p>
-          </div>
-          <div class="header-right-m">
-            <div class="search-icon-m">
-              <img
-                src="img/resultat-de-la-recherche2.png"
-                class="header-picto-m"
-              />
-            </div>
-            <div class="connect-icon-m">
-              <img src="img/utilisateur.png" class="header-picto-m" />
-            </div>
-            <div class="menu-icon-m">
-              <img src="img/menu.png" class="header-picto-m" />
-            </div>
-          </div>
-        </div>
-
-        <div class="header-desktop">
-          <div class="logo-site-d">
-            <img src="img/logo2_2.png" alt="" class="logo" />
-          </div>
-          <div class="header-right-d">
-            <nav class="menu-d">
-              <a href="index.html" class="link-menu-m">ACCUEIL</a>
-              <a href="#" class="link-menu-m">NOS MISSIONS</a>
-              <a href="vous_et_nous.html" class="link-menu-m">VOUS & NOUS</a>
-              <input
-                type="button"
-                value="S'inscrire / Se Connecter"
-                id="btn-connec-nav"
-              />
-            </nav>
-          </div>
-        </div>
-      </header>
-
-      <section id="hero-section">
-        <div class="titre-site">
-          <h1>Les &Eacute;claireurs <span id="color-word">Solidaires</span></h1>
-        </div>
-        <div class="accroche-site">
-          <p>
-            Passez à l'action citoyenne : trouvez facilement des missions de
-            bénévolat variées, engagez-vous pour l'environnement, la solidarité,
-            l'entraide ou l'éducation, et devenez un acteur du changement social
-            !
-          </p>
-        </div>
-        <div class="blc-btn-inscConnec">
-          <input type="button" value="S'inscrire" id="btn-inscri" />
-          <input type="button" value="Se Connecter" id="btn-connec" />
-        </div>
-        <div class="bloc-search-d">
-          <input
-            type="search"
-            name="search-bar-desktop"
-            id="search-bar-d"
-            placeholder="Rechercher une mission"
-          />
-        </div>
-      </section>
+    <div id="modal_container" class="modal_container">
+      <div class="modal_content">
+        <span id="close_modal_btn" class="close_btn">x</span>
+        <h2>Titre de la Modale</h2>
+        <p>
+          Ceci est le contenu de la fenêtre modale. Vous pouvez y mettre du
+          texte, des images, ou même un formulaire !
+        </p>
+      </div>
     </div>
+    <div class="overlay_menu_mobile"></div>
+    <header>
+      <div>
+        <img src="img/logo2_2.png" alt="Logo du site" class="logo_d logo_m" />
+      </div>
+      <h1 class="mobile_title">
+        Les &Eacute;claireurs <span id="color_word">Solidaires</span>
+      </h1>
+      <nav class="nav_bar">
+        <div class="btn_nav_close">
+          <img src="img/btn-right.png" id="btn_close" />
+        </div>
+        <ul class="nav_menu">
+          <h1 class="burger_title">
+            Les &Eacute;claireurs <span id="color_word">Solidaires</span>
+          </h1>
+          <li class="menu_link">
+            <a href="index.html">ACCUEIL</a>
+          </li>
+          <li class="menu_link">
+            <a href="#">NOS MISSIONS</a>
+          </li>
+          <li class="menu_link">
+            <a href="#">VOUS & NOUS</a>
+          </li>
+          <li class="menu_link">
+            <input
+              type="button"
+              value="S'inscrire / Se Connecter"
+              class="btn_connec_nav btn_connection"
+            />
+          </li>
+        </ul>
+      </nav>
+      <div class="menu_icon_m">
+        <img src="img/hamb_menu.png" id="picto_burger" />
+      </div>
+    </header>
 
-    <section class="bloc-pres">
-      <div class="who-are">
-        <div id="font-pres">
+    <section id="hero_section">
+      <div class="titre_site">
+        <h1>Les &Eacute;claireurs <span id="color_word">Solidaires</span></h1>
+      </div>
+      <div class="accroche_site">
+        <p>
+          Passez à l'action citoyenne : trouvez facilement des missions de
+          bénévolat variées, engagez-vous pour l'environnement, la solidarité,
+          l'entraide ou l'éducation, et devenez un acteur du changement social !
+        </p>
+      </div>
+      <div class="blc_btn_connec">
+        <input
+          type="button"
+          value="S'inscrire"
+          class="btn_inscri btn_connection"
+        />
+        <input
+          type="button"
+          value="Se Connecter"
+          class="btn_connec btn_connection"
+        />
+      </div>
+      <div class="bloc_search">
+        <input
+          type="search"
+          name="search_bar_hero"
+          id="search_bar"
+          placeholder="Rechercher une mission"
+        />
+      </div>
+    </section>
+
+    <section class="bloc_pres">
+      <div class="who_are">
+        <div id="font_pres">
           <h3>Qui Sommes Nous ?</h3>
           <p>
             "Les Éclaireurs Solidaires" est une association loi 1901, fondée à
@@ -97,16 +113,16 @@
             opportunités de bénévolat ponctuelles ou régulières dans les
             domaines social, écologique et culturel.
           </p>
-          <div class="btn-see-more">
-            <input type="button" value="En savoir plus" id="btn-see-more" />
+          <div class="btn_see_more">
+            <input type="button" value="En savoir plus" id="btn_see_more" />
           </div>
         </div>
-        <div class="img-pres">
+        <div class="img_pres">
           <img src="../projet_fil_rouge/img/img-asso3.jpg" />
         </div>
       </div>
-      <div class="our-vision">
-        <div id="font-vision">
+      <div class="our_vision">
+        <div id="font_vision">
           <h3>Nos chiffres :</h3>
           <ul>
             <li>1 200 bénévoles actifs depuis notre création</li>
@@ -115,167 +131,167 @@
             <li>+ 40 partenaires associatifs à Lyon et sa métropole</li>
             <li>3 domaines d’actions : social, écologique, cullturel</li>
           </ul>
-          <div class="btn-see-more">
-            <input type="button" value="En savoir plus" id="btn-see-more" />
+          <div class="btn_see_more">
+            <input type="button" value="En savoir plus" id="btn_see_more" />
           </div>
         </div>
-        <div class="img-vision">
+        <div class="img_vision">
           <img src="../projet_fil_rouge/img/img-asso4.jpg" />
         </div>
       </div>
     </section>
 
     <section class="mission">
-      <div class="titre-last-mission">
+      <div class="titre_last_mission">
         <h3>NOS DERNIERES MISSIONS</h3>
       </div>
 
-      <div id="glob-miss">
-        <div class="blc-mission">
-          <div class="entete-miss">
-            <div class="title-miss">
+      <div id="glob_miss">
+        <div class="blc_mission">
+          <div class="entete_miss">
+            <div class="title_miss">
               <p>Animation d'atelier cuisine solidaire</p>
             </div>
-            <div class="cat-miss">
+            <div class="cat_miss">
               <p>SOCIAL</p>
             </div>
           </div>
-          <div class="detail-miss">
-            <div class="txt-miss">
+          <div class="detail_miss">
+            <div class="txt_miss">
               <p><b>Description mission :</b></p>
-              <div class="glob-descrip">
-                <p id="descrip-mission">
+              <div class="glob_descrip">
+                <p id="descrip_mission">
                   Animez un atelier de cuisine participatif destiné aux familles
                   du quartier. L'objectif est de préparer ensemble un repas
                   équilibré et économique tout en créant du lien social. Vous
                   serez accompagné(e) d'une animatrice expérimentée.
                 </p>
-                <div id="btn-more-descrip-mission">
-                  <p id="btn-view-more-down">Voir plus</p>
-                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                <div id="btn_more_descrip_mission">
+                  <p id="btn_view_more_down">Voir plus</p>
+                  <p id="btn_view_more_up" class="visible">Voir moins</p>
                 </div>
               </div>
               <p><b>Profil recherche :</b></p>
-              <div class="glob-profil-mission">
-                <ul id="liste-profil-mission">
+              <div class="glob_profil_mission">
+                <ul id="liste_profil_mission">
                   <li>Aimer la cuisine et le contact humain</li>
                   <li>Patience et bienveillance</li>
                   <li>Aucune compétence culinaire professionnelle requise</li>
                 </ul>
-                <div id="btn-more-descrip-mission">
-                  <p id="btn-view-more-down">Voir plus</p>
-                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                <div id="btn_more_descrip_mission">
+                  <p id="btn_view_more_down">Voir plus</p>
+                  <p id="btn_view_more_up" class="visible">Voir moins</p>
                 </div>
               </div>
               <p><b>Date : </b>Samedi 29 juin 2025 - 14h à 17h</p>
               <p><b>Duree : </b>3 h</p>
               <p><b>Lieu : </b>Centre social Gerland, Lyon 7ème</p>
             </div>
-            <div class="foot-detail">
-              <div class="btn-join-miss">
+            <div class="foot_detail">
+              <div class="btn_join_miss">
                 <input type="button" value="Rejoindre la mission" />
               </div>
-              <div class="see-details">
+              <div class="see_details">
                 <a href="#">Voir détails</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="blc-mission">
-          <div class="entete-miss">
-            <div class="title-miss">
+        <div class="blc_mission">
+          <div class="entete_miss">
+            <div class="title_miss">
               <p>Plantation d'arbres urbains</p>
             </div>
-            <div class="cat-miss">
+            <div class="cat_miss">
               <p>ECOLOGIQUE</p>
             </div>
           </div>
-          <div class="detail-miss">
-            <div class="txt-miss">
+          <div class="detail_miss">
+            <div class="txt_miss">
               <p><b>Description mission :</b></p>
-              <div class="glob-descrip">
-                <p id="descrip-mission">
+              <div class="glob_descrip">
+                <p id="descrip_mission">
                   Participez à la végétalisation de Lyon en plantant des arbres
                   fruitiers dans le cadre du projet "Forêt Urbaine". Cette
                   action s'inscrit dans la lutte contre les îlots de chaleur et
                   la promotion de la biodiversité en ville.
                 </p>
-                <div id="btn-more-descrip-mission">
-                  <p id="btn-view-more-down">Voir plus</p>
-                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                <div id="btn_more_descrip_mission">
+                  <p id="btn_view_more_down">Voir plus</p>
+                  <p id="btn_view_more_up" class="visible">Voir moins</p>
                 </div>
               </div>
               <p><b>Profil recherche :</b></p>
-              <div class="glob-profil-mission">
-                <ul id="liste-profil-mission">
+              <div class="glob_profil_mission">
+                <ul id="liste_profil_mission">
                   <li>Sensibilité écologique</li>
                   <li>Bonne condition physique</li>
                   <li>Vêtements adaptés au jardinage</li>
                 </ul>
-                <div id="btn-more-descrip-mission">
-                  <p id="btn-view-more-down">Voir plus</p>
-                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                <div id="btn_more_descrip_mission">
+                  <p id="btn_view_more_down">Voir plus</p>
+                  <p id="btn_view_more_up" class="visible">Voir moins</p>
                 </div>
               </div>
               <p><b>Date : </b>Dimanche 7 juillet 2025 - 9h à 13h</p>
               <p><b>Duree : </b>4 h</p>
               <p><b>Lieu : </b>Parc de la Tête d'Or, Lyon 6ème</p>
             </div>
-            <div class="foot-detail">
-              <div class="btn-join-miss">
+            <div class="foot_detail">
+              <div class="btn_join_miss">
                 <input type="button" value="Rejoindre la mission" />
               </div>
-              <div class="see-details">
+              <div class="see_details">
                 <a href="#">Voir détails</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="blc-mission last">
-          <div class="entete-miss">
+        <div class="blc_mission last">
+          <div class="entete_miss">
             <div class="title-miss">
               <p>Accompagnement festival de rue</p>
             </div>
-            <div class="cat-miss">
+            <div class="cat_miss">
               <p>CULTUREL</p>
             </div>
           </div>
-          <div class="detail-miss">
-            <div class="txt-miss">
+          <div class="detail_miss">
+            <div class="txt_miss">
               <p><b>Description mission :</b></p>
-              <div class="glob-descrip">
-                <p id="descrip-mission">
+              <div class="glob_descrip">
+                <p id="descrip_mission">
                   Soutenez l'organisation du Festival des Arts de Rue en
                   accueillant le public, en guidant les visiteurs et en
                   assistant les artistes. Une belle occasion de vivre
                   l'événement de l'intérieur tout en contribuant à sa réussite.
                 </p>
-                <div id="btn-more-descrip-mission">
-                  <p id="btn-view-more-down">Voir plus</p>
-                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                <div id="btn_more_descrip_mission">
+                  <p id="btn_view_more_down">Voir plus</p>
+                  <p id="btn_view_more_up" class="visible">Voir moins</p>
                 </div>
               </div>
               <p><b>Profil recherche :</b></p>
-              <div class="glob-profil-mission">
-                <ul id="liste-profil-mission">
+              <div class="glob_profil_mission">
+                <ul id="liste_profil_mission">
                   <li>Goût pour la culture et les arts</li>
                   <li>Sens du contact et de l'accueil</li>
                   <li>Disponibilité en soirée</li>
                 </ul>
-                <div id="btn-more-descrip-mission">
-                  <p id="btn-view-more-down">Voir plus</p>
-                  <p id="btn-view-more-up" class="visible">Voir moins</p>
+                <div id="btn_more_descrip_mission">
+                  <p id="btn_view_more_down">Voir plus</p>
+                  <p id="btn_view_more_up" class="visible">Voir moins</p>
                 </div>
               </div>
               <p><b>Date : </b>Vendredi 12 juillet 2025 - 16h à 22h</p>
               <p><b>Duree : </b>6 h</p>
               <p><b>Lieu : </b>Place Bellecour, Lyon 2ème</p>
             </div>
-            <div class="foot-detail">
-              <div class="btn-join-miss">
+            <div class="foot_detail">
+              <div class="btn_join_miss">
                 <input type="button" value="Rejoindre la mission" />
               </div>
-              <div class="see-details">
+              <div class="see_details">
                 <a href="#">Voir détails</a>
               </div>
             </div>
@@ -283,17 +299,17 @@
         </div>
       </div>
 
-      <div class="btn-more-miss">
-        <a href="#" class="view-more-miss">Voir plus de missions ...</a>
+      <div class="btn_more_miss">
+        <a href="#" class="view_more_miss">Voir plus de missions ...</a>
       </div>
     </section>
 
     <section id="contact">
-      <div class="titre-blc-contact">
+      <div class="titre_blc_contact">
         <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
       </div>
       <div class="formu">
-        <div class="phr-accroche">
+        <div class="phr_accroche">
           <p>
             Vous représentez une association, un collectif ou vous cherchez à
             vous engager comme bénévole ?
@@ -301,12 +317,12 @@
           <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
         </div>
         <form action="valid.html">
-          <div class="contact-haut">
-            <div class="input-align">
+          <div class="contact_haut">
+            <div class="input_align">
               <label for="name">NOM</label>
               <input type="text" id="name" required placeholder="Votre nom" />
             </div>
-            <div class="input-align">
+            <div class="input_align">
               <label for="mail">MAIL</label>
               <input
                 type="email"
@@ -316,73 +332,75 @@
               />
             </div>
           </div>
-          <div class="contact-bas">
-            <div class="mess-area">
+          <div class="contact_bas">
+            <div class="mess_area">
               <label for="message">MESSAGE</label>
               <textarea id="message" placeholder="Votre message"></textarea>
             </div>
             <div class="consent">
-              <input type="checkbox" name="consent-check" id="" />
-              Je consens à ce que mes informations soient stockées en vue de me
-              répondre
+              <input type="checkbox" name="consent_check" />
+              <p>
+                Je consens à ce que mes informations soient stockées en vue de
+                me répondre
+              </p>
             </div>
-          </div>
-          <div class="button-formu">
-            <input type="button" value="ENVOYER" id="button-formu" />
+            <div class="button_formu">
+              <input type="button" value="ENVOYER" id="button_formu" />
+            </div>
           </div>
         </form>
       </div>
     </section>
 
-    <section class="temoignages">
-      <div class="titre-temoignage">
+    <section class="testimonials">
+      <div class="testimonials_title">
         <h3>T&Eacute;MOIGNAGES</h3>
       </div>
 
-      <div id="glob-card">
-        <div class="avis-card">
-          <div class="avis-card-glob">
-            <div class="entete-avis">
-              <div class="avatar-member">
+      <div id="glob_card">
+        <div class="avis_card">
+          <div class="avis_card_glob">
+            <div class="entete_avis">
+              <div class="avatar_member">
                 <img
                   src="../projet_fil_rouge/img/img-mini-1-2.png"
                   alt=""
-                  id="img-avatar"
+                  id="img_avatar"
                 />
               </div>
-              <div class="lib-mission-avis">
+              <div class="lib_mission_avis">
                 <p>Sportif et solidaire</p>
               </div>
             </div>
-            <div class="foot-avis">
-              <div class="icon-heart">
+            <div class="foot_avis">
+              <div class="icon_heart">
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
               </div>
-              <div class="txt-avis">
+              <div class="txt_avis">
                 <p>Cammille D.</p>
                 <br />
                 <p>
@@ -397,49 +415,49 @@
             </div>
           </div>
         </div>
-        <div class="avis-card">
-          <div class="avis-card-glob">
-            <div class="entete-avis">
-              <div class="avatar-member">
+        <div class="avis_card">
+          <div class="avis_card_glob">
+            <div class="entete_avis">
+              <div class="avatar_member">
                 <img
                   src="../projet_fil_rouge/img/img-mini-1-2.png"
                   alt=""
-                  id="img-avatar"
+                  id="img_avatar"
                 />
               </div>
-              <div class="lib-mission-avis">
+              <div class="lib_mission_avis">
                 <p>Magie avec les enfants</p>
               </div>
             </div>
-            <div class="foot-avis">
-              <div class="icon-heart">
+            <div class="foot_avis">
+              <div class="icon_heart">
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
-                  src="../projet_fil_rouge/img/coeur-vide.png"
+                  src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
               </div>
-              <div class="txt-avis">
+              <div class="txt_avis">
                 <p>Laura B.</p>
                 <br />
                 <p>
@@ -454,49 +472,49 @@
             </div>
           </div>
         </div>
-        <div class="avis-card last">
-          <div class="avis-card-glob">
-            <div class="entete-avis">
-              <div class="avatar-member">
+        <div class="avis_card last">
+          <div class="avis_card_glob">
+            <div class="entete_avis">
+              <div class="avatar_member">
                 <img
                   src="../projet_fil_rouge/img/img-mini-1-2.png"
                   alt=""
-                  id="img-avatar"
+                  id="img_avatar"
                 />
               </div>
-              <div class="lib-mission-avis">
+              <div class="lib_mission_avis">
                 <p>Accompagnement Festival de rue</p>
               </div>
             </div>
-            <div class="foot-avis">
-              <div class="icon-heart">
+            <div class="foot_avis">
+              <div class="icon_heart">
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
                   src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
-                  src="../projet_fil_rouge/img/coeur-vide.png"
+                  src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
                 />
                 <img
-                  src="../projet_fil_rouge/img/coeur-vide.png"
+                  src="../projet_fil_rouge/img/coeur-valide.png"
                   alt=""
-                  id="icon-heart"
+                  id="icon_heart"
+                />
+                <img
+                  src="../projet_fil_rouge/img/coeur-valide.png"
+                  alt=""
+                  id="icon_heart"
                 />
               </div>
-              <div class="txt-avis">
+              <div class="txt_avis">
                 <p>Antoine K.</p>
                 <br />
                 <p>
@@ -515,8 +533,8 @@
     </section>
 
     <footer>
-      <section class="high-footer">
-        <div class="contact-details contact-left">
+      <section class="high_footer">
+        <div class="contact_details">
           Nos Coordonnees
           <ul>
             <li>Claire Michelle</li>
@@ -527,7 +545,7 @@
           </ul>
         </div>
 
-        <div class="contact-details contact-right">
+        <div class="contact_details">
           Plan du site
           <ul>
             <li><a href="#">ACCUEIL</a></li>
@@ -536,12 +554,12 @@
           </ul>
         </div>
       </section>
-      <div class="bottom-footer">
-        <div class="blc-copy">
+      <div class="bottom_footer">
+        <div class="blc_copy">
           &copy; Tous droits r&eacute;serv&eacute;s - CGU - Les
           &Eacute;claireurs Solidaires
         </div>
-        <div class="bloc-picto">
+        <div class="bloc_picto">
           <a href="#"
             ><img src="../projet_fil_rouge/img/icon-X.png" class="picto"
           /></a>

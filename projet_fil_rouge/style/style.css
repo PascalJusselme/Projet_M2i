@@ -1,7 +1,14 @@
-/* ---------- GESTION GENERALE ---------- */
-
+/*------------------------------------------------------------------------------------------*/
+/* ----------------------------------- GESTION GENERALE ----------------------------------- */
+/*------------------------------------------------------------------------------------------*/
+/*--- Applique ces règles à tous les éléments de la page ---*/
 * {
+  /*Définit comment la hauteur et la largeur d'un élément sont calculées. 
+  Avec 'border-box', la bordure et le remplissage (padding) sont inclus dans la largeur 
+  et la hauteur totales de l'élément, ce qui simplifie grandement la mise en page.*/
   box-sizing: border-box;
+  /* Supprime la marge extérieure par défaut que les navigateurs appliquent à certains 
+  éléments (comme les paragraphes ou les titres), permettant un contrôle total sur l'espacement.*/
   margin: 0;
 }
 .roboto-Roboto {
@@ -11,61 +18,108 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-
+/*--- Application d'un style générique pour la balise <body> ---*/
 body {
   font-family: "Roboto";
   color: #100e25;
   font-size: 20px;
 }
-
+/*--- Application d'un style générique pour les balise <a> ---*/
 a {
   text-decoration: none;
   color: #100e25;
 }
-
-#color-word {
+/*--- Gestion de la partie colorée du titre  ---*/
+#color_word {
   color: #ffd900;
 }
-
-/* ---------- GESTION INPUT ---------- */
-
-input,
-textarea {
-  border: none;
-}
-
+/*------------------------------------------------------------------------------------------*/
+/* ----------------------------------- GESTION INPUT -------------------------------------- */
+/*------------------------------------------------------------------------------------------*/
+/* Appliquer cette réinitialisation uniquement aux types d'inputs qui en ont besoin */
 input[type="text"],
 input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
 input[type="search"],
-textarea {
-  border-radius: 30px;
-  padding: 8px 30px;
+textarea, /* Les textareas bénéficient toujours de cette réinitialisation */
+select    /* Les selects aussi, mais ils auront toujours des styles natifs pour la flèche, etc. */ {
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none; /* Toujours important pour supprimer l'outline au focus */
+  border: none; /* Ici, nous supprimons explicitement la bordure pour ces types */
 }
 
+/* Vous devez maintenant définir vos propres styles de bordure pour ces éléments */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea {
+  border: 1px solid #ccc; /* Votre bordure par défaut */
+  background-color: #fff;
+  color: #333;
+  border-radius: 30px;
+  padding: 8px 30px;
+  min-height: 50px;
+}
+
+/* Styles pour le focus (important pour l'accessibilité) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  border-color: #007bff; /* Couleur de bordure au focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Ombre au focus */
+}
+/*--- Gestion du resizins du ou des textarea---*/
 textarea {
   min-width: 100%;
   min-height: 100px;
   max-width: 100%;
   max-height: 150px;
 }
-
-/* ----------------------------- GESTION IMAGE ------------------------------ */
-
-.logo {
+/*------------------------------------------------------------------------------------------*/
+/* ------------------------------------ GESTION IMAGE ------------------------------------- */
+/*------------------------------------------------------------------------------------------*/
+/*--- Taille du logo sur DESKTOP ---*/
+.logo_d {
   width: 120px;
   height: 120px;
 }
-
-#icon-heart {
+/*--- Taille des icone pour la notation ---*/
+#icon_heart {
   width: 20px;
   height: 20px;
 }
-
-/* -------------------------- BLOC DES SEPARATEURS -------------------------- */
-
-.titre-last-mission,
-.titre-temoignage,
-.titre-blc-contact {
+/*--- On cache tout ce qui a un lien avec le menu mobile ---*/
+/*--- Icone Menu Burger ---*/
+.menu_icon_m,
+/*--- Bouton de fermeture du burger Menu ---*/
+.btn_nav_close,
+/*--- Titre de la nav bar pour mobile ---*/
+.mobile_title,
+/*--- Titre dans le burger menu pour mobile ---*/
+.burger_title {
+  display: none;
+}
+/*------------------------------------------------------------------------------------------*/
+/*--------------------------------- CSS DES SEPARATEURS ------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+.titre_last_mission,
+.testimonials_title,
+.titre_blc_contact {
   background-color: #ffd900;
   width: 80%;
   margin: auto;
@@ -75,98 +129,113 @@ textarea {
   font-size: 28px;
 }
 
-.titre-blc-contact {
+.titre_blc_contact {
   position: relative;
   top: 50px;
 }
-
-/*-----------------------------------------------------------------------------*/
-/* ------------------------- BLOC DES PARENTS DE ZONES ----------------------- */
-
-.top-site {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+/*------------------------------------------------------------------------------------------*/
+/* ---------------------------------------- BLOC MODAL ------------------------------------ */
+/*------------------------------------------------------------------------------------------*/
+/* Le conteneur de la modale : prend tout l'écran et est caché par défaut */
+.modal_container {
+  position: fixed; /* Reste en place même si on scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fond noir semi-transparent */
+  display: flex; /* Utilise flexbox pour centrer le contenu */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* S'assure qu'elle est au-dessus de tout */
+  opacity: 0; /* Totalement transparent */
+  pointer-events: none; /* Ne peut pas être cliqué - Ne Déclenche pas les événements JavaScript
+       associés */
+  transition: opacity 0.3s ease; /* Animation douce */
 }
 
-.bloc-pres {
-  width: 95%;
-  margin: 2% auto;
+/* Classe pour afficher la modale */
+.visible_modal {
+  opacity: 1; /* Totalement visible */
+  pointer-events: auto; /* Peut être cliqué - Déclenche les événements JavaScript associés
+*/
 }
 
-.mission {
-  display: flex;
-  flex-direction: column;
+/* Le contenu de la modale */
+.modal_content {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 500px; /* Largeur maximale */
+  position: relative;
 }
 
-#contact {
-  width: 95%;
-  margin: 0 auto 5% auto;
+/* Le bouton pour fermer (la croix) */
+.close_btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
 }
 
-.temoignages {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.close_btn:hover {
+  color: #000;
 }
 
-footer {
-  background-color: #ffd900;
-  display: flex;
-  flex-direction: column;
-  height: 55px;
+/* Style simple pour le bouton d'ouverture */
+#open_modal-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
-
-/*-----------------------------------------------------------------------------*/
-/* ---------- BLOC TOP-SITE (BLOC HEADER + BLOC HERO-SECTION) ---------- */
-/* ---------- BLOC HEADER ---------- */
-
+/*-------------------------------------------------------------------------------------------*/
+/* ---------------------------------------- BLOC HEADER ------------------------------------ */
+/*-------------------------------------------------------------------------------------------*/
 header {
   background-color: rgba(255, 255, 255, 1);
   -webkit-box-shadow: 0px 10px 13px -15px #100e25,
     0px 5px 2px -3px rgba(0, 0, 0, 0.22);
   box-shadow: 0px 10px 13px -15px #100e25, 0px 5px 2px -3px rgba(0, 0, 0, 0.22);
   position: fixed;
-  width: 100%;
-  z-index: 1000;
-}
-
-.header-mobil {
-  display: none;
-}
-
-.header-desktop {
+  z-index: 10;
   height: 120px;
   display: flex;
   justify-content: space-between;
-}
-
-.header-right-d {
   width: 100%;
 }
 
-.menu-d {
-  height: 100%;
+.nav_bar {
+  width: 100%;
+}
+
+.nav_menu {
+  list-style: none;
   display: flex;
   align-items: center;
   justify-content: end;
-  margin-right: 2%;
+  height: 100%;
 }
 
-.menu-d a {
-  margin: 0 2%;
+.menu_link {
+  margin: 0 1%;
 }
 
-#btn-connec-nav {
+.btn_connec_nav {
   padding: 12px 34px;
   background-color: #fff;
   border: medium, solid, #ffd900;
   border-radius: 10px;
+  font-size: 20px;
 }
-
-/* ---------- BLOC HERO SECTION ---------- */
-
-#hero-section {
+/*-------------------------------------------------------------------------------------------*/
+/* ------------------------------------ BLOC HERO SECTION ---------------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+#hero_section {
   background-image: linear-gradient(
       rgba(63, 63, 63, 0.8),
       rgba(63, 63, 63, 0.8)
@@ -181,65 +250,74 @@ header {
   justify-content: space-around;
   flex: 1;
   margin-bottom: 2.5%;
+  height: 100vh;
 }
 
-.titre-site {
+.titre_site {
   margin-top: 200px;
   font-size: 32px;
 }
 
-.accroche-site {
+.accroche_site {
   text-align: center;
   width: 50%;
   margin: 2% 0;
   font-size: 24px;
 }
 
-.blc-btn-inscConnec {
+.blc_btn_connec {
   width: 25%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-#btn-connec {
+.btn_connec {
   background-color: #fff;
   border: medium, solid, #ffd900;
 }
 
-#btn-inscri {
+.btn_inscri {
   background-color: #ffd900;
+  border: medium, solid, #100e25;
 }
 
-#btn-inscri,
-#btn-connec {
+.btn_inscri,
+.btn_connec {
   padding: 6px 17px;
   border-radius: 10px;
   width: 160px;
 }
 
-.bloc-search-d {
+.bloc_search {
   height: 50px;
+  width: 25%;
 }
 
-#search-bar-d {
+#search_bar {
   width: 100%;
+  font-size: 16px;
+}
+/*-------------------------------------------------------------------------------------------*/
+/* ---------------------------------- BLOC PRESENTATION ------------------------------------ */
+/*-------------------------------------------------------------------------------------------*/
+.bloc_pres {
+  width: 95%;
+  margin: 2% auto;
 }
 
-/* ---------- BLOC PRESENTATION ---------- */
-
-.who-are,
-.our-vision {
+.who_are,
+.our_vision {
   display: flex;
   align-items: center;
   margin-bottom: 5%;
   flex-wrap: wrap;
 }
 
-#font-pres,
-#font-vision,
-.img-pres,
-.img-vision {
+#font_pres,
+#font_vision,
+.img_pres,
+.img_vision {
   flex: 1;
   width: 50%;
   position: relative;
@@ -247,57 +325,56 @@ header {
   flex-direction: column;
 }
 
-.btn-see-more {
+.btn_see_more {
   margin-top: 5%;
 }
 
-#btn-see-more {
+#btn_see_more {
   border: 1px, solid;
   background-color: #ffd900;
   border-radius: 15px;
   padding: 8px 16px;
 }
 
-#font-pres,
-#font-vision {
+#font_pres,
+#font_vision {
   background-color: #ffd900;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 600px;
   display: flex;
   justify-content: space-between;
+  padding: 5%;
 }
 
-#font-pres {
-  padding: 5%;
+#font_pres {
   align-items: start;
 }
 
-#font-vision {
-  padding: 5%;
+#font_vision {
   align-items: end;
 }
 
-#font-pres p {
+#font_pres p {
   margin-top: 5%;
   margin-left: 5%;
   width: 75%;
 }
 
-#font-vision ul {
+#font_vision ul {
   text-align: right;
   margin-top: 5%;
   margin-right: 5%;
   width: 100%;
 }
 
-#font-vision li {
+#font_vision li {
   margin-bottom: 2.5%;
   list-style-type: none;
 }
 
-.img-pres img,
-.img-vision img {
+.img_pres img,
+.img_vision img {
   width: 100%;
   height: auto;
   display: block;
@@ -305,41 +382,46 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.who-are .img-pres {
+.who_are .img_pres {
   margin-left: -10%;
   z-index: 1;
 }
 
-.who-are #font-pres {
+.who_are #font_pres {
   z-index: 0;
 }
 
-.our-vision {
+.our_vision {
   flex-direction: row-reverse;
 }
 
-.our-vision #font-vision {
+.our_vision #font_vision {
   z-index: 0;
 }
 
-.our-vision .img-vision {
+.our_vision .img_vision {
   z-index: 1;
   margin-right: -10%;
 }
+/*-------------------------------------------------------------------------------------------*/
+/* ------------------------------------ BLOC MISSION --------------------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+.mission {
+  display: flex;
+  flex-direction: column;
+}
 
-/* ---------- BLOC MISSION ---------- */
-
-#glob-miss {
+#glob_miss {
   display: flex;
   justify-content: space-around;
 }
 
-.blc-mission {
+.blc_mission {
   width: 30%;
   margin: 2.5% 0;
 }
 
-.entete-miss {
+.entete_miss {
   height: 50px;
   display: flex;
   width: 100%;
@@ -347,7 +429,7 @@ header {
   background-color: #100e25;
 }
 
-.title-miss {
+.title_miss {
   width: 70%;
   display: flex;
   align-items: center;
@@ -356,7 +438,7 @@ header {
   border-radius: 15px;
 }
 
-.cat-miss {
+.cat_miss {
   width: 30%;
   display: flex;
   align-items: center;
@@ -366,56 +448,56 @@ header {
   color: white;
 }
 
-.title-miss p {
+.title_miss p {
   margin-left: 1.5%;
   text-align: center;
 }
 
-.cat-miss p {
+.cat_miss p {
   text-align: center;
 }
 
-.detail-miss {
+.detail_miss {
   width: 95%;
   margin: auto;
   background-color: #fae1c4;
 }
 
-.foot-detail {
+.foot_detail {
   width: 95%;
   display: flex;
   justify-content: space-between;
 }
 
-.txt-miss {
+.txt_miss {
   padding: 2% 2%;
 }
 
-.glob-descrip {
+.glob_descrip {
   margin-bottom: 2.5%;
 }
 
-#btn-view-more-down,
-#btn-view-more-up {
+#btn_view_more_down,
+#btn_view_more_up {
   font-size: 12px;
   text-decoration: underline;
 }
 
-.glob-profil-mission {
+.glob_profil_mission {
   margin-bottom: 2%;
 }
 
-#liste-profil-mission {
+#liste_profil_mission {
   height: 20px;
   overflow-y: hidden;
 }
 
-#descrip-mission {
+#descrip_mission {
   height: 20px;
   overflow-y: hidden;
 }
 
-#btn-more-descrip-mission {
+#btn_more_descrip_mission {
   display: flex;
   justify-content: end;
   margin-left: 1%;
@@ -425,25 +507,25 @@ header {
   display: none;
 }
 
-.btn-join-miss {
+.btn_join_miss {
   margin: 2.5%;
 }
 
-.btn-join-miss input {
+.btn_join_miss input {
   background-color: #ffd900;
   border: 1px, solid;
   border-radius: 15px;
   padding: 8px 12px;
 }
 
-.see-details {
+.see_details {
   text-decoration: none;
   display: flex;
   align-items: center;
   margin-right: 15px;
 }
 
-.btn-more-miss {
+.btn_more_miss {
   margin: auto;
   padding: 12px 34px;
   border-radius: 15px;
@@ -452,53 +534,13 @@ header {
   text-align: center;
   font-size: 26px;
 }
-
-/* ---------- BLOC AVIS ---------- */
-
-#glob-card {
-  display: flex;
-  justify-content: space-around;
-  margin: 5% auto;
+/*-------------------------------------------------------------------------------------------*/
+/* ------------------------------- BLOC CONTACT -------------------------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+#contact {
+  width: 95%;
+  margin: 0 auto 5% auto;
 }
-
-.avis-card {
-  width: 29%;
-  margin-top: 2%;
-  background-color: #fae1c4;
-  border-radius: 25px;
-}
-
-.avis-card-glob {
-  position: relative;
-  bottom: 50px;
-  margin-left: 30px;
-}
-
-.entete-avis {
-  display: flex;
-  align-items: center;
-}
-
-.lib-mission-avis {
-  margin-top: 60px;
-  margin-left: 2%;
-}
-
-.icon-heart {
-  display: flex;
-  width: 5%;
-}
-
-.txt-avis {
-  padding: 15px 34px 0 0;
-}
-
-#img-avatar {
-  width: 110px;
-  border-radius: 25px;
-  height: 110px;
-}
-/* ---------- BLOC CONTACT ---------- */
 
 .formu {
   background-color: #fae1c4;
@@ -508,7 +550,7 @@ header {
   padding: 2.5% 5% 5% 2.5%;
 }
 
-.phr-accroche {
+.phr_accroche {
   margin: 50px 0 0 0;
   text-align: center;
 }
@@ -520,65 +562,139 @@ form {
   margin-top: 2%;
 }
 
-#button-formu {
+#button_formu {
   border: 1px, solid;
   border-radius: 35px;
   background-color: #ffd900;
   padding: 12px 34px;
 }
 
-.contact-haut,
-.contact-bas {
+.contact_haut,
+.contact_bas {
   display: flex;
   width: 100%;
 }
 
-.contact-bas {
+.contact_bas {
   flex-direction: column;
+  margin-bottom: 2%;
+  align-items: center;
 }
 
-.contact-haut {
+.contact_haut {
   justify-content: center;
   gap: 5%;
   flex-wrap: wrap;
 }
 
-.input-align {
+.input_align {
   display: flex;
   flex-direction: column;
 }
 
-.mess-area,
-.consent,
-.button-formu {
-  width: 50%;
+.mess_area {
+  min-width: 75%;
   margin: 2% auto 0 auto;
 }
 
-input[type="checkbox"] {
-  margin: 2% 0;
+.button_formu {
+  width: 60%;
+  display: flex;
+  margin-top: 1%;
 }
 
-/* ---------- BLOC FOOTER ---------- */
+.consent {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+}
 
-.high-footer {
+input[type="checkbox"] {
+  margin-right: 1%;
+  width: 20px;
+  height: 20px;
+}
+/*-------------------------------------------------------------------------------------------*/
+/* ------------------------------------------- BLOC AVIS ----------------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#glob_card {
+  display: flex;
+  justify-content: space-around;
+  margin: 5% auto;
+}
+
+.avis_card {
+  width: 29%;
+  margin-top: 2%;
+  background-color: #fae1c4;
+  border-radius: 25px;
+}
+
+.avis_card_glob {
+  position: relative;
+  bottom: 50px;
+  margin-left: 30px;
+}
+
+.entete_avis {
+  display: flex;
+  align-items: center;
+}
+
+.lib_mission_avis {
+  margin-top: 60px;
+  margin-left: 2%;
+}
+
+.icon_heart {
+  display: flex;
+  width: 5%;
+}
+
+.txt_avis {
+  padding: 15px 34px 0 0;
+}
+
+#img_avatar {
+  width: 110px;
+  border-radius: 25px;
+  height: 110px;
+}
+/*-------------------------------------------------------------------------------------------*/
+/* ------------------------------ BLOC FOOTER ---------------------------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+footer {
+  background-color: #ffd900;
+  display: flex;
+  flex-direction: column;
+  height: 55px;
+}
+
+.high_footer {
   background-color: #ffd900;
   display: flex;
   justify-content: space-around;
   padding: 2% 0;
 }
 
-.bottom-footer {
+.bottom_footer {
   background-color: #ffd900;
   display: flex;
   justify-content: space-between;
 }
 
-.contact-details ul {
+.contact_details ul {
   list-style: none;
 }
 
-.blc-copy {
+.blc_copy {
   display: flex;
   align-items: center;
   width: 40%;
@@ -586,7 +702,7 @@ input[type="checkbox"] {
   font-size: 12px;
 }
 
-.bloc-picto {
+.bloc_picto {
   margin-right: 1%;
   display: flex;
   justify-content: space-between;
@@ -595,15 +711,4 @@ input[type="checkbox"] {
 .picto {
   width: 45px;
   height: 45px;
-}
-
-/* ------ VOUS & NOUS PAGE ------ */
-
-.content-you-our {
-  background-color: #fae1c4;
-  padding: 2%;
-}
-
-.menu-you-our {
-  background-color: #e0ab55;
 }
