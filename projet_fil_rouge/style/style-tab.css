@@ -6,6 +6,38 @@
     display: none;
   }
   /*-------------------------------------------------------------------------------------------*/
+  /* ---------------------------------------- BLOC HEADER ------------------------------------ */
+  /*------------------------------------------------------------------------------------------*/
+  /* CACHER COMPLÈTEMENT LES ÉLÉMENTS MOBILES */
+  .menu_icon_m,
+  #btn_close,
+  .btn_nav_close,
+  .mobile_title,
+  .burger_title,
+  .overlay_menu_mobile {
+    display: none ;
+  }
+
+  /* RESET DE LA NAV_BAR POUR TABLETTE/DESKTOP */
+  .nav_bar {
+    display: flex ;
+    position: static ;
+    right: 0 ;
+    width: 100% ;
+    height: auto ;
+    background-color: transparent ;
+    transition: none ;
+    transform: none ;
+    z-index: 10 ;
+  }
+
+  /* RESET DES CLASSES OUVERTES */
+  .nav_bar.open {
+    right: 0 ;
+    transform: none ;
+    transition: none ;
+  }
+  /*-------------------------------------------------------------------------------------------*/
   /* ------------------------------------ BLOC HERO SECTION ---------------------------------- */
   /*-------------------------------------------------------------------------------------------*/
   .blc_btn_connec .btn_connec {
@@ -39,8 +71,4 @@
   .btn_more_miss {
     width: 80%;
   }
-
-  /* .nav_bar {
-    transition: none;
-  } */
 }

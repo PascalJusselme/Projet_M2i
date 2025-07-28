@@ -108,16 +108,22 @@ textarea {
 .menu_icon_m,
 /*--- Bouton de fermeture du burger Menu ---*/
  #btn_close, 
+ .btn_nav_close, 
 /*--- Titre de la nav bar pour mobile ---*/
 .mobile_title,
 /*--- Titre dans le burger menu pour mobile ---*/
 .burger_title,
-.overlay_menu_mobile {
+.overlay_menu_mobile,
+.nav_bar {
   display: none;
 }
 /*--- Burger Menu et Overlay cachés en desktop ---*/
-.overlay_menu_mobile {
+.overlay_menu_mobile,
+.nav_bar {/* 
+  right: 0;
+  top: 0; */
   transition: none;
+  transform: none;
 }
 /*------------------------------------------------------------------------------------------*/
 /*--------------------------------- CSS DES SEPARATEURS ------------------------------------*/
@@ -213,18 +219,29 @@ header {
   justify-content: space-between;
   width: 100%;
 }
-/*--- On rend visible et on designe la nav_bar pour la version desktop ---*/
-.nav_bar {
-  width: 100%;
-  height: auto;
-  right: auto;
-  display: flex;
-  justify-content: end;
-  opacity: 1;
-  pointer-events: auto;
-  transition: none;
-  background-color: transparent;
-}
+/* RESET COMPLET DE LA NAV_BAR POUR DESKTOP */
+  .nav_bar {
+    display: flex;
+    position: static;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    transition: none;
+    transform: none;
+    z-index: auto;
+  }
+
+  /* RESET DES CLASSES OUVERTES */
+  /* .nav_bar.open {
+    right: 0;
+    transform: none;
+  }
+
+  .overlay_menu_mobile.open {
+    display: none;
+  } */
 /*--- On rend visible et on designe le nav_menu,le <ul>, pour la version desktop ---*/
 .nav_menu {
   list-style: none;
@@ -233,7 +250,6 @@ header {
   height: 100%;
   align-items: center;
   justify-content: flex-end;
-  padding: unset;
 }
 
 .menu_link {

@@ -47,7 +47,6 @@
   }
 
   .titre_site,
-  .nav_bar,
   .mobile_title.close {
     display: none;
   }
@@ -79,70 +78,49 @@
     z-index: 10;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(16, 14, 37, 0.45);
-    display: none;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
   }
 
   .nav_bar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -60vw;
     width: 60vw;
     height: 100vh;
+    z-index: 20;
+    display: flex;
     background-color: #ffffff;
     justify-content: center;
-    display: none;
-    z-index: 20;
-    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
   }
 
-  #btn_close {
-    display: block;
+  .overlay_menu_mobile.open,
+  .nav_bar.open {
+    right: 0;
+    opacity: 1;
   }
-
-  .nav_bar.open,
-  .overlay_menu_mobile.open {
-    display: flex;
-    animation: openBurgerMenu 550ms ease-out forwards;
-  }
-
-  @keyframes openBurgerMenu {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  .nav_bar.close,
-  .overlay_menu_mobile.close {
-    display: flex;
-    animation: closeBurgerMenu 550ms ease-out forwards;
-  }
-
-  @keyframes closeBurgerMenu {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
+  
   .btn_nav_close {
+    display: flex;
     cursor: pointer;
     position: absolute;
     top: 10px;
     right: 20px;
   }
 
+  #btn_close {
+    display: block;
+  }
+
   .nav_menu {
-    padding: 0;
-    width: 100%;
+    /* padding: 0; */
     display: flex;
     align-items: flex-end;
     justify-content: center;
