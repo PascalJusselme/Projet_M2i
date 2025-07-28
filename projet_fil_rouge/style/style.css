@@ -223,8 +223,6 @@ header {
   .nav_bar {
     display: flex;
     position: static;
-    right: 0;
-    top: 0;
     width: 100%;
     height: auto;
     background-color: transparent;
@@ -232,16 +230,6 @@ header {
     transform: none;
     z-index: auto;
   }
-
-  /* RESET DES CLASSES OUVERTES */
-  /* .nav_bar.open {
-    right: 0;
-    transform: none;
-  }
-
-  .overlay_menu_mobile.open {
-    display: none;
-  } */
 /*--- On rend visible et on designe le nav_menu,le <ul>, pour la version desktop ---*/
 .nav_menu {
   list-style: none;

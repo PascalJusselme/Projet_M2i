@@ -9,33 +9,33 @@
   /* ---------------------------------------- BLOC HEADER ------------------------------------ */
   /*------------------------------------------------------------------------------------------*/
   /* CACHER COMPLÈTEMENT LES ÉLÉMENTS MOBILES */
-  .menu_icon_m,
-  #btn_close,
-  .btn_nav_close,
-  .mobile_title,
-  .burger_title,
-  .overlay_menu_mobile {
-    display: none ;
-  }
-
-  /* RESET DE LA NAV_BAR POUR TABLETTE/DESKTOP */
   .nav_bar {
-    display: flex ;
-    position: static ;
-    right: 0 ;
-    width: 100% ;
-    height: auto ;
-    background-color: transparent ;
-    transition: none ;
-    transform: none ;
-    z-index: 10 ;
+    display: flex;
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    /* Important : annule toute transition pour la nav_bar sur desktop */
+    transition: none !important;
   }
-
-  /* RESET DES CLASSES OUVERTES */
-  .nav_bar.open {
-    right: 0 ;
-    transform: none ;
-    transition: none ;
+  .overlay_menu_mobile {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    /* Important : annule toute transition pour l'overlay sur desktop */
+    transition: none !important;
+  }
+  .menu_icon_m, /* Ajoute tous les éléments mobiles ici pour les cacher */
+    #btn_close,
+    .btn_nav_close,
+    .mobile_title,
+    .burger_title {
+    display: none;
+    transition: none !important; /* Et annule leurs transitions */
   }
   /*-------------------------------------------------------------------------------------------*/
   /* ------------------------------------ BLOC HERO SECTION ---------------------------------- */
