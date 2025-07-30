@@ -1,0 +1,227 @@
+@media all and (max-width: 860px) {
+  /*------------------------------------------------------------------------------------------*/
+  /* ----------------------------------- GESTION GENERALE ----------------------------------- */
+  /*------------------------------------------------------------------------------------------*/
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .last {
+    display: none;
+  }
+  /*------------------------------------------------------------------------------------------*/
+  /* ------------------------------------ GESTION IMAGE ------------------------------------- */
+  /*------------------------------------------------------------------------------------------*/
+  .logo_m {
+    width: 50px;
+    height: 50px;
+  }
+
+  #picto_burger {
+    width: 25px;
+    height: 25px;
+  }
+  /*------------------------------------------------------------------------------------------*/
+  /*--------------------------------- CSS DES SEPARATEURS ------------------------------------*/
+  /*------------------------------------------------------------------------------------------*/
+  .titre_blc_contact,
+  .titre_last_mission,
+  .testimonials_title {
+    font-size: 22px;
+  }
+  .titre_last_mission,
+  .testimonials_title {
+    width: 80%;
+  }
+
+  .titre_blc_contact {
+    width: 100%;
+  }
+  /*-------------------------------------------------------------------------------------------*/
+  /* ---------------------------------------- BLOC HEADER ------------------------------------ */
+  /*------------------------------------------------------------------------------------------*/
+  header {
+    padding: 0;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .titre_site h1 {
+    font-size: 48px;
+  }
+
+  .burger_title {
+    display: inline;
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  .logo_site_m {
+    height: 50px;
+  }
+
+  .menu_icon_m {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin-right: 2%;
+    cursor: pointer;
+  }
+
+  .overlay_menu_mobile {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(16, 14, 37, 0.3);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
+  }
+
+  .nav_bar {
+    position: fixed;
+    top: 0;
+    right: -60vw;
+    width: 60vw;
+    height: 100vh;
+    z-index: 20;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: right 0.7s ease-out;
+  }
+
+  .overlay_menu_mobile.open {
+    display: block;
+    opacity: 1;
+  }
+
+  .nav_bar.open {
+    right: 0;
+    opacity: 1;
+  }
+
+  .btn_nav_close {
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #btn_close {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-right: 2%;
+  }
+
+  .nav_menu {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .nav_menu li {
+    margin: 2.5%;
+  }
+
+  .nav_menu h1 {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .btn_connec_nav {
+    padding: 8px 17px;
+    font-size: 12px;
+  }
+  /*-------------------------------------------------------------------------------------------*/
+  /* ------------------------------------ BLOC HERO SECTION ---------------------------------- */
+  /*-------------------------------------------------------------------------------------------*/
+  #hero_section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .accroche_site {
+    font-size: 20px;
+    width: 95%;
+    margin-top: 50px;
+  }
+
+  .blc_btn_connec {
+    justify-content: center;
+  }
+
+  .bloc_search {
+    width: 75%;
+  }
+
+  .search_bar {
+    width: 100%;
+  }
+
+  .blc_btn_connec .btn_connec {
+    margin-top: 10px;
+  }
+  /*-------------------------------------------------------------------------------------------*/
+  /* ---------------------------------- BLOC PRESENTATION ------------------------------------ */
+  /*-------------------------------------------------------------------------------------------*/
+
+  .bloc_pres {
+    width: 95%;
+    font-size: 14px;
+  }
+
+  #font_pres,
+  #font_vision {
+    height: auto;
+  }
+  /*-------------------------------------------------------------------------------------------*/
+  /* ------------------------------------ BLOC MISSION --------------------------------------- */
+  /*-------------------------------------------------------------------------------------------*/
+  .mission {
+    padding-top: 1%;
+    width: 100%;
+  }
+
+  #glob_miss,
+  #glob_card {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+  }
+
+  .blc_mission {
+    width: 100%;
+  }
+
+  .blc_mini_miss,
+  .avis_card {
+    width: 100%;
+    margin: 2.5% 0;
+  }
+
+  .avis_card {
+    margin-top: 55px;
+  }
+
+  .btn_more_miss {
+    width: 80%;
+    font-size: 22px;
+    padding: 6px 17px;
+  }
+}

@@ -1,9 +1,7 @@
-/*------------------------------------------------------------------------------------------*/
-/* ----------------------------------- GESTION GENERALE ----------------------------------- */
-/*------------------------------------------------------------------------------------------*/
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 .roboto-Roboto {
@@ -20,17 +18,10 @@ body {
   font-size: 20px;
 }
 
-a {
-  text-decoration: none;
-  color: #100e25;
+ul {
+  list-style: none;
 }
 
-#color_word {
-  color: #ffd900;
-}
-/*------------------------------------------------------------------------------------------*/
-/* ----------------------------------- GESTION INPUT -------------------------------------- */
-/*------------------------------------------------------------------------------------------*/
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -42,233 +33,52 @@ textarea {
   padding: 12px 34px;
   min-height: 50px;
 }
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="button"]:focus,
-textarea:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-}
-
-textarea {
-  min-height: 100px;
-  max-height: 150px;
-}
-/*------------------------------------------------------------------------------------------*/
-/* ------------------------------------ GESTION IMAGE ------------------------------------- */
-/*------------------------------------------------------------------------------------------*/
-.logo_d {
-  width: 120px;
-  height: 120px;
-}
-
-#icon_heart {
-  width: 20px;
-  height: 20px;
-}
-
-.menu_icon_m,
-#btn_close,
-.btn_nav_close,
-.burger_title,
-.overlay_menu_mobile,
-.nav_bar {
-  display: none;
-}
-
-.overlay_menu_mobile,
-.nav_bar {
-  transition: none;
-  transform: none;
-}
-/*------------------------------------------------------------------------------------------*/
-/*--------------------------------- CSS DES SEPARATEURS ------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-.titre_last_mission,
-.testimonials_title,
-.titre_blc_contact {
-  background-color: #ffd900;
-  width: 70%;
-  margin: auto;
-  padding: 1.5%;
-  border-radius: 25px;
-  text-align: center;
-  font-size: 25px;
-  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
-}
-
-.titre_blc_contact {
-  position: relative;
-  top: 50px;
-}
-/*------------------------------------------------------------------------------------------*/
-/* ---------------------------------------- BLOC MODAL ------------------------------------ */
-/*------------------------------------------------------------------------------------------*/
-.modal_container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(16, 14, 37, 0.45);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.entete_modal {
-  width: 80%;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 15px 15px 0 0;
-  background-color: #ffd900;
-  padding: 2%;
-}
-
-.modal_content {
-  padding: 2%;
-  background-color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-  width: 80%;
-  border-radius: 0 0 15px 15px;
-}
-
-.modal_text {
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.modal_text,
-.button_validate_connec {
-  margin-bottom: 15%;
-}
-
-.modal_text form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 10%;
-}
-
-.login_modal,
-.pass_modal {
-  display: flex;
-  flex-direction: column;
-}
-
-.login_modal {
-  margin: 0 auto 5% auto;
-}
-.pass_modal {
-  margin: 5% auto 0 auto;
-}
-
-.footer_formu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 75%;
-  margin: 0 auto 15% auto;
-}
-
-.remember {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-}
-
-.button_validate_connec {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.button_validate_connec input[type="button"] {
-  background-color: #ffd900;
-}
-
-.create_account {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 auto 15% auto;
-  justify-content: space-around;
-}
-
-.footer_formu a {
-  text-decoration: underline;
-}
-
-#btn_close_modal {
-  width: 25px;
-  height: 25px;
-  margin-right: 2%;
-}
-
-.visible_modal {
-  opacity: 1;
-  pointer-events: auto;
-}
-/*-------------------------------------------------------------------------------------------*/
-/* ---------------------------------------- BLOC HEADER ------------------------------------ */
-/*-------------------------------------------------------------------------------------------*/
+/*----------------------------------HEADER----------------------------------------------*/
 header {
-  background-color: rgba(255, 255, 255, 1);
-  -webkit-box-shadow: 0px 10px 13px -15px #100e25,
-    0px 5px 2px -3px rgba(0, 0, 0, 0.22);
+  background-color: white;
   box-shadow: 0px 10px 13px -15px #100e25, 0px 5px 2px -3px rgba(0, 0, 0, 0.22);
   position: fixed;
   z-index: 10;
+  display: flex;
+  justify-content: space-between;
   height: 120px;
-  display: flex;
   width: 100%;
 }
 
-.nav_bar {
-  display: flex;
-  width: 100%;
-  height: auto;
-  z-index: 10;
+header .logo_d {
+  height: 120px;
+  width: 120px;
 }
 
-.nav_menu {
-  list-style: none;
-  display: flex;
+.nav_bar_d {
   width: 100%;
-  height: 100%;
-  align-items: center;
+  display: flex;
   justify-content: flex-end;
 }
 
-.menu_link {
-  margin: 0 1%;
+.nav_menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav_menu .menu_link {
+  margin-right: 2%;
 }
 
 .btn_connec_nav {
-  padding: 12px 34px;
   background-color: #fff;
   border: medium, solid, #ffd900;
-  border-radius: 10px;
-  font-size: 20px;
 }
-/*-------------------------------------------------------------------------------------------*/
-/* ------------------------------------ BLOC HERO SECTION ---------------------------------- */
-/*-------------------------------------------------------------------------------------------*/
-#hero_section {
+
+.nav_bar_d .btn_nav_close,
+.nav_menu h1,
+.icon_menu_burger {
+  display: none;
+}
+/*-------------------------------HERO SECTION----------------------------------------------*/
+.hero_section {
   background-image: linear-gradient(
       rgba(16, 14, 37, 0.8),
       rgba(16, 14, 37, 0.8)
@@ -277,479 +87,120 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  flex: 1;
-  margin-bottom: 2.5%;
   height: 100vh;
-}
-
-.titre_site {
-  margin-top: 200px;
-  font-size: 32px;
-  text-align: center;
-}
-
-.accroche_site {
-  text-align: center;
-  width: 50%;
-  margin: 2% 0;
-  font-size: 24px;
-}
-
-.blc_btn_connec {
-  width: 25%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.btn_connec {
-  background-color: #fff;
-  border: medium, solid, #ffd900;
-}
-
-.btn_inscri {
-  background-color: #ffd900;
-  border: medium, solid, #100e25;
-}
-
-.btn_inscri,
-.btn_connec {
-  border-radius: 10px;
-  min-width: 160px;
-}
-
-.bloc_search {
-  height: 50px;
-  min-width: 50%;
-}
-
-#search_bar {
   width: 100%;
-  font-size: 16px;
+  padding-top: 120px;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
-/*-------------------------------------------------------------------------------------------*/
-/* ---------------------------------- BLOC PRESENTATION ------------------------------------ */
-/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------WHO ARE & OUR NUMBER--------------------------------------*/
 .bloc_pres {
-  width: 95%;
-  margin: 2% auto;
+  width: 90%;
+  margin: 5% auto 0 auto;
 }
 
 .who_are,
-.our_vision {
+.our_number {
   display: flex;
   align-items: center;
   margin-bottom: 5%;
-  flex-wrap: wrap;
 }
 
 #font_pres,
-#font_vision,
+#font_number,
 .img_pres,
-.img_vision {
-  flex: 1;
-  width: 50%;
+.img_number {
+  width: 80%;
+  /* flex: 1; */
   position: relative;
   display: flex;
   flex-direction: column;
-}
-
-.btn_see_more {
-  margin-top: 5%;
-}
-
-#btn_see_more {
-  border: 1px, solid;
-  background-color: #ffd900;
   border-radius: 15px;
-  padding: 8px 16px;
 }
 
 #font_pres,
-#font_vision {
+#font_number {
   background-color: #ffd900;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
-  height: 600px;
-  display: flex;
-  justify-content: space-between;
+  height: auto;
   padding: 5%;
+  z-index: 0;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
+}
+
+.img_pres img,
+.img_number img {
+  width: 80%;
+  height: auto;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
 
 #font_pres {
   align-items: start;
 }
 
-#font_vision {
+#font_number {
   align-items: end;
 }
 
 #font_pres p {
-  margin-top: 5%;
-  margin-left: 5%;
-  width: 75%;
+  margin:3.5% 0 3.5% 4.5%;
+  width: 90%;
 }
 
-#font_vision ul {
+#font_number ul {
   text-align: right;
-  margin-top: 5%;
-  margin-right: 5%;
-  width: 100%;
+  margin-top: 2.5%;
+  margin-right: 4.5%;
+  width: 90%;
 }
 
-#font_vision li {
-  margin-bottom: 2.5%;
-  list-style-type: none;
+#font_number li {
+  margin-bottom: 7%;
 }
 
-.img_pres img,
-.img_vision img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
+.btn_see_more {
+  padding-top: 2.5%;
+}
+
+#btn_see_more {
+  border: 1px, solid;
+  background-color: #ffd900;
 }
 
 .who_are .img_pres {
   margin-left: -10%;
   z-index: 1;
+  align-items: center;
 }
 
-.who_are #font_pres {
-  z-index: 0;
-}
-
-.our_vision {
-  flex-direction: row-reverse;
-}
-
-.our_vision #font_vision {
-  z-index: 0;
-}
-
-.our_vision .img_vision {
+.our_number .img_number {
   z-index: 1;
   margin-right: -10%;
-}
-/*-------------------------------------------------------------------------------------------*/
-/* ------------------------------------ BLOC MISSION --------------------------------------- */
-/*-------------------------------------------------------------------------------------------*/
-.mission {
-  display: flex;
-  flex-direction: column;
-}
-
-#glob_miss {
-  display: flex;
-  justify-content: space-around;
-}
-
-.blc_mission {
-  width: 30%;
-  margin: 2.5% 0;
-}
-
-.entete_miss {
-  height: 50px;
-  display: flex;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #100e25;
-}
-
-.title_miss {
-  width: 70%;
-  display: flex;
   align-items: center;
-  justify-content: space-around;
-  background-color: #ffd900;
-  border-radius: 15px;
 }
-
-.cat_miss {
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #100e25;
-  border-radius: 0 15px 15px 0;
-  color: white;
-}
-
-.title_miss p {
-  margin-left: 1.5%;
-  text-align: center;
-}
-
-.cat_miss p {
-  text-align: center;
-}
-
-.detail_miss {
-  width: 95%;
+/*------------------------------------MISSIONS-----------------------------------------*/
+.bloc_mission {
+  width: 90%;
   margin: auto;
-  background-color: #fae1c4;
-  border-radius: 0 0 25px 25px;
-  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
-
-.foot_detail {
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.txt_miss {
-  padding: 2% 2%;
-}
-
-.glob_descrip {
-  margin-bottom: 2.5%;
-}
-
-#btn_view_more_down,
-#btn_view_more_up {
-  font-size: 12px;
-  text-decoration: underline;
-}
-
-.glob_profil_mission {
-  margin-bottom: 2%;
-}
-
-#liste_profil_mission {
-  height: 20px;
-  overflow-y: hidden;
-}
-
-#descrip_mission {
-  height: 20px;
-  overflow-y: hidden;
-}
-
-#btn_more_descrip_mission {
-  display: flex;
-  justify-content: end;
-  margin-left: 1%;
-}
-
-.visible {
-  display: none;
-}
-
-.btn_join_miss {
-  margin: 2.5%;
-}
-
-.btn_join_miss input {
-  background-color: #ffd900;
-  border: 1px, solid;
-  border-radius: 15px;
-  padding: 8px 12px;
-}
-
-.see_details {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-right: 15px;
-}
-
-.btn_more_miss {
+/*------------------------------------CONTACTS-----------------------------------------*/
+.contact {
+  width: 90%;
   margin: auto;
-  padding: 12px 34px;
-  border-radius: 15px;
-  background-color: #ffd900;
-  width: 60%;
-  text-align: center;
-  font-size: 26px;
-  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
-/*-------------------------------------------------------------------------------------------*/
-/* ------------------------------- BLOC CONTACT -------------------------------------------- */
-/*-------------------------------------------------------------------------------------------*/
-#contact {
-  width: 95%;
-  margin: 0 auto 5% auto;
-}
-
-.formu {
-  background-color: #fae1c4;
-  display: flex;
-  flex-direction: column;
-  border-radius: 35px;
-  padding: 2.5% 5% 5% 2.5%;
-  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
-}
-
-.phr_accroche {
-  margin: 50px 0 0 0;
-  text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2%;
-}
-
-#button_formu {
-  border: 1px, solid;
-  border-radius: 35px;
-  background-color: #ffd900;
-  padding: 12px 34px;
-}
-
-.contact_haut,
-.contact_bas {
-  display: flex;
-  width: 100%;
-}
-
-.contact_bas {
-  flex-direction: column;
-  margin-bottom: 2%;
-  align-items: center;
-}
-
-.contact_haut {
-  justify-content: center;
-  gap: 5%;
-  flex-wrap: wrap;
-}
-
-.input_align {
-  display: flex;
-  flex-direction: column;
-}
-
-.mess_area {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 2% auto 0 auto;
-}
-
-.button_formu {
-  width: 75%;
-  display: flex;
-  margin-top: 1%;
-}
-
-.consent {
-  min-width: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1% auto;
-}
-
-input[type="checkbox"] {
-  margin-right: 1%;
-  width: 20px;
-  height: 20px;
-}
-/*-------------------------------------------------------------------------------------------*/
-/* ------------------------------------------- BLOC AVIS ----------------------------------- */
-/*-------------------------------------------------------------------------------------------*/
+/*------------------------------------TESTIMONIALS-----------------------------------------*/
 .testimonials {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  width: 90%;
+  margin: auto;
 }
-#glob_card {
-  display: flex;
-  justify-content: space-around;
-  margin: 5% auto;
-}
-
-.avis_card {
-  width: 29%;
-  margin-top: 2%;
-  background-color: #fae1c4;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
-}
-
-.avis_card_glob {
-  position: relative;
-  bottom: 50px;
-  margin-left: 30px;
-}
-
-.entete_avis {
-  display: flex;
-  align-items: center;
-}
-
-.lib_mission_avis {
-  margin-top: 60px;
-  margin-left: 2%;
-}
-
-.icon_heart {
-  display: flex;
-  width: 5%;
-}
-
-.txt_avis {
-  padding: 15px 34px 0 0;
-}
-
 #img_avatar {
   width: 110px;
   border-radius: 25px;
   height: 110px;
 }
-/*-------------------------------------------------------------------------------------------*/
-/* ------------------------------ BLOC FOOTER ---------------------------------------------- */
-/*-------------------------------------------------------------------------------------------*/
+/*------------------------------------FOOTER-----------------------------------------*/
 footer {
-  background-color: #ffd900;
-  display: flex;
-  flex-direction: column;
-  height: 55px;
+  width: 100%;
 }
-
-.high_footer {
-  background-color: #ffd900;
-  display: flex;
-  justify-content: space-around;
-  padding: 2% 0;
-}
-
-.bottom_footer {
-  background-color: #ffd900;
-  display: flex;
-  justify-content: space-between;
-}
-
-.contact_details ul {
-  list-style: none;
-}
-
-.blc_copy {
-  display: flex;
-  align-items: center;
-  width: 40%;
-  margin-left: 1%;
-  font-size: 12px;
-}
-
-.bloc_picto {
-  margin-right: 1%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.picto {
-  width: 45px;
-  height: 45px;
-}
+/*------------------------------------MODAL-----------------------------------------*/

@@ -18,12 +18,14 @@
   <body>
     <header>
       <img src="img/logo2_2.png" alt="Logo du site" class="logo_d logo_m" />
-      <nav class="nav_bar_d">
+      <nav class="nav_bar">
         <div class="btn_nav_close">
           <img src="img/cross.png" id="btn_close" />
         </div>
         <ul class="nav_menu">
-          <h1>Les &Eacute;claireurs <span id="color_word">Solidaires</span></h1>
+          <h1 class="burger_title">
+            Les &Eacute;claireurs <span id="color_word">Solidaires</span>
+          </h1>
           <li class="menu_link">
             <a href="index.html">ACCUEIL</a>
           </li>
@@ -42,12 +44,12 @@
           </li>
         </ul>
       </nav>
-      <div class="icon_menu_burger">
+      <div class="menu_icon_m">
         <img src="img/hamb_menu.png" id="picto_burger" />
       </div>
     </header>
 
-    <section class="hero_section">
+    <section id="hero_section">
       <div class="titre_site">
         <h1>Les &Eacute;claireurs <span id="color_word">Solidaires</span></h1>
       </div>
@@ -103,11 +105,8 @@
           <img src="../projet_fil_rouge/img/img-asso3.jpg" />
         </div>
       </div>
-      <div class="our_number">
-        <div class="img_number">
-          <img src="../projet_fil_rouge/img/img-asso4.jpg" />
-        </div>
-         <div id="font_number">
+      <div class="our_vision">
+        <div id="font_vision">
           <h3>Nos chiffres :</h3>
           <ul>
             <li>1 200 bénévoles actifs depuis notre création</li>
@@ -119,11 +118,14 @@
           <div class="btn_see_more">
             <input type="button" value="En savoir plus" id="btn_see_more" />
           </div>
-        </div> 
+        </div>
+        <div class="img_vision">
+          <img src="../projet_fil_rouge/img/img-asso4.jpg" />
+        </div>
       </div>
     </section>
 
-<section class="bloc_mission">
+    <section class="mission">
       <div class="titre_last_mission">
         <h3>NOS DERNIERES MISSIONS</h3>
       </div>
@@ -286,7 +288,7 @@
       </div>
     </section>
 
-       <!--  <section class="contact">
+    <section id="contact">
       <div class="titre_blc_contact">
         <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
       </div>
@@ -553,8 +555,8 @@
           /></a>
         </div>
       </div>
-    </footer> -->
-    <!-- <div id="modal_container" class="modal_container">
+    </footer>
+    <div id="modal_container" class="modal_container">
       <div class="entete_modal">
         <h1>Les Eclaireurs Solidaires</h1>
         <div class="btn_modal_close">
@@ -600,7 +602,7 @@
         </div>
       </div>
     </div>
-    <div class="overlay_menu_mobile"></div> -->
-    <!-- <script src="./js/script.js"></script> -->
+    <div class="overlay_menu_mobile"></div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
