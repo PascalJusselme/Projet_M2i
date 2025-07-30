@@ -1,16 +1,11 @@
 /*------------------------------------------------------------------------------------------*/
 /* ----------------------------------- GESTION GENERALE ----------------------------------- */
 /*------------------------------------------------------------------------------------------*/
-/*--- Applique ces règles à tous les éléments de la page ---*/
 * {
-  /*Définit comment la hauteur et la largeur d'un élément sont calculées. 
-  Avec 'border-box', la bordure et le remplissage (padding) sont inclus dans la largeur 
-  et la hauteur totales de l'élément, ce qui simplifie grandement la mise en page.*/
   box-sizing: border-box;
-  /* Supprime la marge extérieure par défaut que les navigateurs appliquent à certains 
-  éléments (comme les paragraphes ou les titres), permettant un contrôle total sur l'espacement.*/
   margin: 0;
 }
+
 .roboto-Roboto {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -18,25 +13,24 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-/*--- Application d'un style générique pour la balise <body> ---*/
+
 body {
   font-family: "Roboto";
   color: #100e25;
   font-size: 20px;
 }
-/*--- Application d'un style générique pour les balise <a> ---*/
+
 a {
   text-decoration: none;
   color: #100e25;
 }
-/*--- Gestion de la partie colorée du titre  ---*/
+
 #color_word {
   color: #ffd900;
 }
 /*------------------------------------------------------------------------------------------*/
 /* ----------------------------------- GESTION INPUT -------------------------------------- */
 /*------------------------------------------------------------------------------------------*/
-/* Vous devez maintenant définir vos propres styles de bordure pour ces éléments */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -55,14 +49,12 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="button"]:focus,
 textarea:focus {
-  border-color: #007bff; /* Couleur de bordure au focus */
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Ombre au focus */
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
-/*--- Gestion du resizins du ou des textarea---*/
+
 textarea {
-  min-width: 100%;
   min-height: 100px;
-  max-width: 100%;
   max-height: 150px;
 }
 /*------------------------------------------------------------------------------------------*/
@@ -79,9 +71,8 @@ textarea {
 }
 
 .menu_icon_m,
- #btn_close, 
- .btn_nav_close,
-.mobile_title,
+#btn_close,
+.btn_nav_close,
 .burger_title,
 .overlay_menu_mobile,
 .nav_bar {
@@ -100,12 +91,13 @@ textarea {
 .testimonials_title,
 .titre_blc_contact {
   background-color: #ffd900;
-  width: 80%;
+  width: 70%;
   margin: auto;
   padding: 1.5%;
   border-radius: 25px;
   text-align: center;
-  font-size: 28px;
+  font-size: 25px;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
 
 .titre_blc_contact {
@@ -115,43 +107,37 @@ textarea {
 /*------------------------------------------------------------------------------------------*/
 /* ---------------------------------------- BLOC MODAL ------------------------------------ */
 /*------------------------------------------------------------------------------------------*/
-/* Le conteneur de la modale : prend tout l'écran et est caché par défaut */
 .modal_container {
-  position: fixed; /* Reste en place même si on scroll */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(16, 14, 37, 0.45); /* Fond noir semi-transparent */
-  display: flex; /* Utilise flexbox pour centrer le contenu */
+  background-color: rgba(16, 14, 37, 0.45);
+  display: flex; 
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* S'assure qu'elle est au-dessus de tout */
-  opacity: 0; /* Totalement transparent */
-  /* Ne peut pas être cliqué - Ne Déclenche pas les événements JavaScript associés */
+  z-index: 1000; 
+  opacity: 0; 
   pointer-events: none;
-  /* Animation douce */
   transition: opacity 0.3s ease;
 }
 
-/* Classe pour afficher la modale */
 .visible_modal {
-  /* Totalement visible */
   opacity: 1;
-  /* Peut être cliqué - Déclenche les événements JavaScript associés*/
   pointer-events: auto;
 }
-/* Le contenu de la modale */
+
 .modal_content {
   background-color: #fff;
   padding: 20px 30px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   width: 80%;
-  max-width: 500px; /* Largeur maximale */
+  max-width: 500px;
   position: relative;
 }
-/* Le bouton pour fermer (la croix) */
+
 .close_btn {
   position: absolute;
   top: 10px;
@@ -159,18 +145,11 @@ textarea {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  color: #555;
+  color: #100e25;
 }
 
 .close_btn:hover {
-  color: #000;
-}
-
-/* Style simple pour le bouton d'ouverture */
-#open_modal-btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+  color: #100e25;
 }
 /*-------------------------------------------------------------------------------------------*/
 /* ---------------------------------------- BLOC HEADER ------------------------------------ */
@@ -223,8 +202,8 @@ header {
 /*-------------------------------------------------------------------------------------------*/
 #hero_section {
   background-image: linear-gradient(
-      rgba(63, 63, 63, 0.8),
-      rgba(63, 63, 63, 0.8)
+      rgba(16, 14, 37, 0.8),
+      rgba(16, 14, 37, 0.8)
     ),
     url("../img/img-asso2-2.jpg");
   background-size: cover;
@@ -242,6 +221,7 @@ header {
 .titre_site {
   margin-top: 200px;
   font-size: 32px;
+  text-align: center;
 }
 
 .accroche_site {
@@ -258,7 +238,7 @@ header {
   justify-content: space-around;
 }
 
-.btn_connec{
+.btn_connec {
   background-color: #fff;
   border: medium, solid, #ffd900;
 }
@@ -270,10 +250,8 @@ header {
 
 .btn_inscri,
 .btn_connec {
-  padding: 6px 17px;
   border-radius: 10px;
   min-width: 160px;
-  min-height: auto;
 }
 
 .bloc_search {
@@ -327,7 +305,7 @@ header {
 #font_vision {
   background-color: #ffd900;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
   height: 600px;
   display: flex;
   justify-content: space-between;
@@ -366,7 +344,7 @@ header {
   height: auto;
   display: block;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
 
 .who_are .img_pres {
@@ -448,6 +426,8 @@ header {
   width: 95%;
   margin: auto;
   background-color: #fae1c4;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
 
 .foot_detail {
@@ -520,6 +500,7 @@ header {
   width: 60%;
   text-align: center;
   font-size: 26px;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
 /*-------------------------------------------------------------------------------------------*/
 /* ------------------------------- BLOC CONTACT -------------------------------------------- */
@@ -535,6 +516,7 @@ header {
   flex-direction: column;
   border-radius: 35px;
   padding: 2.5% 5% 5% 2.5%;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
 
 .phr_accroche {
@@ -580,7 +562,10 @@ form {
 }
 
 .mess_area {
-  min-width: 75%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   margin: 2% auto 0 auto;
 }
 
@@ -622,6 +607,7 @@ input[type="checkbox"] {
   margin-top: 2%;
   background-color: #fae1c4;
   border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
 
 .avis_card_glob {

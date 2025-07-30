@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn_more_descrip_down[i].addEventListener("click", () => {
       const description_mission =
         btn_more_descrip_down[i].parentElement.previousElementSibling;
-
+      console.log("ok");
       description_mission.style.height = "auto";
 
       btn_more_descrip_down[i].classList.add("visible");
@@ -28,6 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function openBurgerMenu() {
+    document.querySelector(".nav_bar").classList.add("open");
+    document.querySelector(".overlay_menu_mobile").classList.add("open");
+    document.querySelector(".mobile_title").classList.add("close");
+  }
+
+  function closeBurgerMenu() {
+    document.querySelector(".nav_bar").classList.remove("open");
+    document.querySelector(".overlay_menu_mobile").classList.remove("open");
+    document.querySelector(".mobile_title").classList.remove("close");
+  }
+
   const burgerMenu = document.querySelector(".menu_icon_m");
   burgerMenu.addEventListener("click", () => {
     openBurgerMenu();
@@ -35,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const overlayBurgerMenu = document.querySelector(".overlay_menu_mobile");
   overlayBurgerMenu.addEventListener("click", () => {
-    closeBurgerMenu()
+    closeBurgerMenu();
   });
 
   const btnCloseBurgerMenu = document.querySelector(".btn_nav_close");
@@ -63,19 +75,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-function openBurgerMenu() {
-  document.querySelector('.nav_bar').classList.remove('closed');
-  document.querySelector('.overlay_menu_mobile').classList.remove('closed');
-  document.querySelector('.nav_bar').classList.add('open');
-  document.querySelector('.overlay_menu_mobile').classList.add('open');
-  document.querySelector('.mobile_title').classList.add('close');
-}
-
-function closeBurgerMenu() {
-  document.querySelector('.nav_bar').classList.remove('open');
-  document.querySelector('.overlay_menu_mobile').classList.remove('open');
-  document.querySelector('.nav_bar').classList.add('closed');
-  document.querySelector('.overlay_menu_mobile').classList.add('closed');
-  document.querySelector('.mobile_title').classList.remove('close');
-}

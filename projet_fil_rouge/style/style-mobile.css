@@ -33,6 +33,10 @@
   .testimonials_title {
     font-size: 22px;
   }
+  .titre_last_mission,
+  .testimonials_title {
+    width: 80%;
+  }
 
   .titre_blc_contact {
     width: 100%;
@@ -46,14 +50,8 @@
     align-items: center;
   }
 
-  .titre_site,
-  .mobile_title.close {
-    display: none;
-  }
-
-  .mobile_title {
-    display: inline;
-    width: calc(100% - 25px - 50px);
+  .titre_site h1 {
+    font-size: 48px;
   }
 
   .burger_title {
@@ -81,8 +79,8 @@
     right: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(16, 14, 37, 0.45);
-    display: block;
+    background-color: rgba(16, 14, 37, 0.3);
+    display: none;
     opacity: 0;
     transition: opacity 0.7s ease-out;
   }
@@ -94,19 +92,23 @@
     width: 60vw;
     height: 100vh;
     z-index: 20;
-    display: flex;
     background-color: #ffffff;
+    display: flex;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.7s ease-out;
+    transition: right 0.7s ease-out;
   }
 
-  .overlay_menu_mobile.open,
+  .overlay_menu_mobile.open {
+    display: block;
+    opacity: 1;
+  }
+
   .nav_bar.open {
     right: 0;
     opacity: 1;
   }
-  
+
   .btn_nav_close {
     display: flex;
     cursor: pointer;
@@ -196,7 +198,7 @@
   #glob_miss,
   #glob_card {
     flex-direction: column;
-    width: 95%;
+    width: 90%;
     margin: auto;
   }
 
@@ -216,5 +218,7 @@
 
   .btn_more_miss {
     width: 80%;
+    font-size: 22px;
+    padding: 6px 17px;
   }
 }
