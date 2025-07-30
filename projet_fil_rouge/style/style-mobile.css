@@ -48,6 +48,7 @@
     padding: 0;
     height: 50px;
     align-items: center;
+    justify-content: space-between;
   }
 
   .titre_site h1 {
@@ -94,7 +95,7 @@
     z-index: 20;
     background-color: #ffffff;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     opacity: 0;
     transition: right 0.7s ease-out;
   }
@@ -111,18 +112,20 @@
 
   .btn_nav_close {
     display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    align-items: center;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 20px;
   }
 
   #btn_close {
     display: block;
+    width: 25px;
+    height: 25px;
+    margin-right: 2%;
   }
 
   .nav_menu {
-    /* padding: 0; */
     display: flex;
     align-items: flex-end;
     justify-content: center;

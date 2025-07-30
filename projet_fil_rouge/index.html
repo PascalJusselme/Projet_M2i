@@ -17,13 +17,49 @@
 
   <body>
     <div id="modal_container" class="modal_container">
+      <div class="entete_modal">
+        <h1>Les Eclaireurs Solidaires</h1>
+        <div class="btn_modal_close">
+          <img src="img/cross.png" id="btn_close_modal" />
+        </div>
+      </div>
       <div class="modal_content">
-        <span id="close_modal_btn" class="close_btn">x</span>
-        <h2>Titre de la Modale</h2>
-        <p>
-          Ceci est le contenu de la fenêtre modale. Vous pouvez y mettre du
-          texte, des images, ou même un formulaire !
-        </p>
+        <div class="modal_text">
+          <form action="valid_connec.html">
+            <div class="login_modal">
+              <label for="login">Login</label>
+              <input
+                type="text"
+                id="login"
+                required
+                placeholder="Votre login"
+              />
+            </div>
+            <div class="pass_modal">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                required
+                placeholder="Votre mot de passe"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="footer_formu">
+          <div class="remember">
+            <input type="checkbox" name="remember_me" />
+            <p>Se souvenir de moi</p>
+          </div>
+            <a href="#">Mot de passe oublié ?</a>
+        </div>
+        <div class="button_validate_connec">
+          <input type="button" value="Se connecter" />
+        </div>
+        <div class="create_account">
+          <p>Vous n'avez pas de compte ?</p>
+          <a href="#">Inscrivez-vous.</a>
+        </div>
       </div>
     </div>
     <div class="overlay_menu_mobile"></div>
@@ -32,6 +68,9 @@
         <img src="img/logo2_2.png" alt="Logo du site" class="logo_d logo_m" />
       </div>
       <nav class="nav_bar">
+        <div class="btn_nav_close">
+          <img src="img/cross.png" id="btn_close" />
+        </div>
         <ul class="nav_menu">
           <h1 class="burger_title">
             Les &Eacute;claireurs <span id="color_word">Solidaires</span>
@@ -53,9 +92,6 @@
             />
           </li>
         </ul>
-        <div class="btn_nav_close">
-          <img src="img/btn-right.png" id="btn_close" />
-        </div>
       </nav>
       <div class="menu_icon_m">
         <img src="img/hamb_menu.png" id="picto_burger" />

@@ -114,42 +114,114 @@ textarea {
   width: 100%;
   height: 100%;
   background-color: rgba(16, 14, 37, 0.45);
-  display: flex; 
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000; 
-  opacity: 0; 
+  z-index: 1000;
+  opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+}
+
+.entete_modal {
+  width: 80%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px 15px 0 0;
+  background-color: #ffd900;
+  padding: 2%;
+}
+
+.modal_content {
+  padding: 2%;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 80%;
+  border-radius: 0 0 15px 15px;
+}
+
+.modal_text {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal_text,
+.button_validate_connec {
+  margin-bottom: 15%;
+}
+
+.modal_text form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.login_modal,
+.pass_modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_modal {
+  margin: 0 auto 5% auto;
+}
+.pass_modal {
+  margin: 5% auto 0 auto;
+}
+
+.footer_formu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto 15% auto;
+}
+
+.remember {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.button_validate_connec {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button_validate_connec input[type="button"] {
+  background-color: #ffd900;
+}
+
+.create_account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto 15% auto;
+  justify-content: space-around;
+}
+
+.footer_formu a {
+  text-decoration: underline;
+}
+
+#btn_close_modal {
+  width: 25px;
+  height: 25px;
+  margin-right: 2%;
 }
 
 .visible_modal {
   opacity: 1;
   pointer-events: auto;
-}
-
-.modal_content {
-  background-color: #fff;
-  padding: 20px 30px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  width: 80%;
-  max-width: 500px;
-  position: relative;
-}
-
-.close_btn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #100e25;
-}
-
-.close_btn:hover {
-  color: #100e25;
 }
 /*-------------------------------------------------------------------------------------------*/
 /* ---------------------------------------- BLOC HEADER ------------------------------------ */
@@ -163,15 +235,11 @@ header {
   z-index: 10;
   height: 120px;
   display: flex;
-  justify-content: space-between;
   width: 100%;
 }
 
 .nav_bar {
   display: flex;
-  position: static;
-  right: 0;
-  top: 0;
   width: 100%;
   height: auto;
   z-index: 10;

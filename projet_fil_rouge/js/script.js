@@ -31,13 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function openBurgerMenu() {
     document.querySelector(".nav_bar").classList.add("open");
     document.querySelector(".overlay_menu_mobile").classList.add("open");
-    document.querySelector(".mobile_title").classList.add("close");
   }
 
   function closeBurgerMenu() {
     document.querySelector(".nav_bar").classList.remove("open");
     document.querySelector(".overlay_menu_mobile").classList.remove("open");
-    document.querySelector(".mobile_title").classList.remove("close");
   }
 
   const burgerMenu = document.querySelector(".menu_icon_m");
@@ -56,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const modalWindows = document.getElementById("modal_container");
-  const closeModal = document.getElementById("close_modal_btn");
+  const closeModal = document.getElementById("btn_close_modal");
   const btnsConnection = document.querySelectorAll(".btn_connection");
 
   closeModal.addEventListener("click", () => {
