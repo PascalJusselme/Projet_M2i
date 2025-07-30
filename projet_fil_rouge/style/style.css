@@ -36,49 +36,24 @@ a {
 /*------------------------------------------------------------------------------------------*/
 /* ----------------------------------- GESTION INPUT -------------------------------------- */
 /*------------------------------------------------------------------------------------------*/
-/* Appliquer cette réinitialisation uniquement aux types d'inputs qui en ont besoin */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
-input[type="search"],
-textarea, /* Les textareas bénéficient toujours de cette réinitialisation */
-select    /* Les selects aussi, mais ils auront toujours des styles natifs pour la flèche, etc. */ {
-  padding: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  outline: none; /* Toujours important pour supprimer l'outline au focus */
-  border: none; /* Ici, nous supprimons explicitement la bordure pour ces types */
-}
-
 /* Vous devez maintenant définir vos propres styles de bordure pour ces éléments */
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
 input[type="search"],
+input[type="button"],
 textarea {
-  border: 1px solid #ccc; /* Votre bordure par défaut */
-  background-color: #fff;
-  color: #333;
+  color: #100e25;
   border-radius: 30px;
-  padding: 8px 30px;
+  padding: 12px 34px;
   min-height: 50px;
 }
 
-/* Styles pour le focus (important pour l'accessibilité) */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
 input[type="search"]:focus,
+input[type="button"]:focus,
 textarea:focus {
   border-color: #007bff; /* Couleur de bordure au focus */
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Ombre au focus */
@@ -93,35 +68,28 @@ textarea {
 /*------------------------------------------------------------------------------------------*/
 /* ------------------------------------ GESTION IMAGE ------------------------------------- */
 /*------------------------------------------------------------------------------------------*/
-/*--- Taille du logo sur DESKTOP ---*/
 .logo_d {
   width: 120px;
   height: 120px;
 }
-/*--- Taille des icone pour la notation ---*/
+
 #icon_heart {
   width: 20px;
   height: 20px;
 }
-/*--- On cache tout ce qui a un lien avec le menu mobile ---*/
-/*--- Icone Menu Burger ---*/
+
 .menu_icon_m,
-/*--- Bouton de fermeture du burger Menu ---*/
  #btn_close, 
- .btn_nav_close, 
-/*--- Titre de la nav bar pour mobile ---*/
+ .btn_nav_close,
 .mobile_title,
-/*--- Titre dans le burger menu pour mobile ---*/
 .burger_title,
 .overlay_menu_mobile,
 .nav_bar {
   display: none;
 }
-/*--- Burger Menu et Overlay cachés en desktop ---*/
+
 .overlay_menu_mobile,
-.nav_bar {/* 
-  right: 0;
-  top: 0; */
+.nav_bar {
   transition: none;
   transform: none;
 }
@@ -219,30 +187,17 @@ header {
   justify-content: space-between;
   width: 100%;
 }
-/* RESET COMPLET DE LA NAV_BAR POUR DESKTOP */
-  .nav_bar {
-    display: flex;
-    position: static;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    background-color: transparent;
-    transition: none;
-    transform: none;
-    z-index: auto;
-  }
 
-  /* RESET DES CLASSES OUVERTES */
-  /* .nav_bar.open {
-    right: 0;
-    transform: none;
-  }
+.nav_bar {
+  display: flex;
+  position: static;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
 
-  .overlay_menu_mobile.open {
-    display: none;
-  } */
-/*--- On rend visible et on designe le nav_menu,le <ul>, pour la version desktop ---*/
 .nav_menu {
   list-style: none;
   display: flex;
@@ -303,7 +258,7 @@ header {
   justify-content: space-around;
 }
 
-.btn_connec {
+.btn_connec{
   background-color: #fff;
   border: medium, solid, #ffd900;
 }

@@ -65,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function openBurgerMenu() {
+  document.querySelector('.nav_bar').classList.remove('closed');
+  document.querySelector('.overlay_menu_mobile').classList.remove('closed');
   document.querySelector('.nav_bar').classList.add('open');
   document.querySelector('.overlay_menu_mobile').classList.add('open');
   document.querySelector('.mobile_title').classList.add('close');
@@ -73,18 +75,7 @@ function openBurgerMenu() {
 function closeBurgerMenu() {
   document.querySelector('.nav_bar').classList.remove('open');
   document.querySelector('.overlay_menu_mobile').classList.remove('open');
+  document.querySelector('.nav_bar').classList.add('closed');
+  document.querySelector('.overlay_menu_mobile').classList.add('closed');
   document.querySelector('.mobile_title').classList.remove('close');
-}
-
-function gestionBurgerMenu() {
-  const overlay = document.querySelector(".overlay_menu_mobile");
-  const menu = document.querySelector(".nav_bar");
-
-  if (menu.classList.contains("open")) {
-    // Fermeture
-      closeBurgerMenu()
-  } else {
-    // Ouverture
-      openBurgerMenu()
-  }
 }
