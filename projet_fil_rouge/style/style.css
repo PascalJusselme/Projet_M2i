@@ -1,3 +1,6 @@
+/*------------------------------------------------------------------------------------------*/
+/*-----------------------------------------GENERAL------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,6 +25,63 @@ ul {
   list-style: none;
 }
 
+a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 5px;
+  color: #100e25;
+}
+
+a:hover {
+  color: #ffd900;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #755312;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: sabreLaserEffect 4s infinite alternate ease-in-out;
+}
+
+@keyframes sabreLaserEffect {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+    background-color: #ffd900;
+  }
+  90% {
+    transform: scaleX(0);
+    transform-origin: right;
+    opacity: 1;
+    background-color: #755312;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+    opacity: 0;
+  }
+}
+
+.color_word {
+  color: #ffd900;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -32,8 +92,25 @@ textarea {
   border-radius: 30px;
   padding: 12px 34px;
   min-height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
-/*----------------------------------HEADER----------------------------------------------*/
+
+/* input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover, */
+input[type="button"]:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+/*------------------------------------------------------------------------------------------*/
+/*-----------------------------------------HEADER-------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 header {
   background-color: white;
   box-shadow: 0px 10px 13px -15px #100e25, 0px 5px 2px -3px rgba(0, 0, 0, 0.22);
@@ -77,7 +154,9 @@ header .logo_d {
 .icon_menu_burger {
   display: none;
 }
-/*-------------------------------HERO SECTION----------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*-------------------------------------HERO SECTION-----------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 .hero_section {
   background-image: linear-gradient(
       rgba(16, 14, 37, 0.8),
@@ -92,7 +171,56 @@ header .logo_d {
   padding-top: 120px;
   box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
-/*-------------------------------WHO ARE & OUR NUMBER--------------------------------------*/
+
+.site_title {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.accroche_site p {
+  margin: 5% auto;
+  text-align: center;
+  width: 70%;
+}
+
+.blc_btn_connec {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto 5% auto;
+}
+
+.btn_connec {
+  background-color: #fff;
+  border: medium, solid, #ffd900;
+}
+
+.btn_inscri {
+  background-color: #ffd900;
+  border: medium, solid, #100e25;
+}
+
+.btn_inscri,
+.btn_connec {
+  border-radius: 10px;
+  min-width: 160px;
+}
+
+.bloc_search {
+  height: 50px;
+  width: 50%;
+  display: flex;
+  margin: auto;
+}
+
+.search_bar {
+  width: 100%;
+}
+/*------------------------------------------------------------------------------------------*/
+/*--------------------------------WHO ARE & OUR NUMBER--------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 .bloc_pres {
   width: 90%;
   margin: 5% auto 0 auto;
@@ -111,7 +239,6 @@ header .logo_d {
 .img_pres,
 .img_number {
   width: 80%;
-  /* flex: 1; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -142,6 +269,27 @@ header .logo_d {
 
 #font_number {
   align-items: end;
+}
+
+.title_presentation {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+
+.title_presentation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #755312;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: sabreLaserEffect 4s infinite alternate ease-in-out;
 }
 
 #font_pres p {
@@ -192,7 +340,9 @@ header .logo_d {
   opacity: 1;
   transform: translateX(0%);
 }
-/*------------------------------------MISSIONS-----------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*---------------------------------------MISSIONS-------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 .bloc_mission {
   width: 90%;
   display: flex;
@@ -316,26 +466,59 @@ header .logo_d {
 .visible {
   display: none;
 }
-/*------------------------------------CONTACTS-----------------------------------------*/
+
+.btn_more_miss {
+  margin: 2% auto;
+  border-radius: 15px;
+  background-color: #ffd900;
+  width: 60%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
+  padding: 12px 34px;
+  cursor: pointer;
+}
+
+.btn_more_miss input {
+  all: unset;
+}
+
+.btn_more_miss input:hover {
+  all: unset;
+}
+
+.btn_more_miss:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+/*------------------------------------------------------------------------------------------*/
+/*---------------------------------------CONTACTS-------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 .contact {
   width: 90%;
   margin: auto;
 }
-/*------------------------------------TESTIMONIALS-----------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------TESTIMONIALS------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 .testimonials {
   width: 90%;
   margin: auto;
 }
+
 #img_avatar {
   width: 110px;
-  border-radius: 25px;
   height: 110px;
+  border-radius: 50%;
 }
-/*------------------------------------FOOTER-----------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*----------------------------------------FOOTER--------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 footer {
   width: 100%;
 }
-/*------------------------------------MODAL-----------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+/*-----------------------------------------MODAL--------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 .modal_container {
   position: fixed;
   top: 0;

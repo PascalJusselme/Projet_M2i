@@ -48,8 +48,10 @@
     </header>
 
     <section class="hero_section">
-      <div class="titre_site">
-        <h1>Les &Eacute;claireurs <span id="color_word">Solidaires</span></h1>
+      <div class="site_title">
+        <h1>
+          Les &Eacute;claireurs <span class="color_word">Solidaires</span>
+        </h1>
       </div>
       <div class="accroche_site">
         <p>
@@ -74,7 +76,7 @@
         <input
           type="search"
           name="search_bar_hero"
-          id="search_bar"
+          class="search_bar"
           placeholder="Rechercher une mission"
         />
       </div>
@@ -83,7 +85,7 @@
     <section class="bloc_pres">
       <div class="who_are">
         <div id="font_pres">
-          <h3>Qui Sommes Nous ?</h3>
+            <h3 class="title_presentation">Qui Sommes Nous ?</h3>
           <p>
             "Les Éclaireurs Solidaires" est une association loi 1901, fondée à
             Lyon en 2020, dédiée à la promotion et à la facilitation de
@@ -108,7 +110,7 @@
           <img src="../projet_fil_rouge/img/img-asso4.jpg" class="img_gauche" />
         </div>
         <div id="font_number">
-          <h3>Nos chiffres :</h3>
+          <h3 class="title_presentation">Nos chiffres :</h3>
           <ul>
             <li>1 200 bénévoles actifs depuis notre création</li>
             <li>+350 missions réalisées chaque mois</li>
@@ -141,10 +143,12 @@
             </div>
           </div>
           <div class="description">
-            <p>Animez un atelier de cuisine participatif destiné aux familles du
-            quartier. L'objectif est de préparer ensemble un repas équilibré et
-            économique tout en créant du lien social. Vous serez accompagné(e)
-            d'une animatrice expérimentée.</p>
+            <p>
+              Animez un atelier de cuisine participatif destiné aux familles du
+              quartier. L'objectif est de préparer ensemble un repas équilibré
+              et économique tout en créant du lien social. Vous serez
+              accompagné(e) d'une animatrice expérimentée.
+            </p>
           </div>
           <div class="btn_group">
             <span id="btn_view_more_down" class="btn_toggle">Voir plus</span>
@@ -173,10 +177,12 @@
             </div>
           </div>
           <div class="description">
-            <p>Participez à la végétalisation de Lyon en plantant des arbres
-            fruitiers dans le cadre du projet "Forêt Urbaine". Cette action
-            s'inscrit dans la lutte contre les îlots de chaleur et la promotion
-            de la biodiversité en ville.</p>
+            <p>
+              Participez à la végétalisation de Lyon en plantant des arbres
+              fruitiers dans le cadre du projet "Forêt Urbaine". Cette action
+              s'inscrit dans la lutte contre les îlots de chaleur et la
+              promotion de la biodiversité en ville.
+            </p>
           </div>
           <div class="btn_group">
             <span id="btn_view_more_down" class="btn_toggle">Voir plus</span>
@@ -205,10 +211,12 @@
             </div>
           </div>
           <div class="description">
-            <p>Soutenez l'organisation du Festival des Arts de Rue en accueillant
-            le public, en guidant les visiteurs et en assistant les artistes.
-            Une belle occasion de vivre l'événement de l'intérieur tout en
-            contribuant à sa réussite.</p>
+            <p>
+              Soutenez l'organisation du Festival des Arts de Rue en accueillant
+              le public, en guidant les visiteurs et en assistant les artistes.
+              Une belle occasion de vivre l'événement de l'intérieur tout en
+              contribuant à sa réussite.
+            </p>
           </div>
           <div class="btn_group">
             <span id="btn_view_more_down" class="btn_toggle">Voir plus</span>
@@ -230,12 +238,12 @@
       </div>
 
       <div class="btn_more_miss">
-        <a href="#" class="view_more_miss">Voir plus de missions ...</a>
+        <input type="button" value="Voir plus de missions ..." />
       </div>
     </section>
 
-    <!--  <section class="contact">
-      <div class="titre_blc_contact">
+    <section class="bloc_contact">
+      <div class="bloc_contact_title">
         <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
       </div>
       <div class="formu">
@@ -282,7 +290,7 @@
       </div>
     </section>
 
-    <section class="testimonials">
+    <!--  <section class="testimonials">
       <div class="testimonials_title">
         <h3>T&Eacute;MOIGNAGES</h3>
       </div>
