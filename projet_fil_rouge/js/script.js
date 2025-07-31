@@ -1,29 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
-  function animationImage() {
-    const imgDroite = document.querySelector(".img_pres");
-    const imgGauche = document.querySelector(".img_number");
+function openBurgerMenu() {
+  document.querySelector(".nav_bar_m").classList.add("open");
+  document.querySelector(".overlay_menu_mobile").classList.add("open");
+  document.querySelector("#picto_burger").classList.add("open");
+  document.querySelector("#btn_close").classList.add("open");
+}
 
-    if (imgDroite) {
-      const imgDroiteRect = imgDroite.getBoundingClientRect();
+function closeBurgerMenu() {
+  document.querySelector(".nav_bar_m").classList.remove("open");
+  document.querySelector(".overlay_menu_mobile").classList.remove("open");
+  document.querySelector("#picto_burger").classList.remove("open");
+  document.querySelector("#btn_close").classList.remove("open");
+}
 
-      if (imgDroiteRect.top < window.innerHeight * 0.8) {
-        imgDroite.classList.add("is_visible");
-      } else {
-        imgDroite.classList.remove("is_visible");
-      }
-    }
+function animationImage() {
+  const imgDroite = document.querySelector(".img_pres");
+  const imgGauche = document.querySelector(".img_number");
 
-    if (imgGauche) {
-      const imgGaucheRect = imgGauche.getBoundingClientRect();
+  if (imgDroite) {
+    const imgDroiteRect = imgDroite.getBoundingClientRect();
 
-      if (imgGaucheRect.top < window.innerHeight * 0.8) {
-        imgGauche.classList.add("is_visible");
-      } else {
-        imgGauche.classList.remove("is_visible");
-      }
+    if (imgDroiteRect.top < window.innerHeight * 0.8) {
+      imgDroite.classList.add("is_visible");
+    } else {
+      imgDroite.classList.remove("is_visible");
     }
   }
 
+  if (imgGauche) {
+    const imgGaucheRect = imgGauche.getBoundingClientRect();
+
+    if (imgGaucheRect.top < window.innerHeight * 0.8) {
+      imgGauche.classList.add("is_visible");
+    } else {
+      imgGauche.classList.remove("is_visible");
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     animationImage();
   });
@@ -55,20 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
       btn_more_descrip_up[i].classList.add("visible");
       btn_more_descrip_down[i].classList.toggle("visible");
     });
-  }
-
-  function openBurgerMenu() {
-    document.querySelector(".nav_bar_m").classList.add("open");
-    document.querySelector(".overlay_menu_mobile").classList.add("open");
-    document.querySelector("#picto_burger").classList.add("open");
-    document.querySelector("#btn_close").classList.add("open");
-  }
-
-  function closeBurgerMenu() {
-    document.querySelector(".nav_bar_m").classList.remove("open");
-    document.querySelector(".overlay_menu_mobile").classList.remove("open");
-    document.querySelector("#picto_burger").classList.remove("open");
-    document.querySelector("#btn_close").classList.remove("open");
   }
 
   const burgerMenu = document.querySelector("#picto_burger");

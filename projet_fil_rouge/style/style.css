@@ -96,13 +96,12 @@ textarea {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-/* input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="password"]:hover,
-input[type="search"]:hover, */
+.avis_card:hover,
+.form-container:hover,
+.blc_mission:hover,
 input[type="button"]:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(16, 14, 37, 0.15);
 }
 
 input[type="checkbox"] {
@@ -113,7 +112,7 @@ input[type="checkbox"] {
 /*------------------------------------------------------------------------------------------*/
 header {
   background-color: white;
-  box-shadow: 0px 10px 13px -15px #100e25, 0px 5px 2px -3px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 10px 13px -15px #100e25, 0px 5px 2px -3px rgba(16, 14, 37, 0.2);
   position: fixed;
   z-index: 10;
   display: flex;
@@ -361,11 +360,6 @@ header .nav_bar_d {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-.blc_mission:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
 .card_header {
   width: 100%;
   display: flex;
@@ -521,28 +515,102 @@ h3 {
   border-radius: 25px;
   cursor: pointer;
 }
-
-.form-container:hover {
-  transform: scale(1.05);
-}
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------TESTIMONIALS------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 .testimonials {
-  width: 90%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#glob_card {
+  display: flex;
+  justify-content: space-around;
+  margin: 5% auto;
+}
+
+.avis_card {
+  width: 29%;
+  margin-top: 2%;
+  background-color: #fae1c4;
+  border-radius: 25px;
+}
+
+.avis_card_glob {
+  position: relative;
+  bottom: 50px;
+  margin-left: 30px;
+}
+
+.entete_avis {
+  display: flex;
+  align-items: center;
+}
+
+.lib_mission_avis {
+  margin-top: 60px;
+  margin-left: 2%;
+}
+
+.icon_heart {
+  display: flex;
+  width: 5%;
+}
+
+.txt_avis {
+  padding: 15px 34px 0 0;
 }
 
 #img_avatar {
   width: 110px;
+  border-radius: 25px;
   height: 110px;
-  border-radius: 50%;
 }
 /*------------------------------------------------------------------------------------------*/
 /*----------------------------------------FOOTER--------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 footer {
-  width: 100%;
+  background-color: #ffd900;
+  display: flex;
+  flex-direction: column;
+  height: 55px;
+}
+
+.high_footer {
+  background-color: #ffd900;
+  display: flex;
+  justify-content: space-around;
+  padding: 2% 0;
+}
+
+.bottom_footer {
+  background-color: #ffd900;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_details ul {
+  list-style: none;
+}
+
+.blc_copy {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin-left: 1%;
+  font-size: 12px;
+}
+
+.bloc_picto {
+  margin-right: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.picto {
+  width: 45px;
+  height: 45px;
 }
 /*------------------------------------------------------------------------------------------*/
 /*-----------------------------------------MODAL--------------------------------------------*/
@@ -562,4 +630,99 @@ footer {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+}
+
+.entete_modal {
+  width: 80%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px 15px 0 0;
+  background-color: #ffd900;
+  padding: 2%;
+}
+
+.modal_content {
+  padding: 2%;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 80%;
+  border-radius: 0 0 15px 15px;
+}
+
+.modal_text {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal_text,
+.button_validate_connec {
+  margin-bottom: 15%;
+}
+
+.modal_text form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.login_modal,
+.pass_modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_modal {
+  margin: 0 auto 5% auto;
+}
+.pass_modal {
+  margin: 5% auto 0 auto;
+}
+
+.footer_formu {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto 15% auto;
+}
+
+.remember {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.button_validate_connec {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button_validate_connec input[type="button"] {
+  background-color: #ffd900;
+}
+
+.create_account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto 15% auto;
+  justify-content: space-around;
+}
+
+#btn_close_modal {
+  width: 25px;
+  height: 25px;
+  margin-right: 2%;
+}
+
+.visible_modal {
+  opacity: 1;
+  pointer-events: auto;
 }
