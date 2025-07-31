@@ -16,14 +16,16 @@
   </head>
 
   <body>
+    <div class="overlay_menu_mobile"></div>
     <header>
-      <img src="img/logo2_2.png" alt="Logo du site" class="logo_d logo_m" />
-      <nav class="nav_bar_d">
-        <div class="btn_nav_close">
-          <img src="img/cross.png" id="btn_close" />
-        </div>
+      <img src="./img/logo2_2.png" alt="Logo du site" class="logo_d logo_m" />
+      <img src="./img/hamb_menu.png" id="picto_burger" />
+      <nav class="nav_bar_d nav_bar_m">
+        <img src="./img/cross.png" id="btn_close" />
         <ul class="nav_menu">
-          <h1>Les &Eacute;claireurs <span id="color_word">Solidaires</span></h1>
+          <h1>
+            Les &Eacute;claireurs <span class="color_word">Solidaires</span>
+          </h1>
           <li class="menu_link">
             <a href="index.html">ACCUEIL</a>
           </li>
@@ -42,9 +44,6 @@
           </li>
         </ul>
       </nav>
-      <div class="icon_menu_burger">
-        <img src="img/hamb_menu.png" id="picto_burger" />
-      </div>
     </header>
 
     <section class="hero_section">
@@ -84,8 +83,8 @@
 
     <section class="bloc_pres">
       <div class="who_are">
-        <div id="font_pres">
-            <h3 class="title_presentation">Qui Sommes Nous ?</h3>
+        <div class="font_pres">
+          <h3>Qui Sommes Nous ?</h3>
           <p>
             "Les Éclaireurs Solidaires" est une association loi 1901, fondée à
             Lyon en 2020, dédiée à la promotion et à la facilitation de
@@ -102,15 +101,15 @@
           </div>
         </div>
         <div class="img_pres">
-          <img src="../projet_fil_rouge/img/img-asso3.jpg" class="img_droite" />
+          <img src="./img/img-asso3.jpg" class="img_droite" />
         </div>
       </div>
       <div class="our_number">
         <div class="img_number">
-          <img src="../projet_fil_rouge/img/img-asso4.jpg" class="img_gauche" />
+          <img src="./img/img-asso4.jpg" class="img_gauche" />
         </div>
-        <div id="font_number">
-          <h3 class="title_presentation">Nos chiffres :</h3>
+        <div class="font_number">
+          <h3>Nos chiffres :</h3>
           <ul>
             <li>1 200 bénévoles actifs depuis notre création</li>
             <li>+350 missions réalisées chaque mois</li>
@@ -242,55 +241,33 @@
       </div>
     </section>
 
-    <section class="bloc_contact">
+    <section class="bloc_contact form-container">
       <div class="bloc_contact_title">
         <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
       </div>
-      <div class="formu">
-        <div class="phr_accroche">
-          <p>
-            Vous représentez une association, un collectif ou vous cherchez à
-            vous engager comme bénévole ?
-          </p>
-          <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
-        </div>
-        <form action="valid.html">
-          <div class="contact_haut">
-            <div class="input_align">
-              <label for="name">NOM</label>
-              <input type="text" id="name" required placeholder="Votre nom" />
-            </div>
-            <div class="input_align">
-              <label for="mail">MAIL</label>
-              <input
-                type="email"
-                id="mail"
-                required
-                placeholder="Votre email"
-              />
-            </div>
-          </div>
-          <div class="contact_bas">
-            <div class="mess_area">
-              <label for="message">MESSAGE</label>
-              <textarea id="message" placeholder="Votre message"></textarea>
-            </div>
-            <div class="consent">
-              <input type="checkbox" name="consent_check" />
-              <p>
-                Je consens à ce que mes informations soient stockées en vue de
-                me répondre
-              </p>
-            </div>
-            <div class="button_formu">
-              <input type="button" value="ENVOYER" id="button_formu" />
-            </div>
-          </div>
-        </form>
+      <div class="phr_accroche">
+        <p>
+          Vous représentez une association, un collectif ou vous cherchez à vous
+          engager comme bénévole ?
+        </p>
+        <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
       </div>
+      <form action="#" id="contactForm">
+        <input type="text" placeholder="Nom*" required />
+        <input type="email" placeholder="Email*" required />
+        <textarea rows="4" placeholder="Votre message..." required></textarea>
+        <div class="consent">
+          <input type="checkbox" name="consent_check" />
+          <p>
+            Je consens à ce que mes informations soient stockées en vue de me
+            répondre
+          </p>
+        </div>
+        <input type="button" value="ENVOYER" id="button_formu" />
+      </form>
     </section>
 
-    <!--  <section class="testimonials">
+    <section class="testimonials">
       <div class="testimonials_title">
         <h3>T&Eacute;MOIGNAGES</h3>
       </div>
@@ -300,11 +277,7 @@
           <div class="avis_card_glob">
             <div class="entete_avis">
               <div class="avatar_member">
-                <img
-                  src="../projet_fil_rouge/img/img-mini-1-2.png"
-                  alt=""
-                  id="img_avatar"
-                />
+                <img src="./img/img-mini-1-2.png" alt="" id="img_avatar" />
               </div>
               <div class="lib_mission_avis">
                 <p>Sportif et solidaire</p>
@@ -312,31 +285,11 @@
             </div>
             <div class="foot_avis">
               <div class="icon_heart">
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
               </div>
               <div class="txt_avis">
                 <p>Cammille D.</p>
@@ -357,11 +310,7 @@
           <div class="avis_card_glob">
             <div class="entete_avis">
               <div class="avatar_member">
-                <img
-                  src="../projet_fil_rouge/img/img-mini-1-2.png"
-                  alt=""
-                  id="img_avatar"
-                />
+                <img src="./img/img-mini-1-2.png" alt="" id="img_avatar" />
               </div>
               <div class="lib_mission_avis">
                 <p>Accompagnement Festival de rue</p>
@@ -369,31 +318,11 @@
             </div>
             <div class="foot_avis">
               <div class="icon_heart">
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
               </div>
               <div class="txt_avis">
                 <p>Antoine K.</p>
@@ -414,11 +343,7 @@
           <div class="avis_card_glob">
             <div class="entete_avis">
               <div class="avatar_member">
-                <img
-                  src="../projet_fil_rouge/img/img-mini-1-2.png"
-                  alt=""
-                  id="img_avatar"
-                />
+                <img src="./img/img-mini-1-2.png" alt="" id="img_avatar" />
               </div>
               <div class="lib_mission_avis">
                 <p>Magie avec les enfants</p>
@@ -426,31 +351,11 @@
             </div>
             <div class="foot_avis">
               <div class="icon_heart">
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
-                <img
-                  src="../projet_fil_rouge/img/coeur-valide.png"
-                  alt=""
-                  id="icon_heart"
-                />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_heart" />
               </div>
               <div class="txt_avis">
                 <p>Laura B.</p>
@@ -498,23 +403,17 @@
           &Eacute;claireurs Solidaires
         </div>
         <div class="bloc_picto">
-          <a href="#"
-            ><img src="../projet_fil_rouge/img/icon-X.png" class="picto"
-          /></a>
-          <a href="#"
-            ><img src="../projet_fil_rouge/img/icon-insta.png" class="picto"
-          /></a>
-          <a href="#"
-            ><img src="../projet_fil_rouge/img/icon-facebook.png" class="picto"
-          /></a>
+          <a href="#"><img src="./img/icon-X.png" class="picto" /></a>
+          <a href="#"><img src="./img/icon-insta.png" class="picto" /></a>
+          <a href="#"><img src="./img/icon-facebook.png" class="picto" /></a>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <div id="modal_container" class="modal_container">
       <div class="entete_modal">
         <h1>Les Eclaireurs Solidaires</h1>
         <div class="btn_modal_close">
-          <img src="img/cross.png" id="btn_close_modal" />
+          <img src="./img/cross.png" id="btn_close_modal" />
         </div>
       </div>
       <div class="modal_content">
@@ -556,7 +455,6 @@
         </div>
       </div>
     </div>
-    <div class="overlay_menu_mobile"></div>
     <script src="./js/script.js"></script>
   </body>
 </html>

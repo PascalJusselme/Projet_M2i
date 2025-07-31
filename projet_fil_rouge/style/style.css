@@ -127,7 +127,7 @@ header .logo_d {
   width: 120px;
 }
 
-.nav_bar_d {
+header .nav_bar_d {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -140,7 +140,7 @@ header .logo_d {
   align-items: center;
 }
 
-.nav_menu .menu_link {
+.nav_menu li {
   margin-right: 2%;
 }
 
@@ -149,9 +149,9 @@ header .logo_d {
   border: medium, solid, #ffd900;
 }
 
-.nav_bar_d .btn_nav_close,
 .nav_menu h1,
-.icon_menu_burger {
+#picto_burger,
+#btn_close {
   display: none;
 }
 /*------------------------------------------------------------------------------------------*/
@@ -230,12 +230,12 @@ header .logo_d {
 .our_number {
   display: flex;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 2.5%;
   overflow-x: hidden;
 }
 
-#font_pres,
-#font_number,
+.font_pres,
+.font_number,
 .img_pres,
 .img_number {
   width: 80%;
@@ -245,8 +245,8 @@ header .logo_d {
   border-radius: 15px;
 }
 
-#font_pres,
-#font_number {
+.font_pres,
+.font_number {
   background-color: #ffd900;
   height: auto;
   padding: 5%;
@@ -263,48 +263,27 @@ header .logo_d {
   box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
 }
 
-#font_pres {
+.font_pres {
   align-items: start;
 }
 
-#font_number {
+.font_number {
   align-items: end;
 }
 
-.title_presentation {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  padding-bottom: 5px;
-}
-
-.title_presentation::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #755312;
-
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: sabreLaserEffect 4s infinite alternate ease-in-out;
-}
-
-#font_pres p {
+.font_pres p {
   margin: 3.5% 0 3.5% 4.5%;
   width: 90%;
 }
 
-#font_number ul {
+.font_number ul {
   text-align: right;
   margin-top: 2.5%;
   margin-right: 4.5%;
   width: 90%;
 }
 
-#font_number li {
+.font_number li {
   margin-bottom: 7%;
 }
 
@@ -347,18 +326,22 @@ header .logo_d {
   width: 90%;
   display: flex;
   flex-direction: column;
-  margin: 5% auto;
+  margin: 2.5% auto;
 }
 
 .bloc_mission_title {
   background-color: #ffd900;
   width: 70%;
   margin: auto;
-  padding: 1.5%;
+  padding: 12px 34px;
   border-radius: 25px;
   text-align: center;
   font-size: 25px;
   box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
+}
+
+.bloc_mission_title h3 {
+  margin: auto;
 }
 
 .glob_miss {
@@ -493,9 +476,54 @@ header .logo_d {
 /*------------------------------------------------------------------------------------------*/
 /*---------------------------------------CONTACTS-------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
-.contact {
+.bloc_contact {
   width: 90%;
+  margin: 0 auto 2.5% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 2%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bloc_contact_title {
+  background-color: #ffd900;
+  width: 100%;
+  border-radius: 15px;
+  padding: 12px 34px;
+}
+
+.phr_accroche {
+  text-align: center;
+  margin: 3% auto;
+}
+
+h3 {
+  text-align: center;
   margin: auto;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 1%;
+  margin: 2% 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container input[type="button"] {
+  background: #ffd900;
+  border: none;
+  padding: 12px 34px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.form-container:hover {
+  transform: scale(1.05);
 }
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------TESTIMONIALS------------------------------------------*/

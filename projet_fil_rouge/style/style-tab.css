@@ -1,9 +1,9 @@
-@media all and (max-width: 875px) and (min-width: 736px) {
+@media all and (max-width: 1140px) and (min-width: 741px) {
   .last {
     display: none;
   }
   .blc_mission {
-    width: 40%;
+    width: 45%;
   }
   .card_header div {
     width: 100%;
