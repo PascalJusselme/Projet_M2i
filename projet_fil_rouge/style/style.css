@@ -102,7 +102,8 @@ header .logo_d {
 .our_number {
   display: flex;
   align-items: center;
-  margin-bottom: 5%;
+  margin-top: 5%;
+  overflow-x: hidden;
 }
 
 #font_pres,
@@ -144,7 +145,7 @@ header .logo_d {
 }
 
 #font_pres p {
-  margin:3.5% 0 3.5% 4.5%;
+  margin: 3.5% 0 3.5% 4.5%;
   width: 90%;
 }
 
@@ -172,17 +173,148 @@ header .logo_d {
   margin-left: -10%;
   z-index: 1;
   align-items: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .our_number .img_number {
   z-index: 1;
   margin-right: -10%;
   align-items: center;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.who_are .img_pres.is_visible,
+.our_number .img_number.is_visible {
+  opacity: 1;
+  transform: translateX(0%);
 }
 /*------------------------------------MISSIONS-----------------------------------------*/
 .bloc_mission {
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 5% auto;
+}
+
+.bloc_mission_title {
+  background-color: #ffd900;
+  width: 70%;
   margin: auto;
+  padding: 1.5%;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 25px;
+  box-shadow: 0 4px 8px rgba(16, 14, 37, 0.1);
+}
+
+.glob_miss {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.blc_mission {
+  width: 30%;
+  background: #fae1c4;
+  /* background: #fff; */
+  border-radius: 15px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.blc_mission:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5%;
+}
+
+.miss01 img {
+  border: 2px solid #2d1b55;
+}
+.miss02 img {
+  border: 2px solid #1b5533;
+}
+.miss03 img {
+  border: 2px solid #55291b;
+}
+.miss01 .cat_mission {
+  background-color: #2d1b55;
+}
+.miss02 .cat_mission {
+  background-color: #1b5533;
+}
+.miss03 .cat_mission {
+  background-color: #55291b;
+}
+
+.card_header div {
+  width: calc(90% - 110px);
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+.card_header img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.card_header h3 {
+  color: #100e25;
+  margin-bottom: 1%;
+}
+
+.cat_mission {
+  font-size: 14px;
+  color: #fff;
+  padding: 3px 8.5px;
+  border-radius: 15px;
+}
+
+.description {
+  padding: 0 5%;
+  height: 20px;
+  overflow: hidden;
+  color: #100e25;
+  transition: height 0.5s ease;
+}
+
+.card_info {
+  color: #6b7280;
+  margin-top: 1%;
+}
+
+.card_footer {
+  padding: 0 3% 5% 3%;
+}
+
+.btn_group {
+  margin-top: 2%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: end;
+}
+
+.btn_toggle {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.visible {
+  display: none;
 }
 /*------------------------------------CONTACTS-----------------------------------------*/
 .contact {
@@ -204,3 +336,19 @@ footer {
   width: 100%;
 }
 /*------------------------------------MODAL-----------------------------------------*/
+.modal_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 14, 37, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}

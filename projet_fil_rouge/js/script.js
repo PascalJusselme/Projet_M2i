@@ -1,4 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
+  function animationImage() {
+    const imgDroite = document.querySelector(".img_pres");
+    const imgGauche = document.querySelector(".img_number");
+
+    if (imgDroite) {
+      const imgDroiteRect = imgDroite.getBoundingClientRect();
+
+      if (imgDroiteRect.top < window.innerHeight * 0.8) {
+        imgDroite.classList.add("is_visible");
+      } else {
+        imgDroite.classList.remove("is_visible");
+      }
+    }
+
+    if (imgGauche) {
+      const imgGaucheRect = imgGauche.getBoundingClientRect();
+
+      if (imgGaucheRect.top < window.innerHeight * 0.8) {
+        imgGauche.classList.add("is_visible");
+      } else {
+        imgGauche.classList.remove("is_visible");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", () => {
+    animationImage();
+  });
+
   const btn_more_descrip_down = document.querySelectorAll(
     "#btn_view_more_down"
   );
@@ -38,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".overlay_menu_mobile").classList.remove("open");
   }
 
-  const burgerMenu = document.querySelector(".menu_icon_m");
+  const burgerMenu = document.querySelector(".icon_menu_burger");
   burgerMenu.addEventListener("click", () => {
     openBurgerMenu();
   });

@@ -1,0 +1,11 @@
+@media all and (max-width: 875px) and (min-width: 736px) {
+  .last {
+    display: none;
+  }
+  .blc_mission {
+    width: 40%;
+  }
+  .card_header div {
+    width: 100%;
+  }
+}

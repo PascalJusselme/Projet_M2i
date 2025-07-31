@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartes de Missions</title>
+  <style>
+    body {
+      background-color: #FFFDEB;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+    }
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      padding: 1.25rem;
+    }
+    .card-header img {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 9999px;
+      border: 2px solid #FFD500;
+    }
+    .card-header div {
+      margin-left: 1rem;
+    }
+    .card-header h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 0.25rem;
+    }
+    .badge {
+      font-size: 0.75rem;
+      background-color: #2D1B55;
+      color: #fff;
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+    }
+    .description {
+      padding: 0 1.25rem;
+      height: 20px;
+      overflow: hidden;
+      font-size: 0.875rem;
+      color: #374151;
+      transition: height 0.3s ease;
+    }
+    .card-info {
+      padding: 0 1.25rem;
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+    }
+    .card-footer {
+      padding: 1rem 1.25rem;
+    }
+    .card-footer a,
+    .toggle-btn {
+      color: #FFD500;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn-group {
+      margin-top: 0.5rem;
+    }
+    .visible {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-header">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Photo profil">
+        <div>
+          <h3>Jardin partagé solidaire</h3>
+          <span class="badge">Écologie</span>
+        </div>
+      </div>
+      <div class="description">
+        Rejoignez une équipe conviviale pour entretenir un jardin collectif dans le quartier. Cette mission permet de favoriser les liens sociaux tout en agissant pour l'environnement.
+      </div>
+      <div class="card-footer">
+        <div class="btn-group">
+          <span id="btn_view_more_down" class="toggle-btn">Voir plus</span>
+          <span id="btn_view_more_up" class="toggle-btn visible">Voir moins</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <p><strong>Contact :</strong> claire.michel@gmail.com</p>
+        <p><strong>Date :</strong> 12/09/2025</p>
+        <p><strong>Lieu :</strong> Lyon 7e</p>
+        <p><strong>Durée :</strong> 3h</p>
+      </div>
+    </div>
+
+    <!-- Duplicate cards with other data as needed -->
+
+  </div>
+
+  <script>
+    const btn_more_descrip_down = document.querySelectorAll("#btn_view_more_down");
+    const btn_more_descrip_up = document.querySelectorAll("#btn_view_more_up");
+
+    for (let i = 0; i < btn_more_descrip_down.length; i++) {
+      btn_more_descrip_down[i].addEventListener("click", () => {
+        const description_mission = btn_more_descrip_down[i].closest(".card").querySelector(".description");
+        description_mission.style.height = "auto";
+
+        btn_more_descrip_down[i].classList.add("visible");
+        btn_more_descrip_up[i].classList.remove("visible");
+      });
+    }
+
+    for (let i = 0; i < btn_more_descrip_up.length; i++) {
+      btn_more_descrip_up[i].addEventListener("click", () => {
+        const description_mission = btn_more_descrip_up[i].closest(".card").querySelector(".description");
+        description_mission.style.height = "20px";
+
+        btn_more_descrip_up[i].classList.add("visible");
+        btn_more_descrip_down[i].classList.remove("visible");
+      });
+    }
+  </script>
+</body>
+</html>
