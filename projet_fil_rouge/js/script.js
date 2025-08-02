@@ -1,3 +1,7 @@
+function getRandomNmb(max) {
+  return Math.floor(Math.random() * max);
+}
+
 function openBurgerMenu() {
   document.querySelector(".nav_bar_m").classList.add("open");
   document.querySelector(".overlay_menu_mobile").classList.add("open");
@@ -12,7 +16,7 @@ function closeBurgerMenu() {
   document.querySelector("#btn_close").classList.remove("open");
 }
 
-function animationImage() {
+function animImgBlocWhoAre() {
   const imgDroite = document.querySelector(".img_pres");
   const imgGauche = document.querySelector(".img_number");
 
@@ -37,9 +41,71 @@ function animationImage() {
   }
 }
 
+function isMailValid(text) {
+  const mailRegex =
+    /^[a-zA-Z0-9]([a-zA-Z0-9._+-])*[a-zA-Z0-9]@[a-zA-Z0-9]([a-zA-Z0-9.-])*[a-zA-Z0-9]\.[a-z]{2,5}$/;
+
+  return text !== "" && mailRegex.test(text);
+}
+
+function isNameValid(text) {
+  const nameRegex = /^[a-zA-ZÀ-ÿ\s'-]{2,50}$/;
+
+  return text !== "" && nameRegex.test(text);
+}
+
+function inputValidation(input, funcValidation, inputLib) {
+  const tabInvalidMess = [
+    `Le champ ${inputLib} n'est pas valide`,
+    `Non tu ne peux pas écrire cela ici...`,
+    `C'est cela oui !!!`,
+    `Tu es sur que c'est un ${inputLib} ?`
+  ];
+  const tabEmptyMess = [
+    `Le champ ${inputLib} ne peux pas être vide`,
+    `Eh! Oh! tu le rempli ce champ ${inputLib}?`,
+    `zzzZZZZZzzzzz`,
+    `Si tu pense qu'un ${inputLib} peut être vide, passe ton chemin`
+  ];
+  const inputValue = input.value;
+  const divHelpId = input.getAttribute("aria-describedby");
+  const divHelp = document.getElementById(divHelpId);
+  const emptyMessage =
+    tabEmptyMess.length === 0
+      ? `Le champ ${inputLib} est obligatoire et ne peut donc pas être vide.`
+      : tabEmptyMess[getRandomNmb(tabEmptyMess.length)];
+  const invalidMessage =
+    tabInvalidMess.length === 0
+      ? `Le champ ${inputLib} n'est pas valide.`
+      : tabInvalidMess[getRandomNmb(tabInvalidMess.length)];
+
+  input.classList.remove("valid", "invalid");
+  divHelp.classList.remove("visible");
+
+  if (inputValue === "") {
+    input.classList.add("invalid");
+    divHelp.classList.add("visible");
+    divHelp.textContent = emptyMessage;
+    return;
+  }
+
+  const isValid = funcValidation(inputValue);
+
+  if (isValid) {
+    input.classList.add("valid");
+    divHelp.classList.remove("visible");
+  } else {
+    input.classList.add("invalid");
+    divHelp.classList.add("visible");
+    divHelp.textContent = invalidMessage;
+  }
+
+  return isValid;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
-    animationImage();
+    animImgBlocWhoAre();
   });
 
   const btn_more_descrip_down = document.querySelectorAll(
@@ -51,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn_more_descrip_down[i].addEventListener("click", () => {
       const description_mission =
         btn_more_descrip_down[i].parentElement.previousElementSibling;
-      console.log("ok");
+
       description_mission.style.height = "auto";
 
       btn_more_descrip_down[i].classList.add("visible");
@@ -89,15 +155,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalWindows = document.getElementById("modal_container");
   const closeModal = document.getElementById("btn_close_modal");
   const btnsConnection = document.querySelectorAll(".btn_connection");
-
   closeModal.addEventListener("click", () => {
     modalWindows.classList.remove("visible_modal");
   });
-
-  modalWindows.addEventListener("click", () => {
-    modalWindows.classList.remove("visible_modal");
-  });
-
   for (let i = 0; i < btnsConnection.length; i++) {
     const element = btnsConnection[i];
 
@@ -105,4 +165,30 @@ document.addEventListener("DOMContentLoaded", () => {
       modalWindows.classList.add("visible_modal");
     });
   }
+
+  const inputMailContact = document.getElementById("mail_contact");
+  const inputNameContact = document.getElementById("name_contact");
+  inputMailContact.addEventListener("focus", function () {
+    inputValidation(this, isMailValid, "E-mail");
+  });
+
+  inputMailContact.addEventListener("input", function () {
+    inputValidation(this, isMailValid, "E-mail");
+  });
+
+  inputMailContact.addEventListener("blur", function () {
+    inputValidation(this, isMailValid, "E-mail");
+  });
+
+  inputNameContact.addEventListener("focus", function () {
+    inputValidation(this, isNameValid, "Nom");
+  });
+
+  inputNameContact.addEventListener("input", function () {
+    inputValidation(this, isNameValid, "Nom");
+  });
+
+  inputNameContact.addEventListener("blur", function () {
+    inputValidation(this, isNameValid, "Nom");
+  });
 });

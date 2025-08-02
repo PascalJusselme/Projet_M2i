@@ -1,0 +1,31 @@
+du 10 juin au premier aout
+
+
+
+
+
+a partir du premier 01 aout
+
+En ce jour je suis sur une version stable de la home page, responsive ok, quelques animations ok, 
+modal de creation de compte et de connexion mis en place, il faut encore que je vois 2 soucis 
+sur le mode paysage de 2 appareils.
+
+02/08/2025
+je m'attele aux tests des champs remplis par l'utilisateur
+    formulaire contact
+        input mail 
+        input Nom
+        rajout de l'input prenom dans le formulaire de contact a venir
+        input text area
+        comment teste la checkbox? affichage autre
+        Pour faciliter la gestion des erreurs ou autre aide je change les affichage pour avoir
+    sous l'input un div qui apparait pour les message. je fais les regex pour les champs
+pour cela je me renseigne sur les evenements javascript, 
+    focus quand le bloc est focus
+    input quand le text de l'input change
+    blur quand on sort du focus de l'input
+    focusout pour gerer les affichages a la sortie du focus du formulaire, je reflechis encore
+        de l'ui ux pour celui ci
+
+
+

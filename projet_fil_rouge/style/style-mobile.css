@@ -1,4 +1,4 @@
-@media all and (max-width: 819px) {
+@media all and (max-width: 760px) {
   body {
     font-size: 14px;
   }
@@ -25,6 +25,7 @@
     width: 25px;
     height: 25px;
   }
+
   .overlay_menu_mobile {
     z-index: 10;
     position: fixed;
@@ -51,7 +52,7 @@
     justify-content: flex-start;
     align-items: flex-end;
     opacity: 0;
-    transition: right 0.7s ease-out;
+    transition: right 0.7s ease-out, opacity 0.7s ease-out;
   }
 
   .overlay_menu_mobile.open {
@@ -104,6 +105,10 @@
   /*------------------------------------------------------------------------------------------*/
   .hero_section .glob_hero {
     padding-top: 50px;
+  }
+
+  .bloc_search {
+    width: 75%;
   }
   /*------------------------------------------------------------------------------------------*/
   /*--------------------------------WHO ARE & OUR NUMBER--------------------------------------*/
@@ -169,12 +174,12 @@
   .avis_card_glob {
     margin-left: 15px;
     bottom: 25px;
-  }  
+  }
   .avis_card {
     width: 100%;
     margin-top: 40px;
   }
-  
+
   .entete_avis {
     display: flex;
     flex-wrap: wrap;

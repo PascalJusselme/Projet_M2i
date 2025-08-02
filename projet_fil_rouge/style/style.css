@@ -172,25 +172,31 @@ header .nav_bar_d {
 }
 .glob_hero {
   padding-top: 120px;
+  height: 100%;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
 }
 .site_title {
-  margin-top: 1.5%;
+  height: 20%;
+  padding-top: 10px;
   text-align: center;
 }
 
-.accroche_site p {
-  margin: 2% auto;
+.accroche_site {
+  width: 80%;
+  height: 25%;
+  margin: auto;
   text-align: center;
-  width: 70%;
 }
 
-.blc_btn_connec {
-  width: 100%;
+.blc_btn_connec { 
+  height: 25%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 2% auto;
+  margin: auto;
 }
 
 .btn_inscri,
@@ -200,9 +206,9 @@ header .nav_bar_d {
 }
 
 .bloc_search {
-  height: 50px;
+  height: 25%;
   width: 50%;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .search_bar {
@@ -518,6 +524,28 @@ h3 {
   border-radius: 5px;
 }
 
+#name_help,
+#mail_help {
+  display: none;
+}
+
+#name_help.visible,
+#mail_help.visible {
+  display: inline-block;
+  color: rgb(139, 2, 2);
+  font-size: 16px;
+}
+
+#name_contact.invalid,
+#mail_contact.invalid {
+  box-shadow: 0 8px 24px rgba(100, 24, 24, 0.8);
+}
+
+#name_contact.valid,
+#mail_contact.valid {
+  box-shadow: 0 8px 24px rgb(19, 82, 50, 0.8);
+}
+
 .form-container input[type="button"] {
   background: #ffd900;
   border: none;
@@ -561,8 +589,8 @@ h3 {
   margin-left: 2%;
 }
 .lib_mission_avis {
-  width: calc(98% - 110px); 
-  margin: 50px 0 0 0; 
+  width: calc(98% - 110px);
+  margin: 50px 0 0 0;
 }
 
 #icon_hearth {

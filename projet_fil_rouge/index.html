@@ -48,39 +48,40 @@
 
     <section class="hero_section">
       <div class="glob_hero">
-      <div class="site_title">
-        <h1>
-          Les &Eacute;claireurs <span class="color_word">Solidaires</span>
-        </h1>
+        <div class="site_title">
+          <h1>
+            Les &Eacute;claireurs <span class="color_word">Solidaires</span>
+          </h1>
+        </div>
+        <div class="accroche_site">
+          <p>
+            Passez à l'action citoyenne : trouvez facilement des missions de
+            bénévolat variées, engagez-vous pour l'environnement, la solidarité,
+            l'entraide ou l'éducation, et devenez un acteur du changement social
+            !
+          </p>
+        </div>
+        <div class="blc_btn_connec">
+          <input
+            type="button"
+            value="S'inscrire"
+            class="btn_inscri btn_connection"
+          />
+          <input
+            type="button"
+            value="Se Connecter"
+            class="btn_connec btn_connection"
+          />
+        </div>
+        <div class="bloc_search">
+          <input
+            type="search"
+            name="search_bar_hero"
+            class="search_bar"
+            placeholder="Rechercher une mission"
+          />
+        </div>
       </div>
-      <div class="accroche_site">
-        <p>
-          Passez à l'action citoyenne : trouvez facilement des missions de
-          bénévolat variées, engagez-vous pour l'environnement, la solidarité,
-          l'entraide ou l'éducation, et devenez un acteur du changement social !
-        </p>
-      </div>
-      <div class="blc_btn_connec">
-        <input
-          type="button"
-          value="S'inscrire"
-          class="btn_inscri btn_connection"
-        />
-        <input
-          type="button"
-          value="Se Connecter"
-          class="btn_connec btn_connection"
-        />
-      </div>
-      <div class="bloc_search">
-        <input
-          type="search"
-          name="search_bar_hero"
-          class="search_bar"
-          placeholder="Rechercher une mission"
-        />
-      </div>
-    </div>
     </section>
 
     <section class="bloc_pres">
@@ -255,8 +256,22 @@
         <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
       </div>
       <form action="#" id="contactForm">
-        <input type="text" placeholder="Nom*" required />
-        <input type="email" placeholder="Email*" required />
+        <input
+          id="name_contact"
+          type="text"
+          placeholder="Nom*"
+          aria-describedby="name_help"
+          required
+        />
+        <div id="name_help"></div>
+        <input
+          id="mail_contact"
+          type="email"
+          placeholder="Email*"
+          aria-describedby="mail_help"
+          required
+        />
+        <div id="mail_help"></div>
         <textarea rows="4" placeholder="Votre message..." required></textarea>
         <div class="consent">
           <input type="checkbox" name="consent_check" />
@@ -439,8 +454,8 @@
               <input
                 type="text"
                 id="login"
-                required
                 placeholder="Votre login"
+                required
               />
             </div>
             <div class="pass_modal">
@@ -448,8 +463,8 @@
               <input
                 type="password"
                 id="password"
-                required
                 placeholder="Votre mot de passe"
+                required
               />
             </div>
           </form>
