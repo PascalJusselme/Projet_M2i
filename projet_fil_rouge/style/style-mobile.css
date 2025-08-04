@@ -1,4 +1,4 @@
-@media all and (max-width: 760px) {
+@media all and (max-width: 806px) {
   body {
     font-size: 14px;
   }
@@ -12,7 +12,18 @@
   header {
     height: 50px;
     align-items: center;
-    justify-content: space-between;
+  }
+  .div_logo_m,
+  .div_burger_m {
+    width: 40%;
+    display: flex;
+  }
+
+  .div_logo_m{
+    justify-content: start ;
+  }
+  .div_burger_m{
+    justify-content: end ;
   }
 
   header .logo_m {
@@ -103,9 +114,10 @@
   /*------------------------------------------------------------------------------------------*/
   /*-------------------------------------HERO SECTION-----------------------------------------*/
   /*------------------------------------------------------------------------------------------*/
-  .hero_section .glob_hero {
-    padding-top: 50px;
-  }
+  /* .site_title {
+    margin-top: 0;
+    margin-bottom: -30px;
+  } */
 
   .bloc_search {
     width: 75%;
@@ -187,5 +199,10 @@
 
   .lib_mission_avis {
     height: auto;
+  }
+
+  .entete_modal,
+  .modal_content {
+    width: 75%;
   }
 }

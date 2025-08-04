@@ -41,31 +41,36 @@ function animImgBlocWhoAre() {
   }
 }
 
-function isMailValid(text) {
+function mailIsValid(text) {
   const mailRegex =
-    /^[a-zA-Z0-9]([a-zA-Z0-9._+-])*[a-zA-Z0-9]@[a-zA-Z0-9]([a-zA-Z0-9.-])*[a-zA-Z0-9]\.[a-z]{2,5}$/;
+    /^[a-zA-Z0-9]([a-zA-Z0-9._+-])*[a-zA-Z0-9]@[a-zA-Z0-9]([a-zA-Z0-9.-])*[a-zA-Z0-9]\.[a-z]{1,5}$/;
 
   return text !== "" && mailRegex.test(text);
 }
 
-function isNameValid(text) {
-  const nameRegex = /^[a-zA-ZÀ-ÿ\s'-]{2,50}$/;
+function nameIsValid(text) {
+  const nameRegex = /^[a-zA-ZÀ-ÿ\s'-]{1,50}$/;
 
   return text !== "" && nameRegex.test(text);
 }
 
+function areaIsValid(text) {
+  const areaRegex = /^[a-zA-Z0-9\s.,!?;:*+=/"#&%$()\-_'À-ÿ]{1,500}$/
+  return text !== '' && areaRegex.test(text)
+}
+
 function inputValidation(input, funcValidation, inputLib) {
   const tabInvalidMess = [
-    `Le champ ${inputLib} n'est pas valide`,
+    /* `Le champ ${inputLib} n'est pas valide`,
     `Non tu ne peux pas écrire cela ici...`,
     `C'est cela oui !!!`,
-    `Tu es sur que c'est un ${inputLib} ?`
+    `Tu es sur que c'est un ${inputLib} ?` */
   ];
   const tabEmptyMess = [
-    `Le champ ${inputLib} ne peux pas être vide`,
+    /* `Le champ ${inputLib} ne peux pas être vide`,
     `Eh! Oh! tu le rempli ce champ ${inputLib}?`,
     `zzzZZZZZzzzzz`,
-    `Si tu pense qu'un ${inputLib} peut être vide, passe ton chemin`
+    `Si tu pense qu'un ${inputLib} peut être vide, passe ton chemin` */
   ];
   const inputValue = input.value;
   const divHelpId = input.getAttribute("aria-describedby");
@@ -167,28 +172,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const inputMailContact = document.getElementById("mail_contact");
-  const inputNameContact = document.getElementById("name_contact");
   inputMailContact.addEventListener("focus", function () {
-    inputValidation(this, isMailValid, "E-mail");
-  });
+    inputValidation(this, mailIsValid, "E-mail");  });
 
   inputMailContact.addEventListener("input", function () {
-    inputValidation(this, isMailValid, "E-mail");
+    inputValidation(this, mailIsValid, "E-mail");
   });
-
   inputMailContact.addEventListener("blur", function () {
-    inputValidation(this, isMailValid, "E-mail");
+    inputValidation(this, mailIsValid, "E-mail");
   });
 
+  const inputNameContact = document.getElementById("name_contact");
   inputNameContact.addEventListener("focus", function () {
-    inputValidation(this, isNameValid, "Nom");
+    inputValidation(this, nameIsValid, "Nom");
   });
-
   inputNameContact.addEventListener("input", function () {
-    inputValidation(this, isNameValid, "Nom");
+    inputValidation(this, nameIsValid, "Nom");
+  });
+  inputNameContact.addEventListener("blur", function () {
+    inputValidation(this, nameIsValid, "Nom");
   });
 
-  inputNameContact.addEventListener("blur", function () {
-    inputValidation(this, isNameValid, "Nom");
+  const inputAreaContact = document.getElementById("text_area_contact");
+  inputAreaContact.addEventListener("focus", function () {
+    inputValidation(this, areaIsValid, "Message");
+  });
+  inputAreaContact.addEventListener("input", function () {
+    inputValidation(this, areaIsValid, "Message");
+  });
+  inputAreaContact.addEventListener("blur", function () {
+    inputValidation(this, areaIsValid, "Message");
   });
 });

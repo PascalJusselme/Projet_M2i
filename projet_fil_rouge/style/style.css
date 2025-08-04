@@ -97,15 +97,55 @@ textarea {
 }
 
 .avis_card:hover,
-.form-container:hover,
+.form_container:hover,
 .blc_mission:hover,
 input[type="button"]:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(16, 14, 37, 0.15);
 }
 
-input[type="checkbox"] {
+.custom_checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
+}
+
+.custom_checkbox input {
+  position: absolute;
+  opacity: 0; /* Caché visuellement mais toujours là */
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  height: 24px;
+  width: 24px;
+  /* background-color: #100e25;
+    border: 2px solid #ffd900; */
+  background-color: #ffd900;
+  border: 2px solid #100e25;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  /* border: solid #ffd900; */
+  border: solid #100e25;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.custom_checkbox input:checked ~ .checkmark:after {
+  display: block;
 }
 /*------------------------------------------------------------------------------------------*/
 /*-----------------------------------------HEADER-------------------------------------------*/
@@ -117,7 +157,8 @@ header {
   position: fixed;
   z-index: 10;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
   height: 120px;
   width: 100%;
 }
@@ -128,25 +169,24 @@ header .logo_d {
 }
 
 header .nav_bar_d {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  width: 80%;
 }
 
 .nav_menu {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
 }
 
 .nav_menu li {
   margin-right: 2%;
+  display: flex;
+  align-items: center;
 }
 
 .btn_connec_nav {
   background-color: #fff;
-  border: medium, solid, #ffd900;
+  border: 2px solid #ffd900 !important;
 }
 
 .nav_menu h1,
@@ -176,27 +216,36 @@ header .nav_bar_d {
   padding-top: 120px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
+
 .site_title {
   height: 20%;
-  padding-top: 10px;
+  /* margin-top: 120px;
+  margin-bottom: -80px; */
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .accroche_site {
-  width: 80%;
-  height: 25%;
+  width: 60%;
+  /* height: 25%; */
   margin: auto;
   text-align: center;
 }
 
-.blc_btn_connec { 
-  height: 25%;
+.blc_btn_connec {
+  /* height: 25%; */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
+  /* margin-top:-200px; */
+  gap: 40px;
 }
 
 .btn_inscri,
@@ -206,18 +255,28 @@ header .nav_bar_d {
 }
 
 .bloc_search {
-  height: 25%;
+  /* height: 25%; */
   width: 50%;
   margin: auto;
+  position: relative;
 }
 
 .search_bar {
   width: 100%;
 }
 
+#search_btn {
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  right: 15px;
+}
+
 .btn_connec {
-  background-color: #fff;
+  background-color: transparent;
+  backdrop-filter: blur(40px);
   border: medium, solid, #ffd900;
+  color: #fff !important;
 }
 
 .btn_inscri {
@@ -279,15 +338,18 @@ header .nav_bar_d {
 
 .font_pres h3 {
   text-align: left;
+  margin-left: 0;
 }
 
 .font_number h3 {
   text-align: right;
+  margin-right: 30px;
 }
 
 .font_pres p {
   margin: 3.5% 0 3.5% 4.5%;
   width: 90%;
+  margin-left: 0;
 }
 
 .font_number ul {
@@ -308,6 +370,7 @@ header .nav_bar_d {
 #btn_see_more {
   border: 1px, solid;
   background-color: #ffd900;
+  margin-right: 30px;
 }
 
 .who_are .img_pres {
@@ -515,8 +578,8 @@ h3 {
   margin: auto;
 }
 
-.form-container input,
-.form-container textarea {
+.form_container input,
+.form_container textarea {
   width: 100%;
   padding: 1%;
   margin: 2% 0;
@@ -524,11 +587,13 @@ h3 {
   border-radius: 5px;
 }
 
+#text_area_help,
 #name_help,
 #mail_help {
   display: none;
 }
 
+#text_area_help.visible,
 #name_help.visible,
 #mail_help.visible {
   display: inline-block;
@@ -536,17 +601,31 @@ h3 {
   font-size: 16px;
 }
 
+#text_area_contact.invalid,
 #name_contact.invalid,
 #mail_contact.invalid {
   box-shadow: 0 8px 24px rgba(100, 24, 24, 0.8);
 }
 
+#text_area_contact.valid,
 #name_contact.valid,
 #mail_contact.valid {
   box-shadow: 0 8px 24px rgb(19, 82, 50, 0.8);
 }
 
-.form-container input[type="button"] {
+.consent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#check-left {
+  width: 5%;
+}
+.consent p {
+  font-size: 12px;
+}
+
+.form_container input[type="button"] {
   background: #ffd900;
   border: none;
   padding: 12px 34px;
@@ -648,7 +727,7 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-.bloc_picto a {
+.bloc_picto a::after {
   animation: none;
 }
 
@@ -663,84 +742,86 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(16, 14, 37, 0.45);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  display: flex;align-items: center;
+  justify-content: center;
+  /* overflow-x: hidden; */
+}
+
+.modal_glob {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .entete_modal {
-  width: 80%;
-  max-width: 500px;
+  /* width: 50%;
+  height: 15%; */
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   border-radius: 15px 15px 0 0;
   background-color: #ffd900;
-  padding: 2%;
+  padding: 15px;
 }
 
 .modal_content {
+  /* width: 50%;
+  height: 65%; */
+  padding-top: 25px;
+  row-gap: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2%;
   background-color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-  width: 80%;
   border-radius: 0 0 15px 15px;
 }
 
-.modal_text {
-  width: 100%;
-  max-width: 500px;
+.modal_form {
+  width: 95%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  row-gap: 25px;
+  
 }
 
-.modal_text,
-.button_validate_connec {
-  margin-bottom: 15%;
+.input_login {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.modal_text form {
+.input_login input[type="text"],
+.input_login input[type="password"]{
+  width:100%;
+}
+
+.footer_formu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 10%;
-}
-
-.login_modal,
-.pass_modal {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2%;
+  align-items: center;
+  row-gap: 15px;
 }
 
 .remember {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 5%;
-  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .button_validate_connec {
-  width: 100%;
-  margin-top: 2%;
-  display: flex;
-  justify-content: center;
-}
-
-.button_validate_connec input[type="button"] {
   background-color: #ffd900;
 }
 
@@ -748,19 +829,12 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 auto 15% auto;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
-.btn_modal_close {
-  display: flex;
-  align-items: end;
-}
-
 #btn_close_modal {
   width: 25px;
   height: 25px;
-  margin-right: 2%;
 }
 
 .visible_modal {
