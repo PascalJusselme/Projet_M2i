@@ -1,3 +1,66 @@
+function handleCredentialResponse(response) {
+  console.log("La fonction handleCredentialResponse a été appelée !");
+
+  console.log("Encoded JWT ID token: " + response.credential);
+
+  logginSuccess();
+}
+
+function logginSuccess() {
+  localStorage.setItem("isLogged", "true");
+
+  updatePageForLogged();
+
+  const modalWindow = document.getElementById("modal_container");
+  if (modalWindow) {
+    modalWindow.classList.remove("visible_modal");
+  }
+}
+
+function logoutFunct() {
+  localStorage.removeItem("isLogged");
+
+  updatePageForLogged();
+}
+
+function updatePageForLogged() {
+  const isLoggedIn = localStorage.getItem("isLogged") === "true";
+  const btnConnection = document.querySelectorAll(".btn_connection");
+  const profilBtn = document.querySelector(".profil");
+
+  if (isLoggedIn) {
+    for (let i = 0; i < btnConnection.length; i++) {
+      const element = btnConnection[i];
+      element.classList.add("connected");
+    }
+    profilBtn.classList.add("connected");
+  } else {
+    for (let i = 0; i < btnConnection.length; i++) {
+      const element = btnConnection[i];
+      element.classList.remove("connected");
+    }
+    profilBtn.classList.remove("connected");
+  }
+}
+
+function initGoogle() {
+  google.accounts.id.initialize({
+    client_id:
+      "212073117357-k7brmcsr9q22dot5186epl0nucv3827t.apps.googleusercontent.com",
+    callback: handleCredentialResponse,
+  });
+
+  const buttonContainer = document.getElementById("buttonDiv");
+  if (buttonContainer) {
+    google.accounts.id.renderButton(buttonContainer, {
+      theme: "outline",
+      size: "medium",
+      shape: "circle",
+      type: "standard",
+    });
+  }
+}
+
 function getRandomNmb(max) {
   return Math.floor(Math.random() * max);
 }
@@ -55,11 +118,11 @@ function nameIsValid(text) {
 }
 
 function areaIsValid(text) {
-  const areaRegex = /^[a-zA-Z0-9\s.,!?;:*+=/"#&%$()\-_'À-ÿ]{1,500}$/
-  return text !== '' && areaRegex.test(text)
+  const areaRegex = /^[a-zA-Z0-9\s.,!?;:*+=/"#&%$()\-_'À-ÿ]{1,500}$/;
+  return text !== "" && areaRegex.test(text);
 }
 
-function inputValidation(input, funcValidation, inputLib) {
+function inputValidationContact(input, funcValidation, inputLib) {
   const tabInvalidMess = [
     /* `Le champ ${inputLib} n'est pas valide`,
     `Non tu ne peux pas écrire cela ici...`,
@@ -160,47 +223,62 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalWindows = document.getElementById("modal_container");
   const closeModal = document.getElementById("btn_close_modal");
   const btnsConnection = document.querySelectorAll(".btn_connection");
+
   closeModal.addEventListener("click", () => {
     modalWindows.classList.remove("visible_modal");
   });
   for (let i = 0; i < btnsConnection.length; i++) {
     const element = btnsConnection[i];
-
     element.addEventListener("click", () => {
       modalWindows.classList.add("visible_modal");
+      initGoogle();
     });
   }
 
   const inputMailContact = document.getElementById("mail_contact");
   inputMailContact.addEventListener("focus", function () {
-    inputValidation(this, mailIsValid, "E-mail");  });
-
+    inputValidationContact(this, mailIsValid, "E-mail");
+  });
   inputMailContact.addEventListener("input", function () {
-    inputValidation(this, mailIsValid, "E-mail");
+    inputValidationContact(this, mailIsValid, "E-mail");
   });
   inputMailContact.addEventListener("blur", function () {
-    inputValidation(this, mailIsValid, "E-mail");
+    inputValidationContact(this, mailIsValid, "E-mail");
   });
 
   const inputNameContact = document.getElementById("name_contact");
   inputNameContact.addEventListener("focus", function () {
-    inputValidation(this, nameIsValid, "Nom");
+    inputValidationContact(this, nameIsValid, "Nom");
   });
   inputNameContact.addEventListener("input", function () {
-    inputValidation(this, nameIsValid, "Nom");
+    inputValidationContact(this, nameIsValid, "Nom");
   });
   inputNameContact.addEventListener("blur", function () {
-    inputValidation(this, nameIsValid, "Nom");
+    inputValidationContact(this, nameIsValid, "Nom");
   });
 
   const inputAreaContact = document.getElementById("text_area_contact");
   inputAreaContact.addEventListener("focus", function () {
-    inputValidation(this, areaIsValid, "Message");
+    inputValidationContact(this, areaIsValid, "Message");
   });
   inputAreaContact.addEventListener("input", function () {
-    inputValidation(this, areaIsValid, "Message");
+    inputValidationContact(this, areaIsValid, "Message");
   });
   inputAreaContact.addEventListener("blur", function () {
-    inputValidation(this, areaIsValid, "Message");
+    inputValidationContact(this, areaIsValid, "Message");
   });
+
+  const btnConnectOnModal = document.querySelector(".button_validate_connec");
+  btnConnectOnModal.addEventListener("click", function () {
+    logginSuccess();
+  });
+
+  const btnDisconnection = document.getElementById("sign_out");
+  btnDisconnection.addEventListener("click", () => {
+    logoutFunct();
+  });
+});
+
+window.addEventListener("load", () => {
+  updatePageForLogged();
 });

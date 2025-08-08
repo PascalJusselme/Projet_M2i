@@ -1,4 +1,4 @@
-@media all and (max-width: 1275px) and (min-width: 807px) {
+@media all and (max-width: 1024px) and (min-width: 769px) {
   .last {
     display: none;
   }
@@ -7,62 +7,25 @@
   .blc_mission {
     width: 45%;
   }
-
-/*   .entete_modal,
-  .modal_content {
-    width: 55%;
-  } */
-}
-@media (orientation: landscape) and (max-height: 500px) {
   /*------------------------------------------------------------------------------------------*/
   /*-----------------------------------------HEADER-------------------------------------------*/
   /*------------------------------------------------------------------------------------------*/
   header {
-    height: 50px;
+    height: 100px;
   }
+  header .logo_m, 
   header .logo_d {
     display: none;
   }
-  header .logo_m {
+  header .logo_t {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
   }
   /*------------------------------------------------------------------------------------------*/
   /*-------------------------------------HERO SECTION-----------------------------------------*/
   /*------------------------------------------------------------------------------------------*/
-  .hero_section .glob_hero {
-    padding-top: 55px;
-  }
-  
-  /* .site_title {
-    margin-top: 0;
-    margin-bottom: -30px;
-    text-align: center;
-} */
-  /*------------------------------------------------------------------------------------------*/
-  /*-----------------------------------------MODAL--------------------------------------------*/
-  /*------------------------------------------------------------------------------------------*/
- /*  .modal_container {
-    justify-content: center;
-    width: 100%;
-  }*/
-
-  .entete_modal {
-    width: 65%;
-    height: 15%;
-    /* justify-content: space-between; */
-    /* padding: 30px; */
-    margin: auto;
-  }
-
-  .modal_content {
-    width: 65%;
-    height: 75%;
-    margin: auto;
-  } 
-
-  .modal_text form {
-    flex-direction: row;
+ .glob_hero {
+    padding-top: calc(100px + var(--spacing_md));
   }
 }

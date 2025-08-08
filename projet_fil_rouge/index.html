@@ -20,7 +20,7 @@
 
     <header>
       <div class="div_logo_m">
-        <img src="./img/logo2_2.png" alt="Logo du site" class="logo_d logo_m" />
+        <img src="./img/logo2_2.png" alt="Logo du site" class="logo_d logo_t logo_m" />
       </div>
       <div class="div_burger_m">
         <img src="./img/hamb_menu.png" id="picto_burger" />
@@ -46,6 +46,14 @@
               value="S'inscrire / Se Connecter"
               class="btn_connec_nav btn_connection"
             />
+            <div class="profil">
+              <p>Nom de Profil</p>
+              <button id="sign_out">Sign out</button>
+              <img
+                src="https://randomuser.me/api/portraits/women/28.jpg"
+                alt="Photo profil"
+              />
+            </div>
           </li>
         </ul>
       </nav>
@@ -66,7 +74,7 @@
             !
           </p>
         </div>
-        <div class="blc_btn_connec">
+        <div class="blc_btn_connec btn_connection">
           <input
             type="button"
             value="S'inscrire"
@@ -477,24 +485,25 @@
               value="Se connecter"
             />
           </form>
-          <div class="footer_formu">
-            <div class="remember">
-              <label class="custom_checkbox">
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-                <p>Se souvenir de moi</p>
-              </label>
-              <a href="#">Mot de passe oublié ?</a>
-            </div>
-            <div class="create_account">
-              <p>Vous n'avez pas de compte ?</p>
-              <a href="#">Inscrivez-vous.</a>
-            </div>
+          <div class="remember">
+            <label class="custom_checkbox">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              <p>Se souvenir de moi</p>
+            </label>
+            <a href="#">Mot de passe oublié ?</a>
           </div>
+          <div class="create_account">
+            <p>Vous n'avez pas de compte ?</p>
+            <a href="#">Inscrivez-vous.</a>
+            <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+            <!-- BOUTON SIGNOUT GOOGLE A VOIR APRES RAJOUT DE LA PARTIE PROFIL-->
+          </div>
+          <div id="buttonDiv"></div>
         </div>
       </div>
     </div>
-
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
