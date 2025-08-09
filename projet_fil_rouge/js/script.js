@@ -25,7 +25,7 @@ function logoutFunct() {
 
 function updatePageForLogged() {
   const isLoggedIn = localStorage.getItem("isLogged") === "true";
-  const btnConnection = document.querySelectorAll(".btn_connection");
+  const btnConnection = document.querySelectorAll(".connection_btn");
   const profilBtn = document.querySelector(".profil");
 
   if (isLoggedIn) {
@@ -66,22 +66,22 @@ function getRandomNmb(max) {
 }
 
 function openBurgerMenu() {
-  document.querySelector(".nav_bar_m").classList.add("open");
+  document.querySelector("nav").classList.add("open");
   document.querySelector(".overlay_menu_mobile").classList.add("open");
   document.querySelector("#picto_burger").classList.add("open");
-  document.querySelector("#btn_close").classList.add("open");
+  document.querySelector("#picto_cross").classList.add("open");
 }
 
 function closeBurgerMenu() {
-  document.querySelector(".nav_bar_m").classList.remove("open");
+  document.querySelector("nav").classList.remove("open");
   document.querySelector(".overlay_menu_mobile").classList.remove("open");
   document.querySelector("#picto_burger").classList.remove("open");
-  document.querySelector("#btn_close").classList.remove("open");
+  document.querySelector("#picto_cross").classList.remove("open");
 }
 
 function animImgBlocWhoAre() {
-  const imgDroite = document.querySelector(".img_pres");
-  const imgGauche = document.querySelector(".img_number");
+  const imgDroite = document.querySelector(".img_about_left");
+  const imgGauche = document.querySelector(".img_about_right");
 
   if (imgDroite) {
     const imgDroiteRect = imgDroite.getBoundingClientRect();
@@ -122,29 +122,29 @@ function areaIsValid(text) {
   return text !== "" && areaRegex.test(text);
 }
 
-function inputValidationContact(input, funcValidation, inputLib) {
+function inputValidationContact(input, funcValidation, inputLibValidate) {
   const tabInvalidMess = [
-    /* `Le champ ${inputLib} n'est pas valide`,
+    /* `Le champ ${inputLibValidate} n'est pas valide`,
     `Non tu ne peux pas écrire cela ici...`,
     `C'est cela oui !!!`,
-    `Tu es sur que c'est un ${inputLib} ?` */
+    `Tu es sur que c'est un ${inputLibValidate} ?` */
   ];
   const tabEmptyMess = [
-    /* `Le champ ${inputLib} ne peux pas être vide`,
-    `Eh! Oh! tu le rempli ce champ ${inputLib}?`,
+    /* `Le champ ${inputLibValidate} ne peux pas être vide`,
+    `Eh! Oh! tu le rempli ce champ ${inputLibValidate}?`,
     `zzzZZZZZzzzzz`,
-    `Si tu pense qu'un ${inputLib} peut être vide, passe ton chemin` */
+    `Si tu pense qu'un ${inputLibValidate} peut être vide, passe ton chemin` */
   ];
   const inputValue = input.value;
   const divHelpId = input.getAttribute("aria-describedby");
   const divHelp = document.getElementById(divHelpId);
   const emptyMessage =
     tabEmptyMess.length === 0
-      ? `Le champ ${inputLib} est obligatoire et ne peut donc pas être vide.`
+      ? `Le champ ${inputLibValidate} est obligatoire et ne peut donc pas être vide.`
       : tabEmptyMess[getRandomNmb(tabEmptyMess.length)];
   const invalidMessage =
     tabInvalidMess.length === 0
-      ? `Le champ ${inputLib} n'est pas valide.`
+      ? `Le champ ${inputLibValidate} n'est pas valide.`
       : tabInvalidMess[getRandomNmb(tabInvalidMess.length)];
 
   input.classList.remove("valid", "invalid");
@@ -215,14 +215,14 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBurgerMenu();
   });
 
-  const btnCloseBurgerMenu = document.querySelector("#btn_close");
+  const btnCloseBurgerMenu = document.querySelector("#picto_cross");
   btnCloseBurgerMenu.addEventListener("click", () => {
     closeBurgerMenu();
   });
 
   const modalWindows = document.getElementById("modal_container");
   const closeModal = document.getElementById("btn_close_modal");
-  const btnsConnection = document.querySelectorAll(".btn_connection");
+  const btnsConnection = document.querySelectorAll(".connection_btn");
 
   closeModal.addEventListener("click", () => {
     modalWindows.classList.remove("visible_modal");

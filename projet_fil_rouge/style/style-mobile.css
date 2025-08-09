@@ -1,11 +1,7 @@
 @media all and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
   .last {
     display: none;
   }
-
   /*------------------------------------------------------------------------------------------*/
   /*-----------------------------------------HEADER-------------------------------------------*/
   /*------------------------------------------------------------------------------------------*/
@@ -13,26 +9,41 @@
     height: 50px;
     align-items: center;
   }
-  .div_logo_m,
-  .div_burger_m {
+
+  .div_logo,
+  .div_picto_menu {
     width: 40%;
     display: flex;
   }
 
-  .div_logo_m {
+  .div_logo {
     justify-content: start;
   }
-  .div_burger_m {
+
+  .div_picto_menu {
     justify-content: end;
   }
 
-  header .logo_m {
+  .logo {
     width: 50px;
     height: 50px;
   }
 
   #picto_burger {
     display: block;
+    width: 25px;
+    height: 25px;
+  }
+
+  #picto_cross,
+  #picto_burger.open {
+    display: none;
+  }
+
+  #picto_cross.open {
+    display: block;
+    top: 0;
+    right: 0;
     width: 25px;
     height: 25px;
   }
@@ -50,18 +61,16 @@
     transition: opacity 0.7s ease-out;
   }
 
-  header .nav_bar_m {
+  nav {
     position: fixed;
     top: 50px;
-    right: -60vw;
-    width: 60vw;
-    height: 100%;
-    z-index: 20;
+    right: -50vw;
+    width: 50vw;
+    height: 100vh;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
     opacity: 0;
     transition: right 0.7s ease-out, opacity 0.7s ease-out;
   }
@@ -71,136 +80,74 @@
     opacity: 1;
   }
 
-  header .nav_bar_m.open {
+  nav.open {
     right: 0;
     opacity: 1;
   }
 
-  #picto_burger.open {
-    display: none;
-  }
-
-  #btn_close.open {
-    display: block;
-    position: absolute;
-    top: -37.5px;
-    width: 25px;
-    height: 25px;
-  }
-
-  .nav_menu {
+  .nav_bar_menu {
+    height: 75%;
+    width: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
   }
 
-  .nav_menu li {
-    margin: 2.5%;
-  }
-
-  .nav_menu h1 {
+  .nav_bar_menu h1 {
     display: inline;
     width: 100%;
-    font-size: 18px;
-    padding-left: 10px;
+    text-align: center;
   }
-
-  .btn_connec_nav {
-    padding: 8px 17px;
-    font-size: 12px;
-  }
-
   /*------------------------------------------------------------------------------------------*/
   /*-------------------------------------HERO SECTION-----------------------------------------*/
   /*------------------------------------------------------------------------------------------*/
-  .glob_hero {
+  .hero_section {
     padding-top: calc(50px + var(--spacing_sm));
   }
-  .bloc_search {
+  .block_search {
     width: 75%;
   }
-
   /*------------------------------------------------------------------------------------------*/
   /*--------------------------------WHO ARE & OUR NUMBER--------------------------------------*/
   /*------------------------------------------------------------------------------------------*/
-  .who_are,
-  .our_number {
+  .about_left,
+  .about_right {
     flex-direction: column;
   }
 
-  .our_number {
-    flex-direction: column-reverse;
-  }
-
-  .our_number .img_number,
-  .who_are .img_pres {
+  .about_right .img_about_right,
+  .about_left .img_about_left {
     margin: 0;
   }
 
-  .img_number img,
-  .img_pres img {
+  /*  .img_about_right img,
+  .img_about_left img {
     margin-top: 2.5%;
-  }
+  } */
 
-  .font_pres p,
-  .font_number ul {
+  /*  .txt_about_left p,
+  .txt_about_right ul {
     text-align: center;
-  }
+  } */
 
-  .btn_see_more {
+  .btn_learn_more {
     width: 100%;
     display: flex;
     justify-content: center;
   }
   /*------------------------------------------------------------------------------------------*/
-  /*---------------------------------------MISSIONS-------------------------------------------*/
+  /*----------------------------MISSIONS & TESTIMONIALS---------------------------------------*/
   /*------------------------------------------------------------------------------------------*/
-  .blc_mission {
+  .card_mission,
+  .card_testimonials {
     width: 100%;
   }
 
-  .bloc_mission_title {
-    width: 95%;
-  }
-
-  .glob_miss {
-    flex-direction: column;
-    margin: 2.5% auto;
-  }
-
-  .miss02 {
-    margin-top: 5%;
-  }
-
-  .card_header div {
-    width: 100%;
-  }
-  .btn_more_miss {
-    width: 80%;
-  }
-  /*------------------------------------------------------------------------------------------*/
-  /*------------------------------------TESTIMONIALS------------------------------------------*/
-  /*------------------------------------------------------------------------------------------*/
-  .avis_card_glob {
-    margin-left: 15px;
-    bottom: 25px;
-  }
-  .avis_card {
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  .entete_avis {
-    display: flex;
+  .block_testimonials {
     flex-wrap: wrap;
-  }
-
-  .lib_mission_avis {
-    height: auto;
   }
   /*------------------------------------------------------------------------------------------*/
   /*-----------------------------------------MODAL--------------------------------------------*/
   /*------------------------------------------------------------------------------------------*/
-  
 }
