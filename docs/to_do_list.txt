@@ -1,0 +1,32 @@
+Tester sur differents navigateurs les affichages
+    Mozilla
+    Opera
+    Edge
+    Chrome
+sur Mozilla tester le site sur les version mobile de chrome et mozilla, possibilite 
+via le mode dev de Mozilla
+
+Tester le responsive : 
+    Tester sur les mobile via le mode dev Chrome (IPhone SE, etc etc)
+    Tester le responsive en direct
+        Mode portrait
+            largeur : 1800 hauteur : fenetre
+
+            largeur : 1024 hauteur : fenetre
+
+            largeur : 880 hauteur : fenetre
+
+            largeur : 500 hauteur : fenetre
+
+            largeur : 350 hauteur : fenetre
+        Mode paysage
+            largeur : 1800 hauteur : 800
+
+            largeur : 1024 hauteur : fenetre
+
+            largeur : 880 hauteur : fenetre
+
+            largeur : 500 hauteur : fenetre
+            
+            largeur : 350 hauteur : fenetre
+

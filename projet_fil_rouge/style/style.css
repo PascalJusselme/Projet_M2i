@@ -294,7 +294,7 @@ nav button {
 }
 
 .title_site {
-  /* text-align: center; */
+  text-align: center; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,6 +319,18 @@ nav button {
   min-width: 160px;
 }
 
+.logIn_btn {
+  background-color: transparent;
+  backdrop-filter: blur(40px);
+  border: 2px solid var(--primary_yellow);
+  color: var(--bg_primary) !important;
+}
+
+.signUp_btn {
+  background-color: var(--primary_yellow);
+  border: 2px solid var(--primary_dark);
+}
+
 .block_search {
   width: 50%;
   margin: auto;
@@ -330,22 +342,16 @@ nav button {
 }
 
 #search_validate_btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  font-size: 0;
+  line-height: 0;
   position: absolute;
-  width: 30px;
-  height: 40px;
+  height: 100%;
   right: 15px;
-}
-
-.logIn_btn {
-  background-color: transparent;
-  backdrop-filter: blur(40px);
-  border: medium, solid, var(--primary_yellow);
-  color: var(--bg_primary) !important;
-}
-
-.signUp_btn {
-  background-color: var(--primary_yellow);
-  border: medium, solid, var(--primary_dark);
 }
 /*------------------------------------------------------------------------------------------*/
 /*-----------------------------------------ABOUT--------------------------------------------*/

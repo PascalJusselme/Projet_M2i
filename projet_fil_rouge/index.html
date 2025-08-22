@@ -1,505 +1,456 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/style-mobile.css" />
-    <link rel="stylesheet" href="./style/style-tab.css" />
-    <title>Les &Eacute;claireurs Solidaires</title>
-  </head>
 
-  <body>
-    <div class="overlay_menu_mobile"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="./style/style-mobile.css" />
+  <link rel="stylesheet" href="./style/style-tab.css" />
+  <title>Les &Eacute;claireurs Solidaires</title>
+</head>
 
-    <header>
-      <div class="div_logo">
-        <img src="./img/logo2_2.png" alt="Logo du site" class="logo" />
-      </div>
-      <div class="div_picto_menu">
-        <img src="./img/hamb_menu.png" id="picto_burger" />
-        <img src="./img/cross.png" id="picto_cross" />
-      </div>
-      <nav>
-        <ul class="nav_bar_menu">
-          <h1>
-            Les &Eacute;claireurs <span class="color_word">Solidaires</span>
-          </h1>
-          <li>
-            <a href="index.html">ACCUEIL</a>
-          </li>
-          <li>
-            <a href="#">NOS MISSIONS</a>
-          </li>
-          <li>
-            <a href="#">VOUS & NOUS</a>
-          </li>
-          <li class="last_link_nav">
-            <button class="connection_btn">S'inscrire / Se Connecter</button>
-            <div class="profil">
-              <div>
-                <p>Nom de Profil</p>
-                <button id="sign_out">Sign out</button>
-              </div>
-              <img
-                src="https://randomuser.me/api/portraits/women/28.jpg"
-                alt="Photo profil"
-              />
+<body>
+  <div class="overlay_menu_mobile"></div>
+
+  <header>
+    <div class="div_logo">
+      <img src="./img/logo2_2.png" alt="Logo du site" class="logo" />
+    </div>
+    <div class="div_picto_menu">
+      <img src="./img/hamb_menu.png" id="picto_burger" />
+      <img src="./img/cross.png" id="picto_cross" />
+    </div>
+    <nav>
+      <ul class="nav_bar_menu">
+        <h1>
+          Les &Eacute;claireurs <span class="color_word">Solidaires</span>
+        </h1>
+        <li>
+          <a href="index.html">ACCUEIL</a>
+        </li>
+        <li>
+          <a href="#">NOS MISSIONS</a>
+        </li>
+        <li>
+          <a href="#">VOUS & NOUS</a>
+        </li>
+        <li class="last_link_nav">
+          <button class="connection_btn">S'inscrire / Se Connecter</button>
+          <div class="profil">
+            <div>
+              <p>Nom de Profil</p>
+              <button id="sign_out">Sign out</button>
             </div>
-          </li>
+            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Photo profil" />
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero_section">
+    <div class="hero_container">
+      <div class="title_site">
+        <h1>
+          Les &Eacute;claireurs <span class="color_word">Solidaires</span>
+        </h1>
+      </div>
+      <div class="tagline_site">
+        <p>
+          Passez à l'action citoyenne : trouvez facilement des missions de
+          bénévolat variées, engagez-vous pour l'environnement, la solidarité,
+          l'entraide ou l'éducation, et devenez un acteur du changement social
+          !
+        </p>
+      </div>
+      <div class="block_connection_btn connection_btn">
+        <button class="signUp_btn connection_btn">S'inscrire</button>
+        <button class="logIn_btn connection_btn">Se Connecter</button>
+      </div>
+      <div class="block_search">
+        <input type="search" name="search_bar_hero" class="search_input" placeholder="Rechercher une mission" />
+        <button id="search_validate_btn">
+          <img src="./img/search.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about_left">
+      <div class="txt_about_left">
+        <h3>Qui Sommes Nous ?</h3>
+        <p>
+          "Les Éclaireurs Solidaires" est une association loi 1901, fondée à
+          Lyon en 2020, dédiée à la promotion et à la facilitation de
+          l'engagement bénévole.
+        </p>
+        <p>
+          Notre mission principale est de créer des ponts entre les citoyens
+          désireux d'agir et les besoins concrets du terrain, en proposant des
+          opportunités de bénévolat ponctuelles ou régulières dans les
+          domaines social, écologique et culturel.
+        </p>
+        <div class="btn_learn_more">
+          <button id="btn_learn_more">En savoir plus</button>
+        </div>
+      </div>
+      <div class="img_about_left">
+        <img src="./img/img-asso3.jpg" />
+      </div>
+    </div>
+    <div class="about_right">
+      <div class="img_about_right">
+        <img src="./img/img-asso4.jpg" />
+      </div>
+      <div class="txt_about_right">
+        <h3>Nos chiffres :</h3>
+        <ul>
+          <li>1 200 bénévoles actifs depuis notre création</li>
+          <li>+350 missions réalisées chaque mois</li>
+          <li>85 % de satisfaction parmi nos bénévoles</li>
+          <li>+ 40 partenaires associatifs à Lyon et sa métropole</li>
+          <li>3 domaines d’actions : social, écologique, cullturel</li>
         </ul>
-      </nav>
-    </header>
-
-    <section class="hero_section">
-      <div class="hero_container">
-        <div class="title_site">
-          <h1>
-            Les &Eacute;claireurs <span class="color_word">Solidaires</span>
-          </h1>
-        </div>
-        <div class="tagline_site">
-          <p>
-            Passez à l'action citoyenne : trouvez facilement des missions de
-            bénévolat variées, engagez-vous pour l'environnement, la solidarité,
-            l'entraide ou l'éducation, et devenez un acteur du changement social
-            !
-          </p>
-        </div>
-        <div class="block_connection_btn connection_btn">
-          <button class="signUp_btn connection_btn">S'inscrire</button>
-          <button class="logIn_btn connection_btn">Se Connecter</button>
-        </div>
-        <div class="block_search">
-          <input
-            type="search"
-            name="search_bar_hero"
-            class="search_input"
-            placeholder="Rechercher une mission"
-          />
-          <img src="./img/search.svg" id="search_validate_btn" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <section class="about">
-      <div class="about_left">
-        <div class="txt_about_left">
-          <h3>Qui Sommes Nous ?</h3>
-          <p>
-            "Les Éclaireurs Solidaires" est une association loi 1901, fondée à
-            Lyon en 2020, dédiée à la promotion et à la facilitation de
-            l'engagement bénévole.
-          </p>
-          <p>
-            Notre mission principale est de créer des ponts entre les citoyens
-            désireux d'agir et les besoins concrets du terrain, en proposant des
-            opportunités de bénévolat ponctuelles ou régulières dans les
-            domaines social, écologique et culturel.
-          </p>
-          <div class="btn_learn_more">
-            <button id="btn_learn_more">En savoir plus</button>
-          </div>
-        </div>
-        <div class="img_about_left">
-          <img src="./img/img-asso3.jpg" />
-        </div>
-      </div>
-      <div class="about_right">
-        <div class="img_about_right">
-          <img src="./img/img-asso4.jpg" />
-        </div>
-        <div class="txt_about_right">
-          <h3>Nos chiffres :</h3>
-          <ul>
-            <li>1 200 bénévoles actifs depuis notre création</li>
-            <li>+350 missions réalisées chaque mois</li>
-            <li>85 % de satisfaction parmi nos bénévoles</li>
-            <li>+ 40 partenaires associatifs à Lyon et sa métropole</li>
-            <li>3 domaines d’actions : social, écologique, cullturel</li>
-          </ul>
-          <div class="btn_learn_more">
-            <button id="btn_learn_more">En savoir plus</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="missions">
-      <div class="missions_container">
-        <div class="missions_title">
-          <h3>NOS DERNI&Egrave;RES MISSIONS</h3>
-        </div>
-
-        <div class="card_missions_container">
-          <div class="card_mission miss01">
-            <div class="card_header">
-              <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Photo profil"
-              />
-              <div class="card_header_right">
-                <h3>Animation d'atelier cuisine solidaire</h3>
-                <span class="cat_mission">SOCIAL</span>
-              </div>
-            </div>
-            <div class="description">
-              <p>
-                Animez un atelier de cuisine participatif destiné aux familles
-                du quartier.
-              </p>
-              <p>
-                L'objectif est de préparer ensemble un repas équilibré et
-                économique tout en créant du lien social.
-              </p>
-              <p>Vous serez accompagné(e) d'une animatrice expérimentée.</p>
-            </div>
-            <div class="btn_group">
-              <span id="btn_view_more_down">Voir plus</span>
-              <span id="btn_view_more_up" class="visible">Voir moins</span>
-            </div>
-            <div class="card_info">
-              <p><strong>Contact : </strong>claire.michel@gmail.com</p>
-              <p><strong>Date : </strong>Samedi 29 juin 2025 - 14h à 17h</p>
-              <p><strong>Lieu : </strong>Centre social Gerland, Lyon 7ème</p>
-              <p><strong>Durée : </strong>3h</p>
-            </div>
-          </div>
-
-          <div class="card_mission miss02">
-            <div class="card_header">
-              <img
-                src="https://randomuser.me/api/portraits/men/22.jpg"
-                alt="Photo profil"
-              />
-              <div class="card_header_right">
-                <h3>Plantation d'arbres urbains</h3>
-                <span class="cat_mission">ECOLOGIQUE</span>
-              </div>
-            </div>
-            <div class="description">
-              <p>
-                Participez à la végétalisation de Lyon en plantant des arbres
-                fruitiers dans le cadre du projet "Forêt Urbaine".
-              </p>
-              <p>
-                Cette action s'inscrit dans la lutte contre les îlots de chaleur
-                et la promotion de la biodiversité en ville.
-              </p>
-            </div>
-            <div class="btn_group">
-              <span id="btn_view_more_down">Voir plus</span>
-              <span id="btn_view_more_up" class="visible">Voir moins</span>
-            </div>
-            <div class="card_info">
-              <p><strong>Contact : </strong></p>
-              <p><strong>Date : </strong>Dimanche 7 juillet 2025 - 9h à 13h</p>
-              <p><strong>Lieu : </strong>Parc de la Tête d'Or, Lyon 6ème</p>
-              <p><strong>Durée : </strong>4 h</p>
-            </div>
-          </div>
-
-          <div class="card_mission miss03 last">
-            <div class="card_header">
-              <img
-                src="https://randomuser.me/api/portraits/women/67.jpg"
-                alt="Photo profil"
-              />
-              <div class="card_header_right">
-                <h3>Accompagnement festival de rue</h3>
-                <span class="cat_mission">CULTUREL</span>
-              </div>
-            </div>
-            <div class="description">
-              <p>
-                Soutenez l'organisation du Festival des Arts de Rue en
-                accueillant le public, en guidant les visiteurs et en assistant
-                les artistes.
-              </p>
-              <p>
-                Une belle occasion de vivre l'événement de l'intérieur tout en
-                contribuant à sa réussite.
-              </p>
-            </div>
-            <div class="btn_group">
-              <span id="btn_view_more_down">Voir plus</span>
-              <span id="btn_view_more_up" class="visible">Voir moins</span>
-            </div>
-            <div class="card_info">
-              <p><strong>Contact : </strong></p>
-              <p>
-                <strong>Date : </strong>Vendredi 12 juillet 2025 - 16h à 22h
-              </p>
-              <p><strong>Lieu : </strong>Place Bellecour, Lyon 2ème</p>
-              <p><strong>Durée : </strong>6 h</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="view_more_mission">
-          <button>Voir plus de missions ...</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact">
-      <div class="contact_container">
-        <div class="form_header">
-          <div class="contact_title">
-            <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
-          </div>
-          <div class="tagline_contact">
-            <p>
-              Vous représentez une association, un collectif ou vous cherchez à
-              vous engager comme bénévole ?
-            </p>
-            <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
-          </div>
-        </div>
-        <form action="#">
-          <input
-            id="name_contact"
-            type="text"
-            placeholder="Nom*"
-            aria-describedby="name_help"
-            required
-          />
-          <div id="name_help"></div>
-          <input
-            id="mail_contact"
-            type="email"
-            placeholder="Email*"
-            aria-describedby="mail_help"
-            required
-          />
-          <div id="mail_help"></div>
-          <textarea
-            id="text_area_contact"
-            rows="4"
-            placeholder="Votre message..."
-            aria-describedby="text_area_help"
-            required
-          ></textarea>
-          <div id="text_area_help"></div>
-        </form>
-        <div class="form_footer">
-          <div class="consent">
-            <label class="custom_checkbox">
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <!-- <input type="checkbox" name="consent_check" /> -->
-            <p>
-              Je consens à ce que mes informations soient stockées en vue de me
-              répondre
-            </p>
-          </div>
-          <button id="button_formu">ENVOYER</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <div class="testimonials_container">
-        <div class="testimonials_title">
-          <h3>T&Eacute;MOIGNAGES</h3>
-        </div>
-
-        <div class="block_testimonials">
-          <div class="card_testimonials">
-            <div class="card_testimonials_container">
-              <div class="entete_avis">
-                <div class="avatar_member">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/34.jpg"
-                    alt=""
-                    id="img_avatar"
-                  />
-                </div>
-                <div class="lib_mission_avis">
-                  <p>Sportif et solidaire</p>
-                </div>
-              </div>
-              <div class="foot_avis">
-                <div class="icon_hearth">
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                </div>
-                <div class="txt_avis">
-                  <p>Cammille D.</p>
-                  <p>
-                    Super événement ! J'étais au ravitaillement et l'ambiance
-                    était électrique. Maxime avait bien organisé les rotations.
-                    Lever tôt mais ça vaut le coup de voir tous ces coureurs se
-                    dépasser pour la bonne cause. Équipe de bénévoles au top !
-                  </p>
-                  <p><b>Date : </b>30 juillet 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card_testimonials">
-            <div class="card_testimonials_container">
-              <div class="entete_avis">
-                <div class="avatar_member">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/10.jpg"
-                    alt=""
-                    id="img_avatar"
-                  />
-                </div>
-                <div class="lib_mission_avis">
-                  <p>Accompagnement Festival de rue</p>
-                </div>
-              </div>
-              <div class="foot_avis">
-                <div class="icon_hearth">
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                </div>
-                <div class="txt_avis">
-                  <p>Antoine K.</p>
-                  <p>
-                    Festival génial ! J'étais à la technique et c'était intense.
-                    Quelques moments de stress car pas mal d'imprévus, mais
-                    l'équipe était solidaire. Julie nous a bien soutenus. C'est
-                    le genre de mission où on apprend beaucoup !
-                  </p>
-                  <p><b>Date : </b>13 août 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card_testimonials last">
-            <div class="card_testimonials_container">
-              <div class="entete_avis">
-                <div class="avatar_member">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/55.jpg"
-                    alt=""
-                    id="img_avatar"
-                  />
-                </div>
-                <div class="lib_mission_avis">
-                  <p>Magie avec les enfants</p>
-                </div>
-              </div>
-              <div class="foot_avis">
-                <div class="icon_hearth">
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                  <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
-                </div>
-                <div class="txt_avis">
-                  <p>Laura B.</p>
-                  <p>
-                    Quel bonheur de voir les yeux des enfants briller ! Sophie,
-                    la bibliothécaire, nous avait bien conseillés sur les
-                    livres. L'espace était parfait et les enfants très
-                    attentifs. J'ai pris autant de plaisir qu'eux. Mission
-                    parfaite pour moi !
-                  </p>
-                  <p><b>Date : </b>26 juin 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <section class="high_footer">
-        <div class="address_contact_footer">
-          Nos Coordonnees
-          <ul>
-            <li>Claire Michelle</li>
-            <li>62 avenue de l’Imagerie</li>
-            <li>69000, Lyon Cedex 09</li>
-            <li>e-mail : claire-michelle@gmail.com</li>
-            <li>whatsApp :</li>
-          </ul>
-        </div>
-
-        <div class="site_map">
-          Plan du site
-          <ul>
-            <li><a href="#">ACCUEIL</a></li>
-            <li><a href="#">NOS MISSIONS</a></li>
-            <li><a href="#">VOUS & NOUS</a></li>
-          </ul>
-        </div>
-      </section>
-      <div class="bottom_footer">
-        <div class="blc_copy">
-          &copy; Tous droits r&eacute;serv&eacute;s - CGU - Les
-          &Eacute;claireurs Solidaires
-        </div>
-        <div class="bloc_picto">
-          <a href="#"><img src="./img/icon-X.png" id="picto" /></a>
-          <a href="#"><img src="./img/icon-insta.png" id="picto" /></a>
-          <a href="#"><img src="./img/icon-facebook.png" id="picto" /></a>
-        </div>
-      </div>
-    </footer>
-
-    <div id="modal_container" class="modal_container">
-      <div class="modal_glob">
-        <div class="entete_modal">
-          <h1>Les Eclaireurs Solidaires</h1>
-          <div class="btn_modal_close">
-            <img src="./img/cross.png" id="btn_close_modal" />
-          </div>
-        </div>
-        <div class="modal_content">
-          <form class="modal_form" action="valid_connec.html">
-            <div class="input_login">
-              <input type="text" id="login" placeholder="Login *" required />
-              <input
-                type="password"
-                id="password"
-                placeholder="Mot de Passe *"
-                required
-              />
-            </div>
-            <button class="button_validate_connec">Se connecter</button>
-          </form>
-          <div class="remember">
-            <label class="custom_checkbox">
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-              <p>Se souvenir de moi</p>
-            </label>
-            <a href="#">Mot de passe oublié ?</a>
-          </div>
-          <div class="create_account">
-            <p>Vous n'avez pas de compte ?</p>
-            <a href="#">Inscrivez-vous.</a>
-            <!-- <a href="#" onclick="signOut();">Sign out</a> -->
-            <!-- BOUTON SIGNOUT GOOGLE A VOIR APRES RAJOUT DE LA PARTIE PROFIL-->
-          </div>
-          <div id="buttonDiv"></div>
+        <div class="btn_learn_more">
+          <button id="btn_learn_more">En savoir plus</button>
         </div>
       </div>
     </div>
+  </section>
 
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="./js/script.js"></script>
-  </body>
+  <section class="missions">
+    <div class="missions_container">
+      <div class="missions_title">
+        <h3>NOS DERNI&Egrave;RES MISSIONS</h3>
+      </div>
+
+      <div class="card_missions_container">
+        <div class="card_mission miss01">
+          <div class="card_header">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Photo profil" />
+            <div class="card_header_right">
+              <h3>Animation d'atelier cuisine solidaire</h3>
+              <span class="cat_mission">SOCIAL</span>
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              Animez un atelier de cuisine participatif destiné aux familles
+              du quartier.
+            </p>
+            <p>
+              L'objectif est de préparer ensemble un repas équilibré et
+              économique tout en créant du lien social.
+            </p>
+            <p>Vous serez accompagné(e) d'une animatrice expérimentée.</p>
+          </div>
+          <div class="btn_group">
+            <span id="btn_view_more_down">Voir plus</span>
+            <span id="btn_view_more_up" class="visible">Voir moins</span>
+          </div>
+          <div class="card_info">
+            <p><strong>Contact : </strong>claire.michel@gmail.com</p>
+            <p><strong>Date : </strong>Samedi 29 juin 2025 - 14h à 17h</p>
+            <p><strong>Lieu : </strong>Centre social Gerland, Lyon 7ème</p>
+            <p><strong>Durée : </strong>3h</p>
+          </div>
+        </div>
+
+        <div class="card_mission miss02">
+          <div class="card_header">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Photo profil" />
+            <div class="card_header_right">
+              <h3>Plantation d'arbres urbains</h3>
+              <span class="cat_mission">ECOLOGIQUE</span>
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              Participez à la végétalisation de Lyon en plantant des arbres
+              fruitiers dans le cadre du projet "Forêt Urbaine".
+            </p>
+            <p>
+              Cette action s'inscrit dans la lutte contre les îlots de chaleur
+              et la promotion de la biodiversité en ville.
+            </p>
+          </div>
+          <div class="btn_group">
+            <span id="btn_view_more_down">Voir plus</span>
+            <span id="btn_view_more_up" class="visible">Voir moins</span>
+          </div>
+          <div class="card_info">
+            <p><strong>Contact : </strong></p>
+            <p><strong>Date : </strong>Dimanche 7 juillet 2025 - 9h à 13h</p>
+            <p><strong>Lieu : </strong>Parc de la Tête d'Or, Lyon 6ème</p>
+            <p><strong>Durée : </strong>4 h</p>
+          </div>
+        </div>
+
+        <div class="card_mission miss03 last">
+          <div class="card_header">
+            <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Photo profil" />
+            <div class="card_header_right">
+              <h3>Accompagnement festival de rue</h3>
+              <span class="cat_mission">CULTUREL</span>
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              Soutenez l'organisation du Festival des Arts de Rue en
+              accueillant le public, en guidant les visiteurs et en assistant
+              les artistes.
+            </p>
+            <p>
+              Une belle occasion de vivre l'événement de l'intérieur tout en
+              contribuant à sa réussite.
+            </p>
+          </div>
+          <div class="btn_group">
+            <span id="btn_view_more_down">Voir plus</span>
+            <span id="btn_view_more_up" class="visible">Voir moins</span>
+          </div>
+          <div class="card_info">
+            <p><strong>Contact : </strong></p>
+            <p>
+              <strong>Date : </strong>Vendredi 12 juillet 2025 - 16h à 22h
+            </p>
+            <p><strong>Lieu : </strong>Place Bellecour, Lyon 2ème</p>
+            <p><strong>Durée : </strong>6 h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="view_more_mission">
+        <button>Voir plus de missions ...</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact_container">
+      <div class="form_header">
+        <div class="contact_title">
+          <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
+        </div>
+        <div class="tagline_contact">
+          <p>
+            Vous représentez une association, un collectif ou vous cherchez à
+            vous engager comme bénévole ?
+          </p>
+          <p>Envoyez-nous un message, on vous aide à passer à l'action !</p>
+        </div>
+      </div>
+      <form action="#">
+        <input id="name_contact" type="text" placeholder="Nom*" aria-describedby="name_help" required />
+        <div id="name_help"></div>
+        <input id="mail_contact" type="email" placeholder="Email*" aria-describedby="mail_help" required />
+        <div id="mail_help"></div>
+        <textarea id="text_area_contact" rows="4" placeholder="Votre message..." aria-describedby="text_area_help"
+          required></textarea>
+        <div id="text_area_help"></div>
+      </form>
+      <div class="form_footer">
+        <div class="consent">
+          <label class="custom_checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <!-- <input type="checkbox" name="consent_check" /> -->
+          <p>
+            Je consens à ce que mes informations soient stockées en vue de me
+            répondre
+          </p>
+        </div>
+        <button id="button_formu">ENVOYER</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonials_container">
+      <div class="testimonials_title">
+        <h3>T&Eacute;MOIGNAGES</h3>
+      </div>
+
+      <div class="block_testimonials">
+        <div class="card_testimonials">
+          <div class="card_testimonials_container">
+            <div class="entete_avis">
+              <div class="avatar_member">
+                <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="" id="img_avatar" />
+              </div>
+              <div class="lib_mission_avis">
+                <p>Sportif et solidaire</p>
+              </div>
+            </div>
+            <div class="foot_avis">
+              <div class="icon_hearth">
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+              </div>
+              <div class="txt_avis">
+                <p>Cammille D.</p>
+                <p>
+                  Super événement ! J'étais au ravitaillement et l'ambiance
+                  était électrique. Maxime avait bien organisé les rotations.
+                  Lever tôt mais ça vaut le coup de voir tous ces coureurs se
+                  dépasser pour la bonne cause. Équipe de bénévoles au top !
+                </p>
+                <p><b>Date : </b>30 juillet 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_testimonials">
+          <div class="card_testimonials_container">
+            <div class="entete_avis">
+              <div class="avatar_member">
+                <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="" id="img_avatar" />
+              </div>
+              <div class="lib_mission_avis">
+                <p>Accompagnement Festival de rue</p>
+              </div>
+            </div>
+            <div class="foot_avis">
+              <div class="icon_hearth">
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+              </div>
+              <div class="txt_avis">
+                <p>Antoine K.</p>
+                <p>
+                  Festival génial ! J'étais à la technique et c'était intense.
+                  Quelques moments de stress car pas mal d'imprévus, mais
+                  l'équipe était solidaire. Julie nous a bien soutenus. C'est
+                  le genre de mission où on apprend beaucoup !
+                </p>
+                <p><b>Date : </b>13 août 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_testimonials last">
+          <div class="card_testimonials_container">
+            <div class="entete_avis">
+              <div class="avatar_member">
+                <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="" id="img_avatar" />
+              </div>
+              <div class="lib_mission_avis">
+                <p>Magie avec les enfants</p>
+              </div>
+            </div>
+            <div class="foot_avis">
+              <div class="icon_hearth">
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+                <img src="./img/coeur-valide.png" alt="" id="icon_hearth" />
+              </div>
+              <div class="txt_avis">
+                <p>Laura B.</p>
+                <p>
+                  Quel bonheur de voir les yeux des enfants briller ! Sophie,
+                  la bibliothécaire, nous avait bien conseillés sur les
+                  livres. L'espace était parfait et les enfants très
+                  attentifs. J'ai pris autant de plaisir qu'eux. Mission
+                  parfaite pour moi !
+                </p>
+                <p><b>Date : </b>26 juin 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <section class="high_footer">
+      <div class="address_contact_footer">
+        Nos Coordonnees
+        <ul>
+          <li>Claire Michelle</li>
+          <li>62 avenue de l’Imagerie</li>
+          <li>69000, Lyon Cedex 09</li>
+          <li>e-mail : claire-michelle@gmail.com</li>
+          <li>whatsApp :</li>
+        </ul>
+      </div>
+
+      <div class="site_map">
+        Plan du site
+        <ul>
+          <li><a href="#">ACCUEIL</a></li>
+          <li><a href="#">NOS MISSIONS</a></li>
+          <li><a href="#">VOUS & NOUS</a></li>
+        </ul>
+      </div>
+    </section>
+    <div class="bottom_footer">
+      <div class="blc_copy">
+        &copy; Tous droits r&eacute;serv&eacute;s - CGU - Les
+        &Eacute;claireurs Solidaires
+      </div>
+      <div class="bloc_picto">
+        <a href="#"><img src="./img/icon-X.png" id="picto" /></a>
+        <a href="#"><img src="./img/icon-insta.png" id="picto" /></a>
+        <a href="#"><img src="./img/icon-facebook.png" id="picto" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal_container" class="modal_container">
+    <div class="modal_glob">
+      <div class="entete_modal">
+        <h1>Les Eclaireurs Solidaires</h1>
+        <div class="btn_modal_close">
+          <img src="./img/cross.png" id="btn_close_modal" />
+        </div>
+      </div>
+      <div class="modal_content">
+        <form class="modal_form" action="valid_connec.html">
+          <div class="input_login">
+            <input type="text" id="login" placeholder="Login *" required />
+            <input type="password" id="password" placeholder="Mot de Passe *" required />
+          </div>
+          <button class="button_validate_connec">Se connecter</button>
+        </form>
+        <div class="remember">
+          <label class="custom_checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+            <p>Se souvenir de moi</p>
+          </label>
+          <a href="#">Mot de passe oublié ?</a>
+        </div>
+        <div class="create_account">
+          <p>Vous n'avez pas de compte ?</p>
+          <a href="#">Inscrivez-vous.</a>
+          <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+          <!-- BOUTON SIGNOUT GOOGLE A VOIR APRES RAJOUT DE LA PARTIE PROFIL-->
+        </div>
+        <div id="buttonDiv"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
