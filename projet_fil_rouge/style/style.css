@@ -280,7 +280,7 @@ nav button {
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--bg_primary);
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   box-shadow: var(--shadow_md);
   padding-top: calc(100px + var(--spacing_xl));
@@ -294,7 +294,7 @@ nav button {
 }
 
 .title_site {
-  text-align: center; 
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -505,24 +505,13 @@ nav button {
 .card_header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-}
-
-.card_header div {
-  width: calc(97.5% - 110px);
-  display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  margin-bottom: var(--spacing_md);
 }
 
-.card_header img {
-  width: 110px;
-  height: 110px;
-  border-radius: var(--radius_circle);
-}
-
-.card_header_right h3 {
-  height: calc(60% - var(--font_size_medium));
+.card_header h3 {
+  padding: var(--spacing_md) 0;
+  text-align: center;
 }
 
 .cat_mission {
@@ -537,6 +526,7 @@ nav button {
 .description {
   height: 20px;
   overflow: hidden;
+  padding: 0 var(--spacing_md);
 }
 
 .card_info {
@@ -614,7 +604,7 @@ nav button {
   align-items: center;
 }
 
-form {
+.form_contact {
   width: 80%;
   padding: var(--spacing_xl);
   display: flex;
@@ -662,8 +652,8 @@ form {
   background: var(--primary_yellow);
 }
 
-form input,
-form textarea {
+.form_contact input,
+.form_contact textarea {
   width: 75%;
   border: 1px solid #ccc;
   border-radius: var(--radius_sm);
@@ -840,7 +830,7 @@ footer {
 }
 
 .modal_glob {
-  height: 65%;
+  /* height: 65%; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -853,8 +843,8 @@ footer {
   align-items: center;
   justify-content: space-between;
   border-radius: 15px 15px 0 0;
-  background-color: #ffd900;
-  padding: 10px;
+  background-color: var(--primary_yellow);
+  padding: var(--spacing_md);
 }
 
 .modal_content {
@@ -862,16 +852,18 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--bg_primary);
   border-radius: 0 0 15px 15px;
   justify-content: space-around;
 }
 
 .modal_form {
+  width: 80%;
+  padding: var(--spacing_xl);
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  align-items: center;
+  row-gap: var(--spacing_md);
 }
 
 .input_login {
@@ -879,16 +871,18 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  row-gap: var(--spacing_md);
 }
 
 .remember {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: var(--spacing_md);
 }
 
 .button_validate_connec {
-  background-color: #ffd900;
+  background-color: var(--primary_yellow);
 }
 
 .create_account {
@@ -897,6 +891,11 @@ footer {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin: var(--spacing_md) 0;
+}
+
+#buttonDiv {
+  margin: var(--spacing_md) 0;
 }
 
 #btn_close_modal {
