@@ -14,8 +14,8 @@
       </p>
     </div>
     <div class="block_connection_btn connection_btn">
-      <button class="signUp_btn connection_btn">S'inscrire</button>
-      <button class="logIn_btn connection_btn">Se Connecter</button>
+      <a class="signUp_btn connection_btn" href="index.php?page=register">S'inscrire</a>
+      <a class="logIn_btn connection_btn" href="index.php?page=login">Se Connecter</a>
     </div>
     <div class="block_search">
       <input type="search" name="search_bar_hero" class="search_input" placeholder="Rechercher une mission" />
@@ -71,7 +71,7 @@
 
 <section class="missions">
   <div class="missions_container">
-    <div class="missions_title">
+    <div class="section_title">
       <h3>NOS DERNI&Egrave;RES MISSIONS</h3>
     </div>
 
@@ -121,7 +121,7 @@
 <section class="contact">
   <div class="contact_container">
     <div class="form_header">
-      <div class="contact_title">
+      <div class="section_title">
         <h3>Une question, un besoin ? CONTACTEZ-NOUS</h3>
       </div>
       <div class="tagline_contact">
@@ -159,7 +159,7 @@
 
 <section class="testimonials">
   <div class="testimonials_container">
-    <div class="testimonials_title">
+    <div class="section_title">
       <h3>T&Eacute;MOIGNAGES</h3>
     </div>
 

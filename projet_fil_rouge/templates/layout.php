@@ -19,7 +19,9 @@
 
     <header>
         <div class="div_logo">
-            <img src="./img/logo2_2.png" alt="Logo du site" class="logo" />
+            <a href="index.php">
+                <img src="./img/logo2_2.png" alt="Logo du site" class="logo" />
+            </a>
         </div>
         <div class="div_picto_menu">
             <img src="./img/hamb_menu.png" id="picto_burger" />
@@ -31,16 +33,16 @@
                     Les &Eacute;claireurs <span class="color_word">Solidaires</span>
                 </h1>
                 <li>
-                    <a href="index.html">ACCUEIL</a>
+                    <a href="index.php" class="link_animated">ACCUEIL</a>
                 </li>
                 <li>
-                    <a href="#">NOS MISSIONS</a>
+                    <a href="index.php?page=missions" class="link_animated">NOS MISSIONS</a>
                 </li>
                 <li>
-                    <a href="#">VOUS & NOUS</a>
+                    <a href="#" class="link_animated">VOUS & NOUS</a>
                 </li>
                 <li class="last_link_nav">
-                    <button class="connection_btn">S'inscrire / Se Connecter</button>
+                    <a class="connection_btn" href="index.php?page=login">S'inscrire / Se Connecter</a>
                     <div class="profil">
                         <div>
                             <p>Nom de Profil</p>
@@ -53,7 +55,9 @@
         </nav>
     </header>
 
-    <?= $content ?>
+    <div class="content_container">
+        <?= $content ?>
+    </div>
 
     <footer>
         <section class="high_footer">
@@ -71,8 +75,8 @@
             <div class="site_map">
                 Plan du site
                 <ul>
-                    <li><a href="#">ACCUEIL</a></li>
-                    <li><a href="#">NOS MISSIONS</a></li>
+                    <li><a href="index.php">ACCUEIL</a></li>
+                    <li><a href="index.php?page=missions">NOS MISSIONS</a></li>
                     <li><a href="#">VOUS & NOUS</a></li>
                 </ul>
             </div>
@@ -89,42 +93,7 @@
             </div>
         </div>
     </footer>
-
-    <div id="modal_container" class="modal_container">
-        <div class="modal_glob">
-            <div class="entete_modal">
-                <h1>Les &Eacute;claireurs Solidaires</h1>
-                <div class="btn_modal_close">
-                    <img src="./img/cross.png" id="btn_close_modal" />
-                </div>
-            </div>
-            <div class="modal_content">
-                <form class="modal_form" action="valid_connec.html">
-                    <div class="input_login">
-                        <input type="text" id="login" placeholder="Login *" required />
-                        <input type="password" id="password" placeholder="Mot de Passe *" required />
-                    </div>
-                    <button class="button_validate_connec">Se connecter</button>
-                </form>
-                <div class="remember">
-                    <label class="custom_checkbox">
-                        <input type="checkbox" />
-                        <span class="checkmark"></span>
-                        <p>Se souvenir de moi</p>
-                    </label>
-                    <a href="#">Mot de passe oublié ?</a>
-                </div>
-                <div class="create_account">
-                    <p>Vous n'avez pas de compte ?</p>
-                    <a href="#">Inscrivez-vous.</a>
-                    <!-- <a href="#" onclick="signOut();">Sign out</a> -->
-                    <!-- BOUTON SIGNOUT GOOGLE A VOIR APRES RAJOUT DE LA PARTIE PROFIL-->
-                </div>
-                <div id="buttonDiv"></div>
-            </div>
-        </div>
-    </div>
-
+    
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="./js/script.js"></script>
 </body>

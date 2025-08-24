@@ -6,21 +6,39 @@ function handleCredentialResponse(response) {
   logginSuccess();
 }
 
-function logginSuccess() {
-  localStorage.setItem("isLogged", "true");
+async function processLogin() {
+  const loginInput = document.getElementById("login");
+  const passwordInput = document.getElementById("password");
 
-  updatePageForLogged();
+  const formData = new FormData();
+  formData.append("action", "login"); // Indique au handler ce qu'on veut faire
+  formData.append("login", loginInput.value);
+  formData.append("password", passwordInput.value);
 
-  const modalWindow = document.getElementById("modal_container");
-  if (modalWindow) {
-    modalWindow.classList.remove("visible_modal");
+  const response = await fetch("api/user_handler.php", {
+    method: "POST",
+    body: formData,
+  });
+
+  const result = await response.json();
+
+  if (result.success) {
+    localStorage.setItem("isLogged", "true"); // Met à jour le "miroir"
+    window.location.href = "index.php"; // Redirige
+  } else {
+    alert(result.message); // Affiche l'erreur du serveur
   }
 }
 
-function logoutFunct() {
-  localStorage.removeItem("isLogged");
+async function processLogout() {
+  const response = await fetch("api/user_handler.php?action=logout"); // On peut utiliser GET pour la déconnexion
+  const result = await response.json();
 
-  updatePageForLogged();
+  if (result.success) {
+    localStorage.removeItem("isLogged"); // Nettoie le "miroir"
+    updatePageForLogged(); // Met à jour l'UI immédiatement
+    window.location.href = "index.php"; // Redirige pour rafraîchir l'état serveur
+  }
 }
 
 function updatePageForLogged() {
@@ -172,113 +190,102 @@ function inputValidationContact(input, funcValidation, inputLibValidate) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("load", () => {
+    updatePageForLogged();
+    initGoogle();
+  });
+
   window.addEventListener("scroll", () => {
     animImgBlocWhoAre();
   });
+
+  const loginForm = document.getElementById("login_form");
+  if (loginForm) {
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      processLogin();
+    });
+  }
+
+  document.addEventListener("click", function (event) {
+    if (event.target.matches("#sign_out")) {
+      event.preventDefault();
+      processLogout();
+    }
+  });
+
+  const burgerMenu = document.querySelector("#picto_burger");
+  const overlayBurgerMenu = document.querySelector(".overlay_menu_mobile");
+  const btnCloseBurgerMenu = document.querySelector("#picto_cross");
+
+  if (burgerMenu && overlayBurgerMenu && btnCloseBurgerMenu) {
+    burgerMenu.addEventListener("click", openBurgerMenu);
+    overlayBurgerMenu.addEventListener("click", closeBurgerMenu);
+    btnCloseBurgerMenu.addEventListener("click", closeBurgerMenu);
+  }
 
   const btn_more_descrip_down = document.querySelectorAll(
     "#btn_view_more_down"
   );
   const btn_more_descrip_up = document.querySelectorAll("#btn_view_more_up");
 
-  for (let i = 0; i < btn_more_descrip_down.length; i++) {
-    btn_more_descrip_down[i].addEventListener("click", () => {
-      const description_mission =
-        btn_more_descrip_down[i].parentElement.previousElementSibling;
-
-      description_mission.style.height = "auto";
-
-      btn_more_descrip_down[i].classList.add("visible");
-      btn_more_descrip_up[i].classList.toggle("visible");
-    });
+  if (btn_more_descrip_down.length > 0) {
+    for (let i = 0; i < btn_more_descrip_down.length; i++) {
+      btn_more_descrip_down[i].addEventListener("click", () => {
+        const description_mission =
+          btn_more_descrip_down[i].parentElement.previousElementSibling;
+        description_mission.style.height = "auto";
+        btn_more_descrip_down[i].classList.add("visible");
+        btn_more_descrip_up[i].classList.toggle("visible");
+      });
+    }
   }
 
-  for (let i = 0; i < btn_more_descrip_up.length; i++) {
-    btn_more_descrip_up[i].addEventListener("click", () => {
-      const description_mission =
-        btn_more_descrip_up[i].parentElement.previousElementSibling;
-
-      description_mission.style.height = "20px";
-
-      btn_more_descrip_up[i].classList.add("visible");
-      btn_more_descrip_down[i].classList.toggle("visible");
-    });
-  }
-
-  const burgerMenu = document.querySelector("#picto_burger");
-  burgerMenu.addEventListener("click", () => {
-    openBurgerMenu();
-  });
-
-  const overlayBurgerMenu = document.querySelector(".overlay_menu_mobile");
-  overlayBurgerMenu.addEventListener("click", () => {
-    closeBurgerMenu();
-  });
-
-  const btnCloseBurgerMenu = document.querySelector("#picto_cross");
-  btnCloseBurgerMenu.addEventListener("click", () => {
-    closeBurgerMenu();
-  });
-
-  const modalWindows = document.getElementById("modal_container");
-  const closeModal = document.getElementById("btn_close_modal");
-  const btnsConnection = document.querySelectorAll(".connection_btn");
-
-  closeModal.addEventListener("click", () => {
-    modalWindows.classList.remove("visible_modal");
-  });
-  for (let i = 0; i < btnsConnection.length; i++) {
-    const element = btnsConnection[i];
-    element.addEventListener("click", () => {
-      modalWindows.classList.add("visible_modal");
-      initGoogle();
-    });
+  if (btn_more_descrip_up.length > 0) {
+    for (let i = 0; i < btn_more_descrip_up.length; i++) {
+      btn_more_descrip_up[i].addEventListener("click", () => {
+        const description_mission =
+          btn_more_descrip_up[i].parentElement.previousElementSibling;
+        description_mission.style.height = "20px";
+        btn_more_descrip_up[i].classList.add("visible");
+        btn_more_descrip_down[i].classList.toggle("visible");
+      });
+    }
   }
 
   const inputMailContact = document.getElementById("mail_contact");
-  inputMailContact.addEventListener("focus", function () {
-    inputValidationContact(this, mailIsValid, "E-mail");
-  });
-  inputMailContact.addEventListener("input", function () {
-    inputValidationContact(this, mailIsValid, "E-mail");
-  });
-  inputMailContact.addEventListener("blur", function () {
-    inputValidationContact(this, mailIsValid, "E-mail");
-  });
-
   const inputNameContact = document.getElementById("name_contact");
-  inputNameContact.addEventListener("focus", function () {
-    inputValidationContact(this, nameIsValid, "Nom");
-  });
-  inputNameContact.addEventListener("input", function () {
-    inputValidationContact(this, nameIsValid, "Nom");
-  });
-  inputNameContact.addEventListener("blur", function () {
-    inputValidationContact(this, nameIsValid, "Nom");
-  });
-
   const inputAreaContact = document.getElementById("text_area_contact");
-  inputAreaContact.addEventListener("focus", function () {
-    inputValidationContact(this, areaIsValid, "Message");
-  });
-  inputAreaContact.addEventListener("input", function () {
-    inputValidationContact(this, areaIsValid, "Message");
-  });
-  inputAreaContact.addEventListener("blur", function () {
-    inputValidationContact(this, areaIsValid, "Message");
-  });
 
-  const btnConnectOnModal = document.querySelector(".button_validate_connec");
-  btnConnectOnModal.addEventListener("click", function () {
-    logginSuccess();
-  });
+  if (inputMailContact && inputNameContact && inputAreaContact) {
+    inputMailContact.addEventListener("focus", function () {
+      inputValidationContact(this, mailIsValid, "E-mail");
+    });
+    inputMailContact.addEventListener("input", function () {
+      inputValidationContact(this, mailIsValid, "E-mail");
+    });
+    inputMailContact.addEventListener("blur", function () {
+      inputValidationContact(this, mailIsValid, "E-mail");
+    });
 
-  const btnDisconnection = document.getElementById("sign_out");
-  btnDisconnection.addEventListener("click", () => {
-    logoutFunct();
-  });
-});
+    inputNameContact.addEventListener("focus", function () {
+      inputValidationContact(this, nameIsValid, "Nom");
+    });
+    inputNameContact.addEventListener("input", function () {
+      inputValidationContact(this, nameIsValid, "Nom");
+    });
+    inputNameContact.addEventListener("blur", function () {
+      inputValidationContact(this, nameIsValid, "Nom");
+    });
 
-window.addEventListener("load", () => {
-  updatePageForLogged();
+    inputAreaContact.addEventListener("focus", function () {
+      inputValidationContact(this, areaIsValid, "Message");
+    });
+    inputAreaContact.addEventListener("input", function () {
+      inputValidationContact(this, areaIsValid, "Message");
+    });
+    inputAreaContact.addEventListener("blur", function () {
+      inputValidationContact(this, areaIsValid, "Message");
+    });
+  }
 });
